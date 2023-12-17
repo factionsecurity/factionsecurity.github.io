@@ -1,0 +1,657 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Custom Security Report Templates - </title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#general-variables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="/img/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Custom Security Report Templates
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/factionsecurity/faction" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="/img/favicon.png" alt="logo">
+
+    </a>
+    
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/factionsecurity/faction" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to FACTION
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Custom Security Report Templates
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Custom Security Report Templates
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERAL VARIABLES:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerability-tables-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      VULNERABILITY TABLES VARIABLES:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerability-findings-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      VULNERABILITY FINDINGS VARIABLES:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS FORMATTING:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-severity-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      SETTING SEVERITY COLORS:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERAL VARIABLES:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerability-tables-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      VULNERABILITY TABLES VARIABLES:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerability-findings-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      VULNERABILITY FINDINGS VARIABLES:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS FORMATTING:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-severity-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      SETTING SEVERITY COLORS:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Custom Security Report Templates</h1>
+
+<p><img alt="" src="../files/Pasted%20image%2020231217155942.png" /></p>
+<p>The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports you need to use the variables listed below. Entering these into your DOCX reports will auto replace assessment and vulnerability text when the report is generated. You can even use the same variables into many of the assessor input fields outside of the report template (like Risk Assessment Summaries) and it will auto populate the fields when the report is generated.</p>
+<p>You can download the sample template here: <a href="https://github.com/factionsecurity/report_templates">Sample Template</a></p>
+<h3 id="general-variables">GENERAL VARIABLES:</h3>
+<p>All of these variables can be used anywhere in the DOCX template. Those with a star ⭐️ can be used in the web interface to assist in creating common reusable templates.</p>
+<ul>
+<li><strong>${TOC}</strong> – Placeholder for the Table of Contents</li>
+<li><strong>${summary1}</strong> – The high level summary</li>
+<li><strong>${summary2}</strong> – The objective and scope</li>
+<li><strong>${asmtId}</strong> – Internal Database ID ⭐️</li>
+<li><strong>${asmtAppid}</strong> – The assigned Application ID ⭐️</li>
+<li><strong>${asmtName}</strong> – The Assessment Name ⭐️</li>
+<li><strong>${asmtAssessor}</strong> – The first assessor assigned to the assessment ⭐️</li>
+<li><strong>${asmtAssessor_Email}</strong> – The first assessor email address ⭐️</li>
+<li><strong>${asmtAssessors_Lines}</strong> – All Assessors split into lines ⭐️</li>
+<li><strong>${asmtAssessors_Comma}</strong> – All Assessors split into a comma delimited list ⭐️</li>
+<li><strong>${asmtAssessor_Bullets}</strong> – All Assessors split into a bulleted list ⭐️</li>
+<li><strong>${remediation}</strong> – The Remediation Person assigned to the assessment ⭐️</li>
+<li><strong>${riskCount*}</strong> – The number of findings at the RiskLevel 0-9 ⭐️</li>
+<li><strong>${riskTotal}</strong> – The total number of findings at all RiskLevels ⭐️</li>
+<li><strong>${asmtTeam}</strong> – The Assessor Team Name ⭐️</li>
+<li><strong>${asmtType}</strong> – The Type of the Assessment ⭐️</li>
+<li><strong>${asmtStart}</strong> – The Start date of the assessment ⭐️</li>
+<li><strong>${asmtEnd}</strong> – The End date of the assessment ⭐️</li>
+<li><strong>${asmtAccessKey}</strong> – Guid to access the client retest queue. ⭐️</li>
+<li><strong>${today}</strong> – Day the report is generated ⭐️</li>
+<li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf” ⭐️</li>
+</ul>
+<h3 id="vulnerability-tables-variables">VULNERABILITY TABLES VARIABLES:</h3>
+<p>These are only available inside tables.</p>
+<ul>
+<li><strong>${vulnTable}</strong> – This defines a table to be a vulnerability listing table.</li>
+<li><strong>${vulnName}</strong> – The Vulnerability name</li>
+<li><strong>${rec}</strong> – Vulnerability Recommendation</li>
+<li><strong>${desc}</strong> – Vulnerability Description</li>
+<li><strong>${category}</strong> – Category of the vulnerability</li>
+<li><strong>${severity}</strong> – Severity of each vulnerability.</li>
+<li><strong>${likelihood}</strong> – Likelyhood of the vulnerability</li>
+<li><strong>${impact}</strong> – Impact of the vulnerability</li>
+<li><strong>${cvss}</strong> – cvss score of the vulnerability</li>
+<li><strong>${status}</strong> – CVSS Score of the vulnerability</li>
+<li><strong>${count}</strong> – Row Count of the vulnerability</li>
+<li><strong>${tracking}</strong> – Tracking number of the vulnerability</li>
+<li><strong>${vid}</strong> – Vulnerability internal database id</li>
+<li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”</li>
+<li><strong>${color  key=value,key=value}</strong> – The color of the text is based on key-value pairs. <a href="https://www.factionsecurity.com/manual/custom-report-templates/#Colors">See below for how to set up</a> <a href="https://www.factionsecurity.com/manual/custom-report-templates/#Severity%20Colors">colors.</a></li>
+<li><strong>${cells key=value,key=value}</strong> – The color of the table cell is based on key-value pairs. <a href="https://www.factionsecurity.com/manual/custom-report-templates/#Colors">See below for how to set up colors.</a></li>
+<li><strong>${loop}</strong> – This variable tells the report generator which row will be repeated.</li>
+<li><strong>${loop-*}</strong> – This allows multiple rows to be repeated. Example ${loop-1} will repeat the row but the one below it.</li>
+<li><strong>${details}</strong> – This will insert screenshots and exploit steps for each vulnerability.</li>
+</ul>
+<p><strong>Example Table:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>${vulnTable}</td>
+<td>${color Critical=C00000,High=FFC000}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Finding Name</td>
+<td>Impact</td>
+<td>Severity</td>
+</tr>
+<tr>
+<td>${loop}</td>
+<td>${count}. ${vulnName}</td>
+<td>${impact}</td>
+<td>${severity}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Table with Technical findings:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>${vulntable}</td>
+<td>${color Critical=C00000,High=FFC000}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Finding Name</td>
+<td>Impact</td>
+<td>Severity</td>
+</tr>
+<tr>
+<td>${loop-1} ${count}</td>
+<td>${vulnname}</td>
+<td>${impact}</td>
+<td>${severity}</td>
+</tr>
+<tr>
+<td>${exBegin}<br><br>Example ${count}:  <br>${exploit}<br><br>${exEnd}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="vulnerability-findings-variables">VULNERABILITY FINDINGS VARIABLES:</h3>
+<p><strong>For when you do not want to use tables to display your vulnerability information. You can use the following variables for inserting vulnerability information outside of a table</strong></p>
+<ul>
+<li><strong>${fiBegin} / ${fiEnd}</strong> – Block to repeat against all findings.</li>
+<li><strong>${vulnName}</strong> – The Vulnerability name</li>
+<li><strong>${rec}</strong> – Vulnerability Recommendation</li>
+<li><strong>${desc}</strong> – Vulnerability Description</li>
+<li><strong>${category}</strong> – Category of the vulnerability</li>
+<li><strong>${severity}</strong> – Severity of each vulnerability.</li>
+<li><strong>${likelihood}</strong> – Likelihood of the vulnerability</li>
+<li><strong>${impact}</strong> – Impact of the vulnerability</li>
+<li><strong>${cvss}</strong> – cvss score of the vulnerability</li>
+<li><strong>${status}</strong> – CVSS Score of the vulnerability</li>
+<li><strong>${count}</strong> – Row Count of the vulnerability</li>
+<li><strong>${tracking}</strong> – Tracking number of the vulnerability</li>
+<li><strong>${vid}</strong> – Vulnerability internal database id</li>
+<li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”</li>
+<li><strong>${details}</strong> – This will insert screenshots and exploit steps for each vulnerability.</li>
+</ul>
+<h3 id="css-formatting">CSS FORMATTING:</h3>
+<p>All of the text generated from Faction is HTML. You can control how it is rendered in the DOCX format using the CSS editor in the Report Designer. You will need to set the css to match your report templates. Things like font and size will need to match. Images will need to be forced to resize to the correct dimensions to fit in your reports.</p>
+<p><img alt="" src="../files/Pasted%20image%2020231217160124.png" /></p>
+<h3 id="setting-severity-colors">SETTING SEVERITY COLORS:</h3>
+<p>When building reports you most likely will set the text or cell to the color that matches the severity of the finding. To achieve this in FACTION you need to set a default color in the docx template that matches the severity category (i.e. Overall, Likelihood, and Impact). These default colors are in the table below:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td><strong>Color Hex</strong></td>
+</tr>
+<tr>
+<td>Overall Severity</td>
+<td>#FAC701</td>
+</tr>
+<tr>
+<td>Likelihood</td>
+<td>#FAC702</td>
+</tr>
+<tr>
+<td>Impact</td>
+<td>#FAC703</td>
+</tr>
+</tbody>
+</table>
+<p>For Example, a table in MS Word below has pre-filled the color codes for each severity name and category.</p>
+<p><img alt="" src="../files/Pasted%20image%2020231217160231.png" /></p>
+<p>Right-click the overall severity variable, <strong>${severity}</strong>; you can see the default hex code for this color is #FAC701. Likelihood would be set to #FAC02, and Impact would be set to #FAC703.</p>
+<p><img alt="" src="../files/Pasted%20image%2020231217160250.png" /></p>
+<p>Setting the background color for cells works in much the same way. Notice we use the ${cells} variable instead.</p>
+<p><img alt="" src="../files/Pasted%20image%2020231217160305.png" /></p>
+<p>Right-click on the cell and set the color you may only want to use the Overall severity option but you can have multiple cells with each category if you wish.</p>
+<p><img alt="" src="../files/Pasted%20image%2020231217160321.png" /></p>
+<p>Below is an example of the generated report table with colors replaced.</p>
+<p><img alt="" src="../files/Pasted%20image%2020231217160335.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
