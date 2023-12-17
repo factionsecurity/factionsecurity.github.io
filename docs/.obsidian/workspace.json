@@ -1,0 +1,179 @@
+{
+  "main": {
+    "id": "def66f9e516894e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ef49095a92ce6d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fa68f536624649ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Custom Security Report Templates.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "eaf751a611399bf9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a99569e0622e6dc3",
+    "type": "split",
+    "children": [
+      {
+        "id": "e223bd55d52d0d61",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5f5726f4fc49db0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a872a188118af5dc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c64eeee16ce23cc5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "86666a565f6b520d",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e53bbb27088cb89",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b472b3c535a6a953",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0655be567bd723e1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "efd278fc1f91e408",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "418ad1f8f74f7a83",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "index.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "eaf751a611399bf9",
+  "lastOpenFiles": [
+    "test.md",
+    "index.md",
+    "files/Pasted image 20231217161517.png",
+    "Custom Security Report Templates.md",
+    "Pasted.md",
+    "files/Pasted image 20231217155942.png",
+    "files",
+    "images",
+    "files/Pasted image 20231217160335.png",
+    "files/Pasted image 20231217160321.png",
+    "files/Pasted image 20231217160305.png",
+    "files/Pasted image 20231217160250.png",
+    "files/Pasted image 20231217160231.png",
+    "files/Pasted image 20231217160124.png"
+  ]
+}
