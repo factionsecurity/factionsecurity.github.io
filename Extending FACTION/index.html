@@ -512,169 +512,167 @@
 <h2 id="faction-dev-environment">Faction Dev Environment</h2>
 <ol>
 <li>Create a new Eclipse Maven Java Project</li>
-<li>Add the following lines to your <em>pom.xml</em> file to enable the Faction Extendar API. This adds the Extendar API Repository location, the Extendar Library, and configures the build plugin, and Manifest file.</li>
+<li>Add the following lines to your <em>pom.xml</em> file to enable the Faction Extendar API. This adds the Extendar API Repository location, the Extendar Library, and configures the build plugin, and Manifest file.
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;repositories&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">   </span><span class="nt">&lt;repository&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="nt">&lt;id&gt;</span>FactionExtender<span class="nt">&lt;/id&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">&lt;url&gt;</span>https://github.com/factionsecurity/faction-extender/raw/mvn-repo/<span class="nt">&lt;/url&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">&lt;snapshots&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">         </span><span class="nt">&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">         </span><span class="nt">&lt;updatePolicy&gt;</span>always<span class="nt">&lt;/updatePolicy&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">&lt;/snapshots&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">   </span><span class="nt">&lt;/repository&gt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">&lt;/repositories&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">&lt;dependencies&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">   </span><span class="nt">&lt;dependency&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>FactionExtender<span class="nt">&lt;/groupId&gt;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>FactionExtender<span class="nt">&lt;/artifactId&gt;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="nt">&lt;version&gt;</span>1.1<span class="nt">&lt;/version&gt;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">   </span><span class="nt">&lt;/dependency&gt;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nt">&lt;/dependencies&gt;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nt">&lt;build&gt;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">   </span><span class="nt">&lt;plugins&gt;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="nt">&lt;plugin&gt;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">         </span><span class="nt">&lt;artifactId&gt;</span>maven-assembly-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">         </span><span class="nt">&lt;configuration&gt;</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">         </span><span class="nt">&lt;descriptorRefs&gt;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">            </span><span class="nt">&lt;descriptorRef&gt;</span>jar-with-dependencies<span class="nt">&lt;/descriptorRef&gt;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">         </span><span class="nt">&lt;/descriptorRefs&gt;</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">         </span><span class="nt">&lt;archive&gt;</span><span class="w"> </span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">            </span><span class="nt">&lt;manifestEntries&gt;</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">               </span><span class="nt">&lt;Import-Library&gt;</span>org.faction.JiraPlugin<span class="nt">&lt;/Import-Library&gt;</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">            </span><span class="nt">&lt;/manifestEntries&gt;</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">         </span><span class="nt">&lt;/archive&gt;</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">         </span><span class="nt">&lt;/configuration&gt;</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">       </span><span class="nt">&lt;/plugin&gt;</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">   </span><span class="nt">&lt;/plugins&gt;</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="nt">&lt;/build&gt;</span>
+</span></code></pre></div>
+The <em>maven-assembly-plugin</em> contains the manifest entries which is important for Faction to be able to find the correct class files to run. You will need to update the <strong>Import-Library</strong> directive to point to your class.</li>
 </ol>
-<pre><code class="language-xml">&lt;repositories&gt;
-   &lt;repository&gt;
-      &lt;id&gt;FactionExtender&lt;/id&gt;
-      &lt;url&gt;https://github.com/factionsecurity/faction-extender/raw/mvn-repo/&lt;/url&gt;
-      &lt;snapshots&gt;
-         &lt;enabled&gt;true&lt;/enabled&gt;
-         &lt;updatePolicy&gt;always&lt;/updatePolicy&gt;
-      &lt;/snapshots&gt;
-   &lt;/repository&gt;
-&lt;/repositories&gt;
-&lt;dependencies&gt;
-   &lt;dependency&gt;
-      &lt;groupId&gt;FactionExtender&lt;/groupId&gt;
-      &lt;artifactId&gt;FactionExtender&lt;/artifactId&gt;
-      &lt;version&gt;1.1&lt;/version&gt;
-   &lt;/dependency&gt;
-&lt;/dependencies&gt;
-&lt;build&gt;
-   &lt;plugins&gt;
-      &lt;plugin&gt;
-         &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;
-         &lt;configuration&gt;
-         &lt;descriptorRefs&gt;
-            &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;
-         &lt;/descriptorRefs&gt;
-         &lt;archive&gt; 
-            &lt;manifestEntries&gt;
-               &lt;Import-Library&gt;org.faction.JiraPlugin&lt;/Import-Library&gt;
-            &lt;/manifestEntries&gt;
-         &lt;/archive&gt;
-         &lt;/configuration&gt;
-       &lt;/plugin&gt;
-   &lt;/plugins&gt;
-&lt;/build&gt;
-</code></pre>
-<p>The <em>maven-assembly-plugin</em> contains the manifest entries which is important for Faction to be able to find the correct class files to run. You will need to update the <strong>Import-Library</strong> directive to point to your class.</p>
 <h2 id="create-the-jira-plugin-class">Create The Jira Plugin Class</h2>
 <p>Create a Class named <strong>JiraPlugin</strong> in <em>src/main/java</em>. This class will implement  <em>com.fuse.extender.AssessmentManager</em> as shown below. This code will trigger whenever a change happens to an assessment. You can use the <strong>Operation</strong> enum to control what happens as different events change the assessment.</p>
-<pre><code class="language-java">public class JiraPlugin implements com.fuse.extender.AssessmentManager{
-     @Override
-     public Object[] assessmentChange(Assessment assessment, List&lt;Vulnerability&gt; vulnerabilities, Operation arg2) {
-            return new Object [] {assessment, vulnerabilities};
-     }
-}
-</code></pre>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JiraPlugin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">fuse</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">AssessmentManager</span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">     </span><span class="nd">@Override</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="n">Object</span><span class="o">[]</span><span class="w"> </span><span class="nf">assessmentChange</span><span class="p">(</span><span class="n">Assessment</span><span class="w"> </span><span class="n">assessment</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Vulnerability</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vulnerabilities</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">arg2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="n">assessment</span><span class="p">,</span><span class="w"> </span><span class="n">vulnerabilities</span><span class="p">};</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">     </span><span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>Note that above it returns <strong>Object [] {assessment, vulnerabilities}.</strong> This will update Faction’s database if the values change when this function returns. If you Return <strong>null</strong> it will NOT update Faction and only just send/process information.</p>
 <h2 id="putting-it-all-together">Putting It All Together</h2>
 <p>Now we have a basic functional block of code we need to make it perform the action of sending all vulnerabilities to Jira only when the assessment is finalized. To do this we create an if statement that checks the Operation enum equals Finalized.</p>
-<pre><code class="language-java">import com.fuse.elements.Assessment;
-import com.fuse.elements.Vulnerability;
-
-public class JiraPlugin implements com.fuse.extender.AssessmentManager{
-
-    @Override
-    public Object[] assessmentChange(Assessment assessment, List&lt;Vulnerability&gt; vulns, Operation opcode) {
-
-        if(opcode == Operation.Finalize) {
-            //Integration into vulnerability management system
-            for(Vulnerability vuln : vulns) {
-                //this can update vulns and send the updated values back into Faction
-                String issueId = sendVulnerbilityToJira(vuln);
-                if(issueId != null) {
-                    vuln.setTracking(issueId);
-                }
-            }
-        }
-        return new Object [] {assessment, vulns};
-    }
-}
-
-
-</code></pre>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.fuse.elements.Assessment</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.fuse.elements.Vulnerability</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JiraPlugin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">fuse</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">AssessmentManager</span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Object</span><span class="o">[]</span><span class="w"> </span><span class="nf">assessmentChange</span><span class="p">(</span><span class="n">Assessment</span><span class="w"> </span><span class="n">assessment</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Vulnerability</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vulns</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">opcode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">opcode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Operation</span><span class="p">.</span><span class="na">Finalize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="c1">//Integration into vulnerability management system</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="n">Vulnerability</span><span class="w"> </span><span class="n">vuln</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">vulns</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">                </span><span class="c1">//this can update vulns and send the updated values back into Faction</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">issueId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sendVulnerbilityToJira</span><span class="p">(</span><span class="n">vuln</span><span class="p">);</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">issueId</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">                    </span><span class="n">vuln</span><span class="p">.</span><span class="na">setTracking</span><span class="p">(</span><span class="n">issueId</span><span class="p">);</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="n">assessment</span><span class="p">,</span><span class="w"> </span><span class="n">vulns</span><span class="p">};</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>Now we just need to add the following supporting functions to send the issues to Jira using their <a href="https://docs.atlassian.com/software/jira/docs/api/REST/8.9.1/">REST API</a>. <strong>Note: To use this code you need to update the Environment Variables to use your Jira Hostname and API key. You also need to update the Project key to match your projects.</strong></p>
-<pre><code class="language-java">import java.util.Base64;
-import java.util.List;
-
-import com.fuse.elements.Assessment;
-import com.fuse.elements.Vulnerability;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-
-public class JiraPlugin implements com.fuse.extender.AssessmentManager{
-
-    @Override
-    public Object[] assessmentChange(Assessment assessment, List vulns, Operation opcode) {
-
-        if(opcode == Operation.Finalize) {
-            //Integration into vulnerability management system
-            for(Vulnerability vuln : vulns) {
-                //this can update vulns and send the updated values back into Faction
-                String issueId = sendVulnerbilityToJira(vuln);
-                if(issueId != null) {
-                    vuln.setTracking(issueId);
-                }
-            }
-        }
-        return new Object [] {assessment, vulns};
-    }
-
-    public String sendVulnerbilityToJira(Vulnerability vuln) {
-
-        JSONObject issueType = new JSONObject();
-        issueType.put(&quot;name&quot;, &quot;Bug&quot;);
-
-        JSONObject project = new JSONObject();
-        project.put(&quot;key&quot;, &quot;KAN&quot;); //Change this
-
-        JSONObject fields = new JSONObject();
-        fields.put(&quot;summary&quot;, vuln.getName());
-        fields.put(&quot;description&quot;, vuln.getDescription());
-        fields.put(&quot;project&quot;, project);
-        fields.put(&quot;issuetype&quot;, issueType);
-
-        JSONObject issue = new JSONObject();
-        issue.put(&quot;fields&quot;, fields);
-        String jiraHost = System.getenv(&quot;JIRA_HOST&quot;);
-        String jiraURL = String.format(&quot;%s%s&quot;, jiraHost, &quot;rest/api/2/issue/&quot;);
-        return httpPost(jiraURL, issue);
-    }
-
-    private String base64(String data) {
-        return &quot;Basic &quot; +Base64.getEncoder().encodeToString(data.getBytes());
-    }
-
-    private String httpPost(String url, JSONObject payload) {
-        HttpClient httpClient = HttpClientBuilder.create().build();
-        String apiKey = System.getenv(&quot;JIRA_API_KEY&quot;);
-        try {
-            HttpPost request = new HttpPost(url);
-            StringEntity params = new StringEntity(payload.toJSONString());
-            request.addHeader(&quot;content-type&quot;, &quot;application/json&quot;);
-            request.addHeader(&quot;Authorization&quot;, base64(apiKey));
-            request.setEntity(params);
-            HttpResponse response = httpClient.execute(request);
-            if( response.getStatusLine().getStatusCode() == 201) {
-                String json = EntityUtils.toString(response.getEntity());
-                JSONParser parser = new JSONParser();
-                JSONObject jsonObj = (JSONObject) parser.parse(json);
-                return (String) jsonObj.get(&quot;id&quot;);
-            }else {
-                return null;
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return &quot;&quot;;
-        } 
-
-    }
-}
-</code></pre>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Base64</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.fuse.elements.Assessment</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.fuse.elements.Vulnerability</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.http.HttpResponse</span><span class="p">;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.http.client.HttpClient</span><span class="p">;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.http.client.methods.HttpPost</span><span class="p">;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.http.entity.StringEntity</span><span class="p">;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.http.impl.client.HttpClientBuilder</span><span class="p">;</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.http.util.EntityUtils</span><span class="p">;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.json.simple.JSONObject</span><span class="p">;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.json.simple.parser.JSONParser</span><span class="p">;</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JiraPlugin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">fuse</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">AssessmentManager</span><span class="p">{</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Object</span><span class="o">[]</span><span class="w"> </span><span class="nf">assessmentChange</span><span class="p">(</span><span class="n">Assessment</span><span class="w"> </span><span class="n">assessment</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="w"> </span><span class="n">vulns</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">opcode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">opcode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Operation</span><span class="p">.</span><span class="na">Finalize</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">            </span><span class="c1">//Integration into vulnerability management system</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="n">Vulnerability</span><span class="w"> </span><span class="n">vuln</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">vulns</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">                </span><span class="c1">//this can update vulns and send the updated values back into Faction</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">issueId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sendVulnerbilityToJira</span><span class="p">(</span><span class="n">vuln</span><span class="p">);</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">issueId</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">                    </span><span class="n">vuln</span><span class="p">.</span><span class="na">setTracking</span><span class="p">(</span><span class="n">issueId</span><span class="p">);</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="n">assessment</span><span class="p">,</span><span class="w"> </span><span class="n">vulns</span><span class="p">};</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">sendVulnerbilityToJira</span><span class="p">(</span><span class="n">Vulnerability</span><span class="w"> </span><span class="n">vuln</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">        </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">issueType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">        </span><span class="n">issueType</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bug&quot;</span><span class="p">);</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">        </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">        </span><span class="n">project</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;key&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;KAN&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//Change this</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">        </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">        </span><span class="n">fields</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;summary&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">vuln</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">        </span><span class="n">fields</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;description&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">vuln</span><span class="p">.</span><span class="na">getDescription</span><span class="p">());</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">        </span><span class="n">fields</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;project&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">project</span><span class="p">);</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">        </span><span class="n">fields</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;issuetype&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">issueType</span><span class="p">);</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">        </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">issue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">        </span><span class="n">issue</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;fields&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fields</span><span class="p">);</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">jiraHost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getenv</span><span class="p">(</span><span class="s">&quot;JIRA_HOST&quot;</span><span class="p">);</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">jiraURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">jiraHost</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rest/api/2/issue/&quot;</span><span class="p">);</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">httpPost</span><span class="p">(</span><span class="n">jiraURL</span><span class="p">,</span><span class="w"> </span><span class="n">issue</span><span class="p">);</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">base64</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Basic &quot;</span><span class="w"> </span><span class="o">+</span><span class="n">Base64</span><span class="p">.</span><span class="na">getEncoder</span><span class="p">().</span><span class="na">encodeToString</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="na">getBytes</span><span class="p">());</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">httpPost</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="w">        </span><span class="n">HttpClient</span><span class="w"> </span><span class="n">httpClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HttpClientBuilder</span><span class="p">.</span><span class="na">create</span><span class="p">().</span><span class="na">build</span><span class="p">();</span>
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">apiKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getenv</span><span class="p">(</span><span class="s">&quot;JIRA_API_KEY&quot;</span><span class="p">);</span>
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a><span class="w">            </span><span class="n">HttpPost</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpPost</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a><span class="w">            </span><span class="n">StringEntity</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringEntity</span><span class="p">(</span><span class="n">payload</span><span class="p">.</span><span class="na">toJSONString</span><span class="p">());</span>
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a><span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;content-type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">);</span>
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a><span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">base64</span><span class="p">(</span><span class="n">apiKey</span><span class="p">));</span>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a><span class="w">            </span><span class="n">request</span><span class="p">.</span><span class="na">setEntity</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a><span class="w">            </span><span class="n">HttpResponse</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">httpClient</span><span class="p">.</span><span class="na">execute</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">getStatusLine</span><span class="p">().</span><span class="na">getStatusCode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">201</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EntityUtils</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">getEntity</span><span class="p">());</span>
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a><span class="w">                </span><span class="n">JSONParser</span><span class="w"> </span><span class="n">parser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONParser</span><span class="p">();</span>
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a><span class="w">                </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">jsonObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">JSONObject</span><span class="p">)</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">jsonObj</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">);</span>
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a><span class="w">            </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a><span class="w">            </span><span class="n">ex</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span>
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a><span class="p">}</span>
+</span></code></pre></div>
 <h2 id="install-it-in-your-faction">Install It In Your Faction</h2>
-<p>Build the jar file by running:</p>
-<pre><code>mvn clean compile assembly:single
-</code></pre>
+<p>Build the jar file by running:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mvn<span class="w"> </span>clean<span class="w"> </span>compile<span class="w"> </span>assembly:single
+</span></code></pre></div></p>
 <p>This will create a jar file named <strong>JiraPlugin-0.0.1-SNAPSHOT-jar-with-dependencies.jar</strong> in your ./target folder. </p>
 <p>To run it on Faction, you need to copy <strong>JiraPlugin-0.0.1-SNAPSHOT-jar-with-dependencies.jar</strong> into the <strong>/opt/faction/modules/</strong> folder on your server. The Faction web server with automatically pick up this change without restarting and will execute your custom code when when the assessment is finalized. </p>
 <p>Now when an assessment is finalized it will add All the findings to JIRA as shown in the following screenshot:</p>
@@ -725,7 +723,7 @@ public class JiraPlugin implements com.fuse.extender.AssessmentManager{
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>

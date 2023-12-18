@@ -615,12 +615,12 @@
 <p><strong>Requirements</strong>
 - Java JDK11 
 - Maven (for building the project)</p>
-<p>Run the following commands to build the war file and deploy it to the docker container. </p>
-<pre><code>git clone git@github.com:factionsecurity/faction.git
-cd faction
-mvn clean compile war:war
-docker-compose up --build
-</code></pre>
+<p>Run the following commands to build the war file and deploy it to the docker container. 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone git@github.com:factionsecurity/faction.git
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cd faction
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>mvn clean compile war:war
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>docker-compose up --build
+</span></code></pre></div></p>
 <p>Once the containers are up you can navigate to http://127.0.0.1:8080 to access your FACTION instance. 
 On the first boot, it will ask you to create an admin account. </p>
 <h2 id="import-the-vulnerability-templates">Import the Vulnerability Templates</h2>
@@ -690,7 +690,7 @@ On the first boot, it will ask you to create an admin account. </p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.d7c377c4.min.js"></script>
