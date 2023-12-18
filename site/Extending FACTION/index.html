@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../Custom%20Security%20Report%20Templates/">
       
       
-        <link rel="next" href="../Extending%20FACTION/">
+        <link rel="next" href="../FACTION%20Plugin%20Extension%20API/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Custom Security Report Templates - </title>
+        <title>Extending FACTION - </title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#general-variables" class="md-skip">
+        <a href="#faction-dev-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Custom Security Report Templates
+              Extending FACTION
             
           </span>
         </div>
@@ -238,6 +238,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Custom%20Security%20Report%20Templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Security Report Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -252,7 +272,7 @@
           
   
   <span class="md-ellipsis">
-    Custom Security Report Templates
+    Extending FACTION
   </span>
   
 
@@ -263,7 +283,7 @@
         
   
   <span class="md-ellipsis">
-    Custom Security Report Templates
+    Extending FACTION
   </span>
   
 
@@ -283,45 +303,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-variables" class="md-nav__link">
+  <a href="#faction-dev-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      GENERAL VARIABLES:
+      Faction Dev Environment
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vulnerability-tables-variables" class="md-nav__link">
+  <a href="#create-the-jira-plugin-class" class="md-nav__link">
     <span class="md-ellipsis">
-      VULNERABILITY TABLES VARIABLES:
+      Create The Jira Plugin Class
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vulnerability-findings-variables" class="md-nav__link">
+  <a href="#putting-it-all-together" class="md-nav__link">
     <span class="md-ellipsis">
-      VULNERABILITY FINDINGS VARIABLES:
+      Putting It All Together
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#css-formatting" class="md-nav__link">
+  <a href="#install-it-in-your-faction" class="md-nav__link">
     <span class="md-ellipsis">
-      CSS FORMATTING:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-severity-colors" class="md-nav__link">
-    <span class="md-ellipsis">
-      SETTING SEVERITY COLORS:
+      Install It In Your Faction
     </span>
   </a>
   
@@ -331,26 +342,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Extending%20FACTION/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Extending FACTION
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -460,45 +451,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-variables" class="md-nav__link">
+  <a href="#faction-dev-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      GENERAL VARIABLES:
+      Faction Dev Environment
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vulnerability-tables-variables" class="md-nav__link">
+  <a href="#create-the-jira-plugin-class" class="md-nav__link">
     <span class="md-ellipsis">
-      VULNERABILITY TABLES VARIABLES:
+      Create The Jira Plugin Class
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vulnerability-findings-variables" class="md-nav__link">
+  <a href="#putting-it-all-together" class="md-nav__link">
     <span class="md-ellipsis">
-      VULNERABILITY FINDINGS VARIABLES:
+      Putting It All Together
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#css-formatting" class="md-nav__link">
+  <a href="#install-it-in-your-faction" class="md-nav__link">
     <span class="md-ellipsis">
-      CSS FORMATTING:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-severity-colors" class="md-nav__link">
-    <span class="md-ellipsis">
-      SETTING SEVERITY COLORS:
+      Install It In Your Faction
     </span>
   </a>
   
@@ -522,187 +504,181 @@
   
 
 
-  <h1>Custom Security Report Templates</h1>
+  <h1>Extending FACTION</h1>
 
-<p><img alt="" src="../files/Pasted%20image%2020231217155942.png" /></p>
-<p>The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports you need to use the variables listed below. Entering these into your DOCX reports will auto replace assessment and vulnerability text when the report is generated. You can even use the same variables into many of the assessor input fields outside of the report template (like Risk Assessment Summaries) and it will auto populate the fields when the report is generated.</p>
-<p>You can download the sample template here: <a href="https://github.com/factionsecurity/report_templates">Sample Template</a></p>
-<h3 id="general-variables">GENERAL VARIABLES:</h3>
-<p>All of these variables can be used anywhere in the DOCX template. Those with a star ⭐️ can be used in the web interface to assist in creating common reusable templates.</p>
-<ul>
-<li><strong>${TOC}</strong> – Placeholder for the Table of Contents</li>
-<li><strong>${summary1}</strong> – The high level summary</li>
-<li><strong>${summary2}</strong> – The objective and scope</li>
-<li><strong>${asmtId}</strong> – Internal Database ID ⭐️</li>
-<li><strong>${asmtAppid}</strong> – The assigned Application ID ⭐️</li>
-<li><strong>${asmtName}</strong> – The Assessment Name ⭐️</li>
-<li><strong>${asmtAssessor}</strong> – The first assessor assigned to the assessment ⭐️</li>
-<li><strong>${asmtAssessor_Email}</strong> – The first assessor email address ⭐️</li>
-<li><strong>${asmtAssessors_Lines}</strong> – All Assessors split into lines ⭐️</li>
-<li><strong>${asmtAssessors_Comma}</strong> – All Assessors split into a comma delimited list ⭐️</li>
-<li><strong>${asmtAssessor_Bullets}</strong> – All Assessors split into a bulleted list ⭐️</li>
-<li><strong>${remediation}</strong> – The Remediation Person assigned to the assessment ⭐️</li>
-<li><strong>${riskCount*}</strong> – The number of findings at the RiskLevel 0-9 ⭐️</li>
-<li><strong>${riskTotal}</strong> – The total number of findings at all RiskLevels ⭐️</li>
-<li><strong>${asmtTeam}</strong> – The Assessor Team Name ⭐️</li>
-<li><strong>${asmtType}</strong> – The Type of the Assessment ⭐️</li>
-<li><strong>${asmtStart}</strong> – The Start date of the assessment ⭐️</li>
-<li><strong>${asmtEnd}</strong> – The End date of the assessment ⭐️</li>
-<li><strong>${asmtAccessKey}</strong> – Guid to access the client retest queue. ⭐️</li>
-<li><strong>${today}</strong> – Day the report is generated ⭐️</li>
-<li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf” ⭐️</li>
-</ul>
-<h3 id="vulnerability-tables-variables">VULNERABILITY TABLES VARIABLES:</h3>
-<p>These are only available inside tables.</p>
-<ul>
-<li><strong>${vulnTable}</strong> – This defines a table to be a vulnerability listing table.</li>
-<li><strong>${vulnName}</strong> – The Vulnerability name</li>
-<li><strong>${rec}</strong> – Vulnerability Recommendation</li>
-<li><strong>${desc}</strong> – Vulnerability Description</li>
-<li><strong>${category}</strong> – Category of the vulnerability</li>
-<li><strong>${severity}</strong> – Severity of each vulnerability.</li>
-<li><strong>${likelihood}</strong> – Likelyhood of the vulnerability</li>
-<li><strong>${impact}</strong> – Impact of the vulnerability</li>
-<li><strong>${cvss}</strong> – cvss score of the vulnerability</li>
-<li><strong>${status}</strong> – CVSS Score of the vulnerability</li>
-<li><strong>${count}</strong> – Row Count of the vulnerability</li>
-<li><strong>${tracking}</strong> – Tracking number of the vulnerability</li>
-<li><strong>${vid}</strong> – Vulnerability internal database id</li>
-<li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”</li>
-<li><strong>${color  key=value,key=value}</strong> – The color of the text is based on key-value pairs. <a href="https://www.factionsecurity.com/manual/custom-report-templates/#Colors">See below for how to set up</a> <a href="https://www.factionsecurity.com/manual/custom-report-templates/#Severity%20Colors">colors.</a></li>
-<li><strong>${cells key=value,key=value}</strong> – The color of the table cell is based on key-value pairs. <a href="https://www.factionsecurity.com/manual/custom-report-templates/#Colors">See below for how to set up colors.</a></li>
-<li><strong>${loop}</strong> – This variable tells the report generator which row will be repeated.</li>
-<li><strong>${loop-*}</strong> – This allows multiple rows to be repeated. Example ${loop-1} will repeat the row but the one below it.</li>
-<li><strong>${details}</strong> – This will insert screenshots and exploit steps for each vulnerability.</li>
-</ul>
-<p><strong>Example Table:</strong></p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>${vulnTable}</td>
-<td>${color Critical=C00000,High=FFC000}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>ID</td>
-<td>Finding Name</td>
-<td>Impact</td>
-<td>Severity</td>
-</tr>
-<tr>
-<td>${loop}</td>
-<td>${count}. ${vulnName}</td>
-<td>${impact}</td>
-<td>${severity}</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example Table with Technical findings:</strong></p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>${vulntable}</td>
-<td>${color Critical=C00000,High=FFC000}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>ID</td>
-<td>Finding Name</td>
-<td>Impact</td>
-<td>Severity</td>
-</tr>
-<tr>
-<td>${loop-1} ${count}</td>
-<td>${vulnname}</td>
-<td>${impact}</td>
-<td>${severity}</td>
-</tr>
-<tr>
-<td>${exBegin}<br><br>Example ${count}:  <br>${exploit}<br><br>${exEnd}</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="vulnerability-findings-variables">VULNERABILITY FINDINGS VARIABLES:</h3>
-<p><strong>For when you do not want to use tables to display your vulnerability information. You can use the following variables for inserting vulnerability information outside of a table</strong></p>
-<ul>
-<li><strong>${fiBegin} / ${fiEnd}</strong> – Block to repeat against all findings.</li>
-<li><strong>${vulnName}</strong> – The Vulnerability name</li>
-<li><strong>${rec}</strong> – Vulnerability Recommendation</li>
-<li><strong>${desc}</strong> – Vulnerability Description</li>
-<li><strong>${category}</strong> – Category of the vulnerability</li>
-<li><strong>${severity}</strong> – Severity of each vulnerability.</li>
-<li><strong>${likelihood}</strong> – Likelihood of the vulnerability</li>
-<li><strong>${impact}</strong> – Impact of the vulnerability</li>
-<li><strong>${cvss}</strong> – cvss score of the vulnerability</li>
-<li><strong>${status}</strong> – CVSS Score of the vulnerability</li>
-<li><strong>${count}</strong> – Row Count of the vulnerability</li>
-<li><strong>${tracking}</strong> – Tracking number of the vulnerability</li>
-<li><strong>${vid}</strong> – Vulnerability internal database id</li>
-<li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”</li>
-<li><strong>${details}</strong> – This will insert screenshots and exploit steps for each vulnerability.</li>
-</ul>
-<h3 id="css-formatting">CSS FORMATTING:</h3>
-<p>All of the text generated from Faction is HTML. You can control how it is rendered in the DOCX format using the CSS editor in the Report Designer. You will need to set the css to match your report templates. Things like font and size will need to match. Images will need to be forced to resize to the correct dimensions to fit in your reports.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231217160124.png" /></p>
-<h3 id="setting-severity-colors">SETTING SEVERITY COLORS:</h3>
-<p>When building reports you most likely will set the text or cell to the color that matches the severity of the finding. To achieve this in FACTION you need to set a default color in the docx template that matches the severity category (i.e. Overall, Likelihood, and Impact). These default colors are in the table below:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Category</strong></td>
-<td><strong>Color Hex</strong></td>
-</tr>
-<tr>
-<td>Overall Severity</td>
-<td>#FAC701</td>
-</tr>
-<tr>
-<td>Likelihood</td>
-<td>#FAC702</td>
-</tr>
-<tr>
-<td>Impact</td>
-<td>#FAC703</td>
-</tr>
-</tbody>
-</table>
-<p>For Example, a table in MS Word below has pre-filled the color codes for each severity name and category.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231217160231.png" /></p>
-<p>Right-click the overall severity variable, <strong>${severity}</strong>; you can see the default hex code for this color is #FAC701. Likelihood would be set to #FAC02, and Impact would be set to #FAC703.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231217160250.png" /></p>
-<p>Setting the background color for cells works in much the same way. Notice we use the ${cells} variable instead.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231217160305.png" /></p>
-<p>Right-click on the cell and set the color you may only want to use the Overall severity option but you can have multiple cells with each category if you wish.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231217160321.png" /></p>
-<p>Below is an example of the generated report table with colors replaced.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231217160335.png" /></p>
+<p>Faction can extend its functionality on the server side. If you are familiar with writing BurpSuite extensions then this process should be somewhat familiar to you. If you are not it’s OK. We will walk through the specifics below.</p>
+<p>In this example, we will create a JIRA plugin that will create issues for each vulnerability when the assessment is finalized.</p>
+<p>The source code for this example can be <a href="https://github.com/factionsecurity/JiraPluginExample">downloaded here</a>.</p>
+<h2 id="faction-dev-environment">Faction Dev Environment</h2>
+<ol>
+<li>Create a new Eclipse Maven Java Project</li>
+<li>Add the following lines to your <em>pom.xml</em> file to enable the Faction Extendar API. This adds the Extendar API Repository location, the Extendar Library, and configures the build plugin, and Manifest file.</li>
+</ol>
+<pre><code class="language-xml">&lt;repositories&gt;
+   &lt;repository&gt;
+      &lt;id&gt;FactionExtender&lt;/id&gt;
+      &lt;url&gt;https://github.com/factionsecurity/faction-extender/raw/mvn-repo/&lt;/url&gt;
+      &lt;snapshots&gt;
+         &lt;enabled&gt;true&lt;/enabled&gt;
+         &lt;updatePolicy&gt;always&lt;/updatePolicy&gt;
+      &lt;/snapshots&gt;
+   &lt;/repository&gt;
+&lt;/repositories&gt;
+&lt;dependencies&gt;
+   &lt;dependency&gt;
+      &lt;groupId&gt;FactionExtender&lt;/groupId&gt;
+      &lt;artifactId&gt;FactionExtender&lt;/artifactId&gt;
+      &lt;version&gt;1.1&lt;/version&gt;
+   &lt;/dependency&gt;
+&lt;/dependencies&gt;
+&lt;build&gt;
+   &lt;plugins&gt;
+      &lt;plugin&gt;
+         &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;
+         &lt;configuration&gt;
+         &lt;descriptorRefs&gt;
+            &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;
+         &lt;/descriptorRefs&gt;
+         &lt;archive&gt; 
+            &lt;manifestEntries&gt;
+               &lt;Import-Library&gt;org.faction.JiraPlugin&lt;/Import-Library&gt;
+            &lt;/manifestEntries&gt;
+         &lt;/archive&gt;
+         &lt;/configuration&gt;
+       &lt;/plugin&gt;
+   &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+<p>The <em>maven-assembly-plugin</em> contains the manifest entries which is important for Faction to be able to find the correct class files to run. You will need to update the <strong>Import-Library</strong> directive to point to your class.</p>
+<h2 id="create-the-jira-plugin-class">Create The Jira Plugin Class</h2>
+<p>Create a Class named <strong>JiraPlugin</strong> in <em>src/main/java</em>. This class will implement  <em>com.fuse.extender.AssessmentManager</em> as shown below. This code will trigger whenever a change happens to an assessment. You can use the <strong>Operation</strong> enum to control what happens as different events change the assessment.</p>
+<pre><code class="language-java">public class JiraPlugin implements com.fuse.extender.AssessmentManager{
+     @Override
+     public Object[] assessmentChange(Assessment assessment, List&lt;Vulnerability&gt; vulnerabilities, Operation arg2) {
+            return new Object [] {assessment, vulnerabilities};
+     }
+}
+</code></pre>
+<p>Note that above it returns <strong>Object [] {assessment, vulnerabilities}.</strong> This will update Faction’s database if the values change when this function returns. If you Return <strong>null</strong> it will NOT update Faction and only just send/process information.</p>
+<h2 id="putting-it-all-together">Putting It All Together</h2>
+<p>Now we have a basic functional block of code we need to make it perform the action of sending all vulnerabilities to Jira only when the assessment is finalized. To do this we create an if statement that checks the Operation enum equals Finalized.</p>
+<pre><code class="language-java">import com.fuse.elements.Assessment;
+import com.fuse.elements.Vulnerability;
+
+public class JiraPlugin implements com.fuse.extender.AssessmentManager{
+
+    @Override
+    public Object[] assessmentChange(Assessment assessment, List&lt;Vulnerability&gt; vulns, Operation opcode) {
+
+        if(opcode == Operation.Finalize) {
+            //Integration into vulnerability management system
+            for(Vulnerability vuln : vulns) {
+                //this can update vulns and send the updated values back into Faction
+                String issueId = sendVulnerbilityToJira(vuln);
+                if(issueId != null) {
+                    vuln.setTracking(issueId);
+                }
+            }
+        }
+        return new Object [] {assessment, vulns};
+    }
+}
+
+
+</code></pre>
+<p>Now we just need to add the following supporting functions to send the issues to Jira using their <a href="https://docs.atlassian.com/software/jira/docs/api/REST/8.9.1/">REST API</a>. <strong>Note: To use this code you need to update the Environment Variables to use your Jira Hostname and API key. You also need to update the Project key to match your projects.</strong></p>
+<pre><code class="language-java">import java.util.Base64;
+import java.util.List;
+
+import com.fuse.elements.Assessment;
+import com.fuse.elements.Vulnerability;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.util.EntityUtils;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+public class JiraPlugin implements com.fuse.extender.AssessmentManager{
+
+    @Override
+    public Object[] assessmentChange(Assessment assessment, List vulns, Operation opcode) {
+
+        if(opcode == Operation.Finalize) {
+            //Integration into vulnerability management system
+            for(Vulnerability vuln : vulns) {
+                //this can update vulns and send the updated values back into Faction
+                String issueId = sendVulnerbilityToJira(vuln);
+                if(issueId != null) {
+                    vuln.setTracking(issueId);
+                }
+            }
+        }
+        return new Object [] {assessment, vulns};
+    }
+
+    public String sendVulnerbilityToJira(Vulnerability vuln) {
+
+        JSONObject issueType = new JSONObject();
+        issueType.put(&quot;name&quot;, &quot;Bug&quot;);
+
+        JSONObject project = new JSONObject();
+        project.put(&quot;key&quot;, &quot;KAN&quot;); //Change this
+
+        JSONObject fields = new JSONObject();
+        fields.put(&quot;summary&quot;, vuln.getName());
+        fields.put(&quot;description&quot;, vuln.getDescription());
+        fields.put(&quot;project&quot;, project);
+        fields.put(&quot;issuetype&quot;, issueType);
+
+        JSONObject issue = new JSONObject();
+        issue.put(&quot;fields&quot;, fields);
+        String jiraHost = System.getenv(&quot;JIRA_HOST&quot;);
+        String jiraURL = String.format(&quot;%s%s&quot;, jiraHost, &quot;rest/api/2/issue/&quot;);
+        return httpPost(jiraURL, issue);
+    }
+
+    private String base64(String data) {
+        return &quot;Basic &quot; +Base64.getEncoder().encodeToString(data.getBytes());
+    }
+
+    private String httpPost(String url, JSONObject payload) {
+        HttpClient httpClient = HttpClientBuilder.create().build();
+        String apiKey = System.getenv(&quot;JIRA_API_KEY&quot;);
+        try {
+            HttpPost request = new HttpPost(url);
+            StringEntity params = new StringEntity(payload.toJSONString());
+            request.addHeader(&quot;content-type&quot;, &quot;application/json&quot;);
+            request.addHeader(&quot;Authorization&quot;, base64(apiKey));
+            request.setEntity(params);
+            HttpResponse response = httpClient.execute(request);
+            if( response.getStatusLine().getStatusCode() == 201) {
+                String json = EntityUtils.toString(response.getEntity());
+                JSONParser parser = new JSONParser();
+                JSONObject jsonObj = (JSONObject) parser.parse(json);
+                return (String) jsonObj.get(&quot;id&quot;);
+            }else {
+                return null;
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return &quot;&quot;;
+        } 
+
+    }
+}
+</code></pre>
+<h2 id="install-it-in-your-faction">Install It In Your Faction</h2>
+<p>Build the jar file by running:</p>
+<pre><code>mvn clean compile assembly:single
+</code></pre>
+<p>This will create a jar file named <strong>JiraPlugin-0.0.1-SNAPSHOT-jar-with-dependencies.jar</strong> in your ./target folder. </p>
+<p>To run it on Faction, you need to copy <strong>JiraPlugin-0.0.1-SNAPSHOT-jar-with-dependencies.jar</strong> into the <strong>/opt/faction/modules/</strong> folder on your server. The Faction web server with automatically pick up this change without restarting and will execute your custom code when when the assessment is finalized. </p>
+<p>Now when an assessment is finalized it will add All the findings to JIRA as shown in the following screenshot:</p>
+<p><img alt="" src="../files/Pasted%20image%2020231218085522.png" /></p>
 
 
 

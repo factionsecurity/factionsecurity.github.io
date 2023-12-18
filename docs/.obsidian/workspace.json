@@ -15,7 +15,7 @@
               "state": {
                 "file": "Custom Security Report Templates.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           },
@@ -27,12 +27,72 @@
               "state": {
                 "file": "index.md",
                 "mode": "source",
-                "source": false
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "e57e9f9577101086",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Managed FACTION Setup.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "69aceda4060f54d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Managed FACTION Setup.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "da779b02f5334fd6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Managed FACTION Setup.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "3e80121de3b9f4c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Managed FACTION Setup.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "ad979f7a9e2f40bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FACTION Plugin Extension API.md",
+                "mode": "source",
+                "source": true
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -98,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "FACTION Plugin Extension API.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "FACTION Plugin Extension API.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "FACTION Plugin Extension API.md"
               }
             }
           }
@@ -159,21 +219,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eaf751a611399bf9",
+  "active": "ad979f7a9e2f40bf",
   "lastOpenFiles": [
-    "test.md",
-    "index.md",
-    "files/Pasted image 20231217161517.png",
+    "Managed FACTION Setup.md",
+    "FACTION Plugin Extension API.md",
     "Custom Security Report Templates.md",
+    "Extending FACTION.md",
+    "Integrate Faction into OAuth Solutions.md",
+    "files/Pasted image 20231218085522.png",
+    "Self-Hosted FACTION Setup.md",
+    "files/Pasted image 20231218082756.png",
+    "files/Pasted image 20231218082632.png",
+    "files/Pasted image 20231218082551.png",
+    "files/Pasted image 20231218082323.png",
+    "files/Pasted image 20231218082151.png",
+    "files/Pasted image 20231218082044.png",
+    "files/Pasted image 20231218081745.png",
+    "files/Pasted image 20231218081706.png",
+    "files/Pasted image 20231218081607.png",
+    "index.md",
+    "test.md",
     "Pasted.md",
-    "files/Pasted image 20231217155942.png",
     "files",
-    "images",
-    "files/Pasted image 20231217160335.png",
-    "files/Pasted image 20231217160321.png",
-    "files/Pasted image 20231217160305.png",
-    "files/Pasted image 20231217160250.png",
-    "files/Pasted image 20231217160231.png",
-    "files/Pasted image 20231217160124.png"
+    "images"
   ]
 }

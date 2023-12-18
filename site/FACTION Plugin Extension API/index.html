@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../Extending%20FACTION/">
       
-        <link rel="next" href="Custom%20Security%20Report%20Templates/">
+      
+        <link rel="next" href="../Integrate%20Faction%20into%20OAuth%20Solutions/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title></title>
+        <title>FACTION Plugin Extension API - </title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-faction" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
+    <a href=".." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
       
   <img src="/img/favicon.png" alt="logo">
 
@@ -103,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to FACTION
+              FACTION Plugin Extension API
             
           </span>
         </div>
@@ -190,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+    <a href=".." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
       
   <img src="/img/favicon.png" alt="logo">
 
@@ -216,6 +218,66 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to FACTION
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Custom%20Security%20Report%20Templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Security Report Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Extending%20FACTION/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extending FACTION
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -225,25 +287,23 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Welcome to FACTION
+    FACTION Plugin Extension API
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Welcome to FACTION
+    FACTION Plugin Extension API
   </span>
   
 
@@ -255,8 +315,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -265,63 +323,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-setup" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Setup
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#import-the-vulnerability-templates" class="md-nav__link">
+  <a href="#faction-extension-apis" class="md-nav__link">
     <span class="md-ellipsis">
-      Import the Vulnerability Templates
+      Faction Extension APIs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Faction Extension APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-inventory-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Inventory Extension
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#customize-reports" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#assessment-manager-extension" class="md-nav__link">
     <span class="md-ellipsis">
-      Customize reports
+      Assessment Manager Extension
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#burp-suite-extension" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-manager-extension" class="md-nav__link">
     <span class="md-ellipsis">
-      Burp Suite Extension
+      Vulnerability Manager Extension
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#manuals-and-tutorials" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#verificationretest-manager-extension" class="md-nav__link">
     <span class="md-ellipsis">
-      Manuals and Tutorials
+      Verification(Retest) Manager Extension
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dont-want-to-host-it-yourself" class="md-nav__link">
-    <span class="md-ellipsis">
-      Don't want to host it yourself?
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
+  <a href="#additional-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Screenshots
+      Additional Resources
     </span>
   </a>
   
@@ -342,67 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Custom%20Security%20Report%20Templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Custom Security Report Templates
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Extending%20FACTION/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Extending FACTION
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="FACTION%20Plugin%20Extension%20API/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FACTION Plugin Extension API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Integrate%20Faction%20into%20OAuth%20Solutions/" class="md-nav__link">
+      <a href="../Integrate%20Faction%20into%20OAuth%20Solutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Managed%20FACTION%20Setup/" class="md-nav__link">
+      <a href="../Managed%20FACTION%20Setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -442,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Self-Hosted%20FACTION%20Setup/" class="md-nav__link">
+      <a href="../Self-Hosted%20FACTION%20Setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -472,8 +476,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -482,63 +484,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-setup" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Setup
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#import-the-vulnerability-templates" class="md-nav__link">
+  <a href="#faction-extension-apis" class="md-nav__link">
     <span class="md-ellipsis">
-      Import the Vulnerability Templates
+      Faction Extension APIs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Faction Extension APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-inventory-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Inventory Extension
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#customize-reports" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#assessment-manager-extension" class="md-nav__link">
     <span class="md-ellipsis">
-      Customize reports
+      Assessment Manager Extension
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#burp-suite-extension" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-manager-extension" class="md-nav__link">
     <span class="md-ellipsis">
-      Burp Suite Extension
+      Vulnerability Manager Extension
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#manuals-and-tutorials" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#verificationretest-manager-extension" class="md-nav__link">
     <span class="md-ellipsis">
-      Manuals and Tutorials
+      Verification(Retest) Manager Extension
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dont-want-to-host-it-yourself" class="md-nav__link">
-    <span class="md-ellipsis">
-      Don't want to host it yourself?
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
+  <a href="#additional-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Screenshots
+      Additional Resources
     </span>
   </a>
   
@@ -562,88 +570,83 @@
   
 
 
-<h1 id="welcome-to-faction">Welcome to FACTION</h1>
-<p><strong>PenTesting Report Generation and Collaboration Engine</strong>
-<img alt="image" src="https://github.com/factionsecurity/faction/assets/2343831/d9237bed-302f-4e6a-9716-22ae88d0dc36" /></p>
-<p>FACTION is your entire assessment workflow in a box. With FACTION you can:</p>
-<ol>
-<li>
-<p>Automate pen testing and security assessment Reports</p>
-</li>
-<li>
-<p>Peer review and track changes for reports</p>
-</li>
-<li>
-<p>Create customized DOCX templates for different assessment types and retests</p>
-</li>
-<li>
-<p>Real-time collaboration with assessors via the web app and <a href="https://www.factionsecurity.com/project/faction-burpsuite-extension/">Burp Suite Extensions</a></p>
-</li>
-<li>
-<p>Customizable vulnerability templates with over 75 prepopulated</p>
-</li>
-<li>
-<p>Easily manage assessment teams and track progress across your organization</p>
-</li>
-<li>
-<p>Track vulnerability remediation efforts with custom SLA warnings and alerts  </p>
-</li>
-<li>
-<p>Full Rest API to integrate with other tools                     </p>
-</li>
-</ol>
-<p>Other Features:           </p>
-<ol>
-<li>
-<p>LDAP Integration       </p>
-</li>
-<li>
-<p>OAUTH2.0 Integration</p>
-</li>
-<li>
-<p>SMTP integration </p>
-</li>
-<li>
-<p>Extendable with Custom Plugins similar to Burp Extender.</p>
-</li>
-<li>
-<p>Custom Report Variables</p>
-</li>
-</ol>
-<p><strong>Want to see it in action?</strong> -&gt; <a href="https://www.factionsecurity.com/2023/03/24/write-your-first-vulnerability-report-in-faction/">Faction Video Overview</a></p>
-<h2 id="quick-setup">Quick Setup</h2>
-<p><strong>Requirements</strong>
-- Java JDK11 
-- Maven (for building the project)</p>
-<p>Run the following commands to build the war file and deploy it to the docker container. </p>
-<pre><code>git clone git@github.com:factionsecurity/faction.git
-cd faction
-mvn clean compile war:war
-docker-compose up --build
+  <h1>FACTION Plugin Extension API</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>Faction has an API similar to what you might find in BurpSuite Extensions. You can create custom modules in jar files and copy them to the server and Faction will automatically pick them up and do your custom processing on certain events.</p>
+<p>You can extend things like Application Inventory Search so that it queries an external database to return results before scheduling assessments.</p>
+<p>If you have configured custom fields you can write an extension to search another database and update things like application owner or other metadata about the application that Faction does not support by default.</p>
+<p>You can download an example <a href="https://github.com/factionsecurity/JiraPluginExample">Extension here.</a></p>
+<p>Below is a list of the current Hooks:</p>
+<h2 id="faction-extension-apis">Faction Extension APIs</h2>
+<h3 id="application-inventory-extension">Application Inventory Extension</h3>
+<pre><code class="language-java">public class MyPlugin implements com.fuse.extender.ApplicationInventory{
+
+    @Override
+    public InventoryResult[] search(String arg0, String arg1) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+}
 </code></pre>
-<p>Once the containers are up you can navigate to http://127.0.0.1:8080 to access your FACTION instance. 
-On the first boot, it will ask you to create an admin account. </p>
-<h2 id="import-the-vulnerability-templates">Import the Vulnerability Templates</h2>
-<ol>
-<li>Navigate to Admin -&gt; Default Vulnerabilities</li>
-<li>Click import VulnDB. </li>
-</ol>
-<h2 id="customize-reports">Customize reports</h2>
-<p>You can find out more information about creating your own custom report templates here:
-<a href="https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/">Customize Report Templates</a></p>
-<h2 id="burp-suite-extension">Burp Suite Extension</h2>
-<p><a href="https://www.factionsecurity.com/project/faction-burpsuite-extension/">Burp Suite Extensions</a></p>
-<h2 id="manuals-and-tutorials">Manuals and Tutorials</h2>
-<p><a href="https://www.factionsecurity.com/manual/">Manual</a></p>
-<h2 id="dont-want-to-host-it-yourself">Don't want to host it yourself?</h2>
-<p>We can provide hosting for your instance. All instances are single tenants so you don't have to worry about sharing infrastructure with untrusted parties. Navigate to <a href="https://www.factionsecurity.com">https://www.factionsecurity.com to learn more</a>. </p>
-<h2 id="screenshots">Screenshots</h2>
-<p><strong>Vulnerability Templates</strong>
-<img alt="image" src="https://github.com/factionsecurity/faction/assets/2343831/b6fa6a0b-34a9-46cf-87cb-6aeb2b5d3347" /></p>
-<p><strong>Assessment Scheduling</strong>
-<img alt="image" src="https://github.com/factionsecurity/faction/assets/2343831/7410f74e-3854-41e9-843f-7ca44d79cc54" /></p>
-<p><strong>Peer Review and Track Changes</strong>
-<img alt="image" src="https://github.com/factionsecurity/faction/assets/2343831/fa72a72b-2c95-4c2c-bad1-5b34aab7fd13" /></p>
+<ul>
+<li>Triggers on Assessment Scheduling and will then query external sources instead of the local database.</li>
+<li>Can search based on Application ID or Application name. It will return an InventoryResult Object (explained later)</li>
+</ul>
+<h3 id="assessment-manager-extension">Assessment Manager Extension</h3>
+<pre><code class="language-java">public class MyPlugin implements com.fuse.extender.AssessmentManager{
+
+    @Override
+    public Object[] assessmentChange(Assessment arg0, List&lt;Vulnerability&gt; arg1, Operation arg2) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+}
+</code></pre>
+<p>Typical use case scenario: When an assessor finalizes an assessment this module can send all the vulnerabilities to another tracking system like JIRA and return the tracking numbers to Faction.</p>
+<ul>
+<li>Triggers on Assessment Create, Update, Delete, Finalized, Peer Review Created, Peer Review Complete, Peer Review Accepted</li>
+<li>Accepts the Triggered Assessment and List of vulnerabilities associated with the assessment.</li>
+<li>Returns an Object Array that is the updated Assessment and updated List of vulnerabilities</li>
+<li>If the return object is null Faction will not update locally</li>
+</ul>
+<h3 id="vulnerability-manager-extension">Vulnerability Manager Extension</h3>
+<pre><code class="language-java">public class MyPlugin implements com.fuse.extender.VulnerabilityManager{
+
+    @Override
+    public Vulnerability vulnChange(Assessment arg0, Vulnerability arg1, Operation arg2) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+}
+</code></pre>
+<p>Typical use case scenario: When an assessor creates or updates a vulnerability the module can send the vulnerability to another tracking system like JIRA and return the tracking number to Faction.</p>
+<ul>
+<li>Triggers on Assessment Create, Update, Delete</li>
+<li>Accepts the Triggered Assessment and vulnerability that is being processed.</li>
+<li>Returns the updated vulnerability</li>
+<li>If the return object is null then Faction will not update locally</li>
+</ul>
+<h3 id="verificationretest-manager-extension">Verification(Retest) Manager Extension</h3>
+<pre><code>public class MyPlugin implements com.fuse.extender.VerificationManager{
+
+    @Override
+    public void verificationChange(User arg0, Vulnerability arg1, String arg2, Date arg3, Date arg4, Operation arg5) {
+        // TODO Auto-generated method stub
+
+    }
+}
+</code></pre>
+<ul>
+<li>Triggers on Pass, Fail, Cancel, Assigned</li>
+<li>Accepts the Triggered Assigned User, Vulnerability Assigned, Start and end dates for the verification.</li>
+<li>Returns the updated vulnerability</li>
+</ul>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="/Extending%20FACTION/">Building a JIRA Extension</a></li>
+</ul>
 
 
 
@@ -690,10 +693,10 @@ On the first boot, it will ask you to create an admin account. </p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

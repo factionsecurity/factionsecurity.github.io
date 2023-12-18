@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../FACTION%20Plugin%20Extension%20API/">
       
-        <link rel="next" href="Custom%20Security%20Report%20Templates/">
+      
+        <link rel="next" href="../Managed%20FACTION%20Setup/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title></title>
+        <title>Integrate Faction into OAuth Solutions - </title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-faction" class="md-skip">
+        <a href="#google-oauth-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
+    <a href=".." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
       
   <img src="/img/favicon.png" alt="logo">
 
@@ -103,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to FACTION
+              Integrate Faction into OAuth Solutions
             
           </span>
         </div>
@@ -190,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+    <a href=".." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
       
   <img src="/img/favicon.png" alt="logo">
 
@@ -216,30 +218,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Welcome to FACTION
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -248,89 +230,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#quick-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quick Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#import-the-vulnerability-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Import the Vulnerability Templates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customize-reports" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customize reports
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#burp-suite-extension" class="md-nav__link">
-    <span class="md-ellipsis">
-      Burp Suite Extension
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manuals-and-tutorials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manuals and Tutorials
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dont-want-to-host-it-yourself" class="md-nav__link">
-    <span class="md-ellipsis">
-      Don't want to host it yourself?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
-    <span class="md-ellipsis">
-      Screenshots
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -342,7 +241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Custom%20Security%20Report%20Templates/" class="md-nav__link">
+      <a href="../Custom%20Security%20Report%20Templates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Extending%20FACTION/" class="md-nav__link">
+      <a href="../Extending%20FACTION/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="FACTION%20Plugin%20Extension%20API/" class="md-nav__link">
+      <a href="../FACTION%20Plugin%20Extension%20API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,10 +298,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Integrate%20Faction%20into%20OAuth%20Solutions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -411,6 +319,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -422,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Managed%20FACTION%20Setup/" class="md-nav__link">
+      <a href="../Managed%20FACTION%20Setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -442,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Self-Hosted%20FACTION%20Setup/" class="md-nav__link">
+      <a href="../Self-Hosted%20FACTION%20Setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -475,77 +384,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#quick-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quick Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#import-the-vulnerability-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Import the Vulnerability Templates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customize-reports" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customize reports
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#burp-suite-extension" class="md-nav__link">
-    <span class="md-ellipsis">
-      Burp Suite Extension
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manuals-and-tutorials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manuals and Tutorials
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dont-want-to-host-it-yourself" class="md-nav__link">
-    <span class="md-ellipsis">
-      Don't want to host it yourself?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
-    <span class="md-ellipsis">
-      Screenshots
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -562,88 +400,64 @@
   
 
 
-<h1 id="welcome-to-faction">Welcome to FACTION</h1>
-<p><strong>PenTesting Report Generation and Collaboration Engine</strong>
-<img alt="image" src="https://github.com/factionsecurity/faction/assets/2343831/d9237bed-302f-4e6a-9716-22ae88d0dc36" /></p>
-<p>FACTION is your entire assessment workflow in a box. With FACTION you can:</p>
+<p>Faction seamlessly integrates with your existing enterprise authentication solutions, ensuring a smooth and secure user experience. Leveraging widely adopted solutions such as LDAP and OAuth, Faction effortlessly integrates into any enterprise environment. Our platform is designed to adapt to your authentication infrastructure, providing a hassle-free implementation process and enhancing the overall efficiency of your organization’s security framework. With Faction, you can trust in a unified and streamlined authentication experience tailored to your enterprise needs.</p>
+<p>The article will walk through the steps needed to integrate <a href="https://www.factionsecurity.com/">Faction</a> into <a href="https://console.developers.google.com/">Google Auth</a> or <a href="https://auth0.com/">Auth0</a>.</p>
+<h1 id="google-oauth-setup">Google OAuth Setup</h1>
 <ol>
-<li>
-<p>Automate pen testing and security assessment Reports</p>
-</li>
-<li>
-<p>Peer review and track changes for reports</p>
-</li>
-<li>
-<p>Create customized DOCX templates for different assessment types and retests</p>
-</li>
-<li>
-<p>Real-time collaboration with assessors via the web app and <a href="https://www.factionsecurity.com/project/faction-burpsuite-extension/">Burp Suite Extensions</a></p>
-</li>
-<li>
-<p>Customizable vulnerability templates with over 75 prepopulated</p>
-</li>
-<li>
-<p>Easily manage assessment teams and track progress across your organization</p>
-</li>
-<li>
-<p>Track vulnerability remediation efforts with custom SLA warnings and alerts  </p>
-</li>
-<li>
-<p>Full Rest API to integrate with other tools                     </p>
-</li>
+<li>Log into your company’s <a href="https://console.developers.google.com/">Google API Console</a>.</li>
+<li>Click on <strong>Credentials</strong> from the left navigation.</li>
+<li>Click <strong>+ Create Credentials</strong> from the top navigation.</li>
+<li>Select <strong>OAuth Client ID.</strong></li>
+<li>Select <strong>Web Application</strong> as the application type.</li>
+<li>Name the application something specific like <strong>Faction OAuth Integration.</strong> But the name does not matter.</li>
+<li>Under <strong>Authorized redirect URLs</strong> click <strong>+ ADD URI</strong>.</li>
+<li>Enter the domain of your Faction Instance and append <strong>/oauth/callback?client_name=OidcClient</strong> to the path. Example: If you used Faction to host the site your URL would look like this:<br />
+    https://furry-hyena-1111.factionsecurity.com/oauth/callback?client_name=OidcClient</li>
+<li>Then Click <strong>Create</strong>.</li>
+<li>Take Note of the <strong>Client Id</strong> and <strong>Client Secret</strong>. This will be used later in the Faction Admin Section.</li>
 </ol>
-<p>Other Features:           </p>
+<p>Your Setup should look like the following:
+<img alt="" src="../files/Pasted%20image%2020231218082044.png" /></p>
+<h1 id="auth0-oauth-setup">Auth0 OAuth Setup</h1>
 <ol>
-<li>
-<p>LDAP Integration       </p>
-</li>
-<li>
-<p>OAUTH2.0 Integration</p>
-</li>
-<li>
-<p>SMTP integration </p>
-</li>
-<li>
-<p>Extendable with Custom Plugins similar to Burp Extender.</p>
-</li>
-<li>
-<p>Custom Report Variables</p>
-</li>
+<li>Log into your <a href="https://manage.auth0.com/dashboard/">Auth0 Console</a>.</li>
+<li>Select <strong>Applications</strong> in the left navigation.</li>
+<li>Click <strong>+ Create Application</strong></li>
+<li>Select <strong>Regular Web Application.</strong>
+    <img alt="" src="../files/Pasted%20image%2020231218082151.png" /></li>
+<li>Name it something like <strong>Faction OAuth Integration.</strong></li>
+<li>Click <strong>Create</strong>.</li>
+<li>Ignore the Quick Start screen and Click <strong>Settings</strong>.</li>
+<li>In the <strong>Allowed Callback URLs</strong>, enter the domain of your Faction Instance and append <strong>/oauth/callback?client_name=OidcClient</strong> to the path.  <strong>Example</strong>: If you used <a href="https://www.factionsecurity.com/manual/faction-setup-instructions/">Faction</a> to host the site your URL would look like: <strong>https://furry-hyena-1111.factionsecurity.com/oauth/callback?client_name=OidcClient</strong>
+    <img alt="" src="../files/Pasted%20image%2020231218082323.png" /></li>
+<li>Take Note of the <strong>Client Id</strong> and <strong>Client Secret</strong>. This will be used later in the Faction Admin.</li>
+<li>Scroll down to the bottom and Click <strong>Advanced</strong> and then <strong>Endpoints</strong></li>
+<li>Take note of the <strong>OpenId Configuration</strong> URL
+    <img alt="" src="../files/Pasted%20image%2020231218082551.png" /></li>
 </ol>
-<p><strong>Want to see it in action?</strong> -&gt; <a href="https://www.factionsecurity.com/2023/03/24/write-your-first-vulnerability-report-in-faction/">Faction Video Overview</a></p>
-<h2 id="quick-setup">Quick Setup</h2>
-<p><strong>Requirements</strong>
-- Java JDK11 
-- Maven (for building the project)</p>
-<p>Run the following commands to build the war file and deploy it to the docker container. </p>
-<pre><code>git clone git@github.com:factionsecurity/faction.git
-cd faction
-mvn clean compile war:war
-docker-compose up --build
-</code></pre>
-<p>Once the containers are up you can navigate to http://127.0.0.1:8080 to access your FACTION instance. 
-On the first boot, it will ask you to create an admin account. </p>
-<h2 id="import-the-vulnerability-templates">Import the Vulnerability Templates</h2>
+<h1 id="configure-faction">Configure Faction</h1>
 <ol>
-<li>Navigate to Admin -&gt; Default Vulnerabilities</li>
-<li>Click import VulnDB. </li>
+<li>Log into <strong>Faction</strong> as an admin user.</li>
+<li>Navigate to <strong>Admin</strong> -&gt; <strong>Users</strong>.</li>
+<li>In the <strong>OAuth2.0 Configuration</strong> enter the Client Id you noted earlier from either Auth0 or Google.</li>
+<li>Enter the <strong>Client Secret</strong> you noted earlier.</li>
+<li>Enter the <strong>Discovery URL</strong> as follows:<strong>Google:</strong> <em>https://accounts.google.com/.well-known/openid-configuration</em><br />
+<strong>Auth0:</strong> Enter the <strong>Open Id Configuration</strong> URL you noted in step 11 above.</li>
+<li>Click <strong>Save</strong>
+<img alt="" src="../files/Pasted%20image%2020231218082632.png" /></li>
 </ol>
-<h2 id="customize-reports">Customize reports</h2>
-<p>You can find out more information about creating your own custom report templates here:
-<a href="https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/">Customize Report Templates</a></p>
-<h2 id="burp-suite-extension">Burp Suite Extension</h2>
-<p><a href="https://www.factionsecurity.com/project/faction-burpsuite-extension/">Burp Suite Extensions</a></p>
-<h2 id="manuals-and-tutorials">Manuals and Tutorials</h2>
-<p><a href="https://www.factionsecurity.com/manual/">Manual</a></p>
-<h2 id="dont-want-to-host-it-yourself">Don't want to host it yourself?</h2>
-<p>We can provide hosting for your instance. All instances are single tenants so you don't have to worry about sharing infrastructure with untrusted parties. Navigate to <a href="https://www.factionsecurity.com">https://www.factionsecurity.com to learn more</a>. </p>
-<h2 id="screenshots">Screenshots</h2>
-<p><strong>Vulnerability Templates</strong>
-<img alt="image" src="https://github.com/factionsecurity/faction/assets/2343831/b6fa6a0b-34a9-46cf-87cb-6aeb2b5d3347" /></p>
-<p><strong>Assessment Scheduling</strong>
-<img alt="image" src="https://github.com/factionsecurity/faction/assets/2343831/7410f74e-3854-41e9-843f-7ca44d79cc54" /></p>
-<p><strong>Peer Review and Track Changes</strong>
-<img alt="image" src="https://github.com/factionsecurity/faction/assets/2343831/fa72a72b-2c95-4c2c-bad1-5b34aab7fd13" /></p>
+<h1 id="adding-an-oauth-user">Adding an OAuth User</h1>
+<ol>
+<li>Under <strong>Admin -&gt; Users</strong>, Click <strong>Add User.</strong></li>
+<li>The Username should be part of the user’s email address before the @ symbol. If the email is <strong>test.user@yourcompany.com</strong> then the username is <strong>test.user</strong></li>
+<li>⭐️<strong>Leave the Password Field Blank.</strong>⭐️</li>
+<li>Enter the <strong>First</strong> and <strong>Last</strong> name.</li>
+<li>Enter the <strong>email</strong> address that is used by the OAuth solution to authenticate the user.</li>
+<li>Select <strong>OAuth 2.0</strong> as the Authentication Method.</li>
+<li>Click <strong>Save Changes</strong>.</li>
+</ol>
+<p><img alt="" src="../files/Pasted%20image%2020231218082756.png" /></p>
+<p>When the new user reaches the Login Screen they can enter just their username without a password and click <strong>Login</strong>. Faction will redirect the user to the configured Authentication Provider and redirect back.</p>
 
 
 
@@ -690,10 +504,10 @@ On the first boot, it will ask you to create an admin account. </p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

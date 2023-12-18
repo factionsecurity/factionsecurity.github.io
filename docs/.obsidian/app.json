@@ -1,4 +1,5 @@
 {
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "files"
+  "attachmentFolderPath": "files",
+  "livePreview": false
 }
