@@ -179,7 +179,7 @@ public class JiraPlugin implements com.fuse.extender.AssessmentManager{
 ## Install It In Your Faction
 
 Build the jar file by running:
-```
+```bash
 mvn clean compile assembly:single
 ```
 

@@ -61,7 +61,7 @@ Typical use case scenario: When an assessor creates or updates a vulnerability t
 - If the return object is null then Faction will not update locally
 
 ### Verification(Retest) Manager Extension
-```
+```java
 public class MyPlugin implements com.fuse.extender.VerificationManager{
 
 	@Override

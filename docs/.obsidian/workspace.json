@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FACTION Plugin Extension API.md",
+                "file": "Self-Hosted FACTION Setup.md",
                 "mode": "source",
                 "source": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FACTION Plugin Extension API.md",
+                "file": "Self-Hosted FACTION Setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FACTION Plugin Extension API.md",
+                "file": "Self-Hosted FACTION Setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FACTION Plugin Extension API.md"
+                "file": "Self-Hosted FACTION Setup.md"
               }
             }
           }
@@ -221,12 +221,12 @@
   },
   "active": "ad979f7a9e2f40bf",
   "lastOpenFiles": [
-    "CNAME",
     "Managed FACTION Setup.md",
-    "FACTION Plugin Extension API.md",
-    "Custom Security Report Templates.md",
-    "Extending FACTION.md",
     "Integrate Faction into OAuth Solutions.md",
+    "FACTION Plugin Extension API.md",
+    "Extending FACTION.md",
+    "Custom Security Report Templates.md",
+    "CNAME",
     "files/Pasted image 20231218085522.png",
     "Self-Hosted FACTION Setup.md",
     "files/Pasted image 20231218082756.png",
