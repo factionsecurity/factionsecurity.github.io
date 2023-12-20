@@ -1,8 +1,9 @@
+# Integrate Faction into OAuth Solutions
 Faction seamlessly integrates with your existing enterprise authentication solutions, ensuring a smooth and secure user experience. Leveraging widely adopted solutions such as LDAP and OAuth, Faction effortlessly integrates into any enterprise environment. Our platform is designed to adapt to your authentication infrastructure, providing a hassle-free implementation process and enhancing the overall efficiency of your organization’s security framework. With Faction, you can trust in a unified and streamlined authentication experience tailored to your enterprise needs.
 
 The article will walk through the steps needed to integrate [Faction](https://www.factionsecurity.com/) into [Google Auth](https://console.developers.google.com/) or [Auth0](https://auth0.com/).
 
-# Google OAuth Setup
+## Google OAuth Setup
 1. Log into your company’s [Google API Console](https://console.developers.google.com/).
 2. Click on **Credentials** from the left navigation.
 3. Click **+ Create Credentials** from the top navigation.
@@ -18,7 +19,7 @@ The article will walk through the steps needed to integrate [Faction](https://w
 Your Setup should look like the following:
 ![](files/Pasted%20image%2020231218082044.png)
 
-# Auth0 OAuth Setup
+## Auth0 OAuth Setup
 1. Log into your [Auth0 Console](https://manage.auth0.com/dashboard/).
 2. Select **Applications** in the left navigation.
 3. Click **+ Create Application**
@@ -35,7 +36,7 @@ Your Setup should look like the following:
     ![](files/Pasted%20image%2020231218082551.png)
 
   
-# Configure Faction
+## Configure Faction
 1. Log into **Faction** as an admin user.
 2. Navigate to **Admin** -> **Users**.
 3. In the **OAuth2.0 Configuration** enter the Client Id you noted earlier from either Auth0 or Google.
@@ -45,7 +46,7 @@ Your Setup should look like the following:
 6. Click **Save**
 ![](files/Pasted%20image%2020231218082632.png)
 
-# Adding an OAuth User
+## Adding an OAuth User
 1. Under **Admin -> Users**, Click **Add User.**
 2. The Username should be part of the user’s email address before the @ symbol. If the email is **test.user@yourcompany.com** then the username is **test.user**
 3. ⭐️**Leave the Password Field Blank.**⭐️

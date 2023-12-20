@@ -8,6 +8,7 @@ theme:
     custom_dir: custom_theme/
     features:
         - content.code.copy
+        - navigation.footer
 repo_url: https://github.com/factionsecurity/faction
 markdown_extensions:
   - pymdownx.highlight:
@@ -17,3 +18,17 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+extra:
+  analytics:
+    provider: google
+    property: G-LQPM8RS39Z
+  social:
+      - icon: fontawesome/brands/mastodon
+        link: https://infosec.exchange/@null0perat0r
+      - icon: fontawesome/brands/twitter
+        link: https://twitter.com/null0perar0r
+      - icon: fontawesome/brands/github
+        link: https://github.com/summitt
+plugins:
+  - social
+
