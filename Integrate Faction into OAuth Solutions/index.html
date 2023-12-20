@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#google-oauth-setup" class="md-skip">
+        <a href="#integrate-faction-into-oauth-solutions" class="md-skip">
           Skip to content
         </a>
       
@@ -320,6 +320,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Integrate Faction into OAuth Solutions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -329,6 +340,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#google-oauth-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google OAuth Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auth0-oauth-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auth0 OAuth Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-faction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Faction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-an-oauth-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding an OAuth User
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -394,6 +460,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#google-oauth-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google OAuth Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auth0-oauth-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auth0 OAuth Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-faction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Faction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-an-oauth-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding an OAuth User
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -410,9 +520,10 @@
   
 
 
+<h1 id="integrate-faction-into-oauth-solutions">Integrate Faction into OAuth Solutions</h1>
 <p>Faction seamlessly integrates with your existing enterprise authentication solutions, ensuring a smooth and secure user experience. Leveraging widely adopted solutions such as LDAP and OAuth, Faction effortlessly integrates into any enterprise environment. Our platform is designed to adapt to your authentication infrastructure, providing a hassle-free implementation process and enhancing the overall efficiency of your organization’s security framework. With Faction, you can trust in a unified and streamlined authentication experience tailored to your enterprise needs.</p>
 <p>The article will walk through the steps needed to integrate <a href="https://www.factionsecurity.com/">Faction</a> into <a href="https://console.developers.google.com/">Google Auth</a> or <a href="https://auth0.com/">Auth0</a>.</p>
-<h1 id="google-oauth-setup">Google OAuth Setup</h1>
+<h2 id="google-oauth-setup">Google OAuth Setup</h2>
 <ol>
 <li>Log into your company’s <a href="https://console.developers.google.com/">Google API Console</a>.</li>
 <li>Click on <strong>Credentials</strong> from the left navigation.</li>
@@ -428,7 +539,7 @@
 </ol>
 <p>Your Setup should look like the following:
 <img alt="" src="../files/Pasted%20image%2020231218082044.png" /></p>
-<h1 id="auth0-oauth-setup">Auth0 OAuth Setup</h1>
+<h2 id="auth0-oauth-setup">Auth0 OAuth Setup</h2>
 <ol>
 <li>Log into your <a href="https://manage.auth0.com/dashboard/">Auth0 Console</a>.</li>
 <li>Select <strong>Applications</strong> in the left navigation.</li>
@@ -445,7 +556,7 @@
 <li>Take note of the <strong>OpenId Configuration</strong> URL
     <img alt="" src="../files/Pasted%20image%2020231218082551.png" /></li>
 </ol>
-<h1 id="configure-faction">Configure Faction</h1>
+<h2 id="configure-faction">Configure Faction</h2>
 <ol>
 <li>Log into <strong>Faction</strong> as an admin user.</li>
 <li>Navigate to <strong>Admin</strong> -&gt; <strong>Users</strong>.</li>
@@ -456,7 +567,7 @@
 <li>Click <strong>Save</strong>
 <img alt="" src="../files/Pasted%20image%2020231218082632.png" /></li>
 </ol>
-<h1 id="adding-an-oauth-user">Adding an OAuth User</h1>
+<h2 id="adding-an-oauth-user">Adding an OAuth User</h2>
 <ol>
 <li>Under <strong>Admin -&gt; Users</strong>, Click <strong>Add User.</strong></li>
 <li>The Username should be part of the user’s email address before the @ symbol. If the email is <strong>test.user@yourcompany.com</strong> then the username is <strong>test.user</strong></li>
