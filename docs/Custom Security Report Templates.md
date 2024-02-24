@@ -42,14 +42,15 @@ These are only available inside tables.
 - **${severity}** – Severity of each vulnerability.
 - **${likelihood}** – Likelyhood of the vulnerability
 - **${impact}** – Impact of the vulnerability
-- **${cvss}** – cvss score of the vulnerability
+- **${cvssScore}** – cvss score of the vulnerability
+- **${cvssString}** – cvss vector of the vulnerability
 - **${status}** – CVSS Score of the vulnerability
 - **${count}** – Row Count of the vulnerability
 - **${tracking}** – Tracking number of the vulnerability
 - **${vid}** – Vulnerability internal database id
 - **${cfXXXXXX}** – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”
-- **${color  key=value,key=value}** – The color of the text is based on key-value pairs. [See below for how to set up](https://www.factionsecurity.com/manual/custom-report-templates/#Colors) [colors.](https://www.factionsecurity.com/manual/custom-report-templates/#Severity%20Colors)
-- **${cells key=value,key=value}** – The color of the table cell is based on key-value pairs. [See below for how to set up colors.](https://www.factionsecurity.com/manual/custom-report-templates/#Colors)
+- **${color  key=value,key=value}** – The color of the text is based on key-value pairs. [See below for how to set up colors.](https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors)
+- **${cells key=value,key=value}** – The color of the table cell is based on key-value pairs.  [See below for how to set up colors.](https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors)
 - **${loop}** – This variable tells the report generator which row will be repeated.
 - **${loop-*}** – This allows multiple rows to be repeated. Example ${loop-1} will repeat the row but the one below it.
 - **${details}** – This will insert screenshots and exploit steps for each vulnerability.

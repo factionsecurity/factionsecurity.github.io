@@ -28,7 +28,7 @@ Your Setup should look like the following:
 5. Name it something like **Faction OAuth Integration.**
 6. Click **Create**.
 7. Ignore the Quick Start screen and Click **Settings**.
-8. In the **Allowed Callback URLs**, enter the domain of your Faction Instance and append **/oauth/callback?client_name=OidcClient** to the path.  **Example**: If you used [Faction](https://www.factionsecurity.com/manual/faction-setup-instructions/) to host the site your URL would look like: **https://furry-hyena-1111.factionsecurity.com/oauth/callback?client_name=OidcClient**
+8. In the **Allowed Callback URLs**, enter the domain of your Faction Instance and append **/oauth/callback?client_name=OidcClient** to the path.  **Example**: If you used [Faction](https://docs.factionsecurity.com/Managed%20FACTION%20Setup/) to host the site your URL would look like: **https://furry-hyena-1111.factionsecurity.com/oauth/callback?client_name=OidcClient**
     ![](files/Pasted%20image%2020231218082323.png)
 9. Take Note of the **Client Id** and **Client Secret**. This will be used later in the Faction Admin.
 10. Scroll down to the bottom and Click **Advanced** and then **Endpoints**
