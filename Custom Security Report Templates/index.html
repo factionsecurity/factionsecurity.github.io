@@ -613,14 +613,15 @@
 <li><strong>${severity}</strong> – Severity of each vulnerability.</li>
 <li><strong>${likelihood}</strong> – Likelyhood of the vulnerability</li>
 <li><strong>${impact}</strong> – Impact of the vulnerability</li>
-<li><strong>${cvss}</strong> – cvss score of the vulnerability</li>
+<li><strong>${cvssScore}</strong> – cvss score of the vulnerability</li>
+<li><strong>${cvssString}</strong> – cvss vector of the vulnerability</li>
 <li><strong>${status}</strong> – CVSS Score of the vulnerability</li>
 <li><strong>${count}</strong> – Row Count of the vulnerability</li>
 <li><strong>${tracking}</strong> – Tracking number of the vulnerability</li>
 <li><strong>${vid}</strong> – Vulnerability internal database id</li>
 <li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”</li>
-<li><strong>${color  key=value,key=value}</strong> – The color of the text is based on key-value pairs. <a href="https://www.factionsecurity.com/manual/custom-report-templates/#Colors">See below for how to set up</a> <a href="https://www.factionsecurity.com/manual/custom-report-templates/#Severity%20Colors">colors.</a></li>
-<li><strong>${cells key=value,key=value}</strong> – The color of the table cell is based on key-value pairs. <a href="https://www.factionsecurity.com/manual/custom-report-templates/#Colors">See below for how to set up colors.</a></li>
+<li><strong>${color  key=value,key=value}</strong> – The color of the text is based on key-value pairs. <a href="https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
+<li><strong>${cells key=value,key=value}</strong> – The color of the table cell is based on key-value pairs.  <a href="https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
 <li><strong>${loop}</strong> – This variable tells the report generator which row will be repeated.</li>
 <li><strong>${loop-*}</strong> – This allows multiple rows to be repeated. Example ${loop-1} will repeat the row but the one below it.</li>
 <li><strong>${details}</strong> – This will insert screenshots and exploit steps for each vulnerability.</li>
