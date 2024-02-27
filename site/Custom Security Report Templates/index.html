@@ -308,14 +308,53 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="VULNERABILITY TABLES VARIABLES:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-table-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Table Summary Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-table-detail-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Table Detail Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#vulnerability-findings-variables" class="md-nav__link">
+  <a href="#vulnerability-block-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      VULNERABILITY FINDINGS VARIABLES:
+      VULNERABILITY BLOCK VARIABLES:
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="VULNERABILITY BLOCK VARIABLES:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-block-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Block Findings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -525,14 +564,53 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="VULNERABILITY TABLES VARIABLES:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-table-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Table Summary Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-table-detail-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Table Detail Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#vulnerability-findings-variables" class="md-nav__link">
+  <a href="#vulnerability-block-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      VULNERABILITY FINDINGS VARIABLES:
+      VULNERABILITY BLOCK VARIABLES:
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="VULNERABILITY BLOCK VARIABLES:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-block-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Block Findings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -575,9 +653,10 @@
   <h1>Custom Security Report Templates</h1>
 
 <p><img alt="" src="../files/Pasted%20image%2020231217155942.png" /></p>
-<p>The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports you need to use the variables listed below. Entering these into your DOCX reports will auto replace assessment and vulnerability text when the report is generated. You can even use the same variables into many of the assessor input fields outside of the report template (like Risk Assessment Summaries) and it will auto populate the fields when the report is generated.</p>
-<p>You can download the sample template here: <a href="https://github.com/factionsecurity/report_templates">Sample Template</a></p>
-<h3 id="general-variables">GENERAL VARIABLES:</h3>
+<p>The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports you need to use the variables listed below. Entering these into your DOCX reports will auto-replace assessment and vulnerability text when the report is generated. You can even use the same variables in many of the assessor input fields outside of the report template (like Risk Assessment Summaries) and it will auto-populate the fields when the report is generated.</p>
+<p>You can download the sample templates here:
+ <a href="https://github.com/factionsecurity/report_templates">Sample Templates</a> </p>
+<h2 id="general-variables">GENERAL VARIABLES:</h2>
 <p>All of these variables can be used anywhere in the DOCX template. Those with a star ⭐️ can be used in the web interface to assist in creating common reusable templates.</p>
 <ul>
 <li><strong>${TOC}</strong> – Placeholder for the Table of Contents</li>
@@ -602,7 +681,7 @@
 <li><strong>${today}</strong> – Day the report is generated ⭐️</li>
 <li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf” ⭐️</li>
 </ul>
-<h3 id="vulnerability-tables-variables">VULNERABILITY TABLES VARIABLES:</h3>
+<h2 id="vulnerability-tables-variables">VULNERABILITY TABLES VARIABLES:</h2>
 <p>These are only available inside tables.</p>
 <ul>
 <li><strong>${vulnTable}</strong> – This defines a table to be a vulnerability listing table.</li>
@@ -611,11 +690,10 @@
 <li><strong>${desc}</strong> – Vulnerability Description</li>
 <li><strong>${category}</strong> – Category of the vulnerability</li>
 <li><strong>${severity}</strong> – Severity of each vulnerability.</li>
-<li><strong>${likelihood}</strong> – Likelyhood of the vulnerability</li>
+<li><strong>${likelihood}</strong> – Likelihood of the vulnerability</li>
 <li><strong>${impact}</strong> – Impact of the vulnerability</li>
-<li><strong>${cvssScore}</strong> – cvss score of the vulnerability</li>
-<li><strong>${cvssString}</strong> – cvss vector of the vulnerability</li>
-<li><strong>${status}</strong> – CVSS Score of the vulnerability</li>
+<li><strong>${cvssScore}</strong> – CVSS score of the vulnerability</li>
+<li><strong>${cvssString}</strong> – CVSS vector of the vulnerability</li>
 <li><strong>${count}</strong> – Row Count of the vulnerability</li>
 <li><strong>${tracking}</strong> – Tracking number of the vulnerability</li>
 <li><strong>${vid}</strong> – Vulnerability internal database id</li>
@@ -626,7 +704,7 @@
 <li><strong>${loop-*}</strong> – This allows multiple rows to be repeated. Example ${loop-1} will repeat the row but the one below it.</li>
 <li><strong>${details}</strong> – This will insert screenshots and exploit steps for each vulnerability.</li>
 </ul>
-<p><strong>Example Table:</strong></p>
+<h3 id="example-table-summary-table">Example Table Summary Table</h3>
 <table>
 <thead>
 <tr>
@@ -657,7 +735,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Example Table with Technical findings:</strong></p>
+<h3 id="example-table-detail-table">Example Table Detail Table</h3>
 <table>
 <thead>
 <tr>
@@ -669,32 +747,52 @@
 </thead>
 <tbody>
 <tr>
-<td>${vulntable}</td>
-<td>${color Critical=C00000,High=FFC000}</td>
+<td>${vulnTable}</td>
 <td></td>
+<td>${cells Critical=8064a2,High=c0504d,Medium=e68e00, Low=33D7FF,Recommended=081417,Informational=657376}</td>
 <td></td>
 </tr>
 <tr>
-<td>ID</td>
-<td>Finding Name</td>
-<td>Impact</td>
-<td>Severity</td>
-</tr>
-<tr>
-<td>${loop-1} ${count}</td>
-<td>${vulnname}</td>
-<td>${impact}</td>
+<td>${loop-5}</td>
+<td>## 1  ${vulnName}</td>
+<td></td>
 <td>${severity}</td>
 </tr>
 <tr>
-<td>${exBegin}<br><br>Example ${count}:  <br>${exploit}<br><br>${exEnd}</td>
+<td>CVSS:</td>
+<td></td>
+<td>${cvssString}</td>
+<td>${cvssScore}</td>
+</tr>
+<tr>
+<td>Category:</td>
+<td></td>
+<td>${category}</td>
+<td></td>
+</tr>
+<tr>
+<td>Description:<br><br>${desc}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Recommendation:<br><br>${rec}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>${details}</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="vulnerability-findings-variables">VULNERABILITY FINDINGS VARIABLES:</h3>
+<p><img alt="" src="../files/Pasted%20image%2020240227161500.png" /></p>
+<p>**Why is the heading yellow?!?! Check <a href="/Custom%20Security%20Report%20Templates/#setting-severity-colors">here</a></p>
+<h2 id="vulnerability-block-variables">VULNERABILITY BLOCK VARIABLES:</h2>
 <p><strong>For when you do not want to use tables to display your vulnerability information. You can use the following variables for inserting vulnerability information outside of a table</strong></p>
 <ul>
 <li><strong>${fiBegin} / ${fiEnd}</strong> – Block to repeat against all findings.</li>
@@ -705,18 +803,23 @@
 <li><strong>${severity}</strong> – Severity of each vulnerability.</li>
 <li><strong>${likelihood}</strong> – Likelihood of the vulnerability</li>
 <li><strong>${impact}</strong> – Impact of the vulnerability</li>
-<li><strong>${cvss}</strong> – cvss score of the vulnerability</li>
-<li><strong>${status}</strong> – CVSS Score of the vulnerability</li>
+<li><strong>${cvssScore}</strong> – CVSS score of the vulnerability</li>
+<li><strong>${cvssString}</strong> – CVSS vector of the vulnerability</li>
 <li><strong>${count}</strong> – Row Count of the vulnerability</li>
 <li><strong>${tracking}</strong> – Tracking number of the vulnerability</li>
 <li><strong>${vid}</strong> – Vulnerability internal database id</li>
 <li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”</li>
 <li><strong>${details}</strong> – This will insert screenshots and exploit steps for each vulnerability.</li>
+<li><strong>${color  key=value,key=value}</strong> – The color of the text is based on key-value pairs. <a href="https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
+<li><strong>${fill key=value,key=value}</strong> – The color of the background elements is based on key-value pairs.  <a href="https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
 </ul>
-<h3 id="css-formatting">CSS FORMATTING:</h3>
-<p>All of the text generated from Faction is HTML. You can control how it is rendered in the DOCX format using the CSS editor in the Report Designer. You will need to set the css to match your report templates. Things like font and size will need to match. Images will need to be forced to resize to the correct dimensions to fit in your reports.</p>
+<h3 id="example-block-findings">Example Block Findings</h3>
+<p><img alt="" src="../files/Pasted%20image%2020240227160631.png" /></p>
+<p>**Why is the heading yellow?!?! Check <a href="/Custom%20Security%20Report%20Templates/#setting-severity-colors">here</a></p>
+<h2 id="css-formatting">CSS FORMATTING:</h2>
+<p>All of the text generated from Faction is HTML. You can control how it is rendered in the DOCX format using the CSS editor in the Report Designer. You will need to set the CSS to match your report templates. Things like font and size will need to match. Images will need to be forced to resize to the correct dimensions to fit in your reports.</p>
 <p><img alt="" src="../files/Pasted%20image%2020231217160124.png" /></p>
-<h3 id="setting-severity-colors">SETTING SEVERITY COLORS:</h3>
+<h2 id="setting-severity-colors">SETTING SEVERITY COLORS:</h2>
 <p>When building reports you most likely will set the text or cell to the color that matches the severity of the finding. To achieve this in FACTION you need to set a default color in the docx template that matches the severity category (i.e. Overall, Likelihood, and Impact). These default colors are in the table below:</p>
 <table>
 <thead>
