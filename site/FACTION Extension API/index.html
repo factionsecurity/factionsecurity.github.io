@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../Extending%20FACTION/">
+        <link rel="prev" href="../Custom%20Variables/">
       
       
         <link rel="next" href="../Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/">
@@ -20,7 +20,7 @@
     
     
       
-        <title>FACTION Plugin Extension API - </title>
+        <title>FACTION Extension API - </title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FACTION Plugin Extension API
+              FACTION Extension API
             
           </span>
         </div>
@@ -288,26 +288,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../Extending%20FACTION/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Extending FACTION
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -322,7 +302,7 @@
           
   
   <span class="md-ellipsis">
-    FACTION Plugin Extension API
+    FACTION Extension API
   </span>
   
 
@@ -333,7 +313,7 @@
         
   
   <span class="md-ellipsis">
-    FACTION Plugin Extension API
+    FACTION Extension API
   </span>
   
 
@@ -384,6 +364,15 @@
   <a href="#assessment-manager-extension" class="md-nav__link">
     <span class="md-ellipsis">
       Assessment Manager Extension
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Reports
     </span>
   </a>
   
@@ -461,6 +450,26 @@
   
   <span class="md-ellipsis">
     Integrate Faction into OAuth Solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Jira%20Integration%20Example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jira Integration Example
   </span>
   
 
@@ -571,6 +580,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#update-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Reports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vulnerability-manager-extension" class="md-nav__link">
     <span class="md-ellipsis">
       Vulnerability Manager Extension
@@ -620,21 +638,20 @@
   
 
 
-  <h1>FACTION Plugin Extension API</h1>
+  <h1>FACTION Extension API</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>Faction has an API similar to what you might find in BurpSuite Extensions. You can create custom modules in jar files and copy them to the server and Faction will automatically pick them up and do your custom processing on certain events.</p>
-<p>You can extend things like Application Inventory Search so that it queries an external database to return results before scheduling assessments.</p>
-<p>If you have configured custom fields you can write an extension to search another database and update things like application owner or other metadata about the application that Faction does not support by default.</p>
-<p>You can download an example <a href="https://github.com/factionsecurity/JiraPluginExample">Extension here.</a></p>
+<p>Faction has an API similar to what you might find in BurpSuite Extensions. You can create custom modules in jar files and upload them to the Faction AppStore. Once uploaded, Faction will perform your custom processing when certain events are triggered like finalizing and assessment, creating a report, or failing a retest. </p>
+<p>You can even extend things like the Application Inventory Search so that it queries an external database to return results before scheduling assessments.</p>
+<p>You can download an example <a href="https://github.com/factionsecurity/Faction-Jira-Extension">Extension here.</a></p>
 <p>Below is a list of the current Hooks:</p>
 <h2 id="faction-extension-apis">Faction Extension APIs</h2>
 <h3 id="application-inventory-extension">Application Inventory Extension</h3>
-<p><div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">fuse</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">ApplicationInventory</span><span class="p">{</span>
+<p><div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">faction</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">ApplicationInventory</span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nd">@Override</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">InventoryResult</span><span class="o">[]</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">arg1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="c1">// TODO Auto-generated method stub</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
@@ -642,11 +659,11 @@
 - Triggers on Assessment Scheduling and will then query external sources instead of the local database.
 - Can search based on Application ID or Application name. It will return an InventoryResult Object (explained later)</p>
 <h3 id="assessment-manager-extension">Assessment Manager Extension</h3>
-<p><div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">fuse</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">AssessmentManager</span><span class="p">{</span>
+<p><div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">faction</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">AssessmentManager</span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nd">@Override</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Object</span><span class="o">[]</span><span class="w"> </span><span class="nf">assessmentChange</span><span class="p">(</span><span class="n">Assessment</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Vulnerability</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">arg2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="c1">// TODO Auto-generated method stub</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">AssessmentManagerResult</span><span class="w"> </span><span class="nf">assessmentChange</span><span class="p">(</span><span class="n">Assessment</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Vulnerability</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">arg2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
@@ -656,18 +673,35 @@ Typical use case scenario: When an assessor finalizes an assessment this module 
 <ul>
 <li>Triggers on Assessment Create, Update, Delete, Finalized, Peer Review Created, Peer Review Complete, Peer Review Accepted</li>
 <li>Accepts the Triggered Assessment and List of vulnerabilities associated with the assessment.</li>
-<li>Returns an Object Array that is the updated Assessment and updated List of vulnerabilities</li>
+<li>Returns AssessmentManagerResult, that is the updated Assessment and updated List of vulnerabilities</li>
 <li>If the return object is null Faction will not update locally</li>
 </ul>
-<h3 id="vulnerability-manager-extension">Vulnerability Manager Extension</h3>
-<p><div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">fuse</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">VulnerabilityManager</span><span class="p">{</span>
+<h3 id="update-reports">Update Reports</h3>
+<p><div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">VulnerabilityBarChart</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">faction</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">ReportManager</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nd">@Override</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Vulnerability</span><span class="w"> </span><span class="nf">vulnChange</span><span class="p">(</span><span class="n">Assessment</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">Vulnerability</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">arg2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="c1">// TODO Auto-generated method stub</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">reportCreate</span><span class="p">(</span><span class="n">Assessment</span><span class="w"> </span><span class="n">asmt</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Vulnerability</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vulns</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">reportText</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">reportText</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
+</span></code></pre></div>
+This method triggers every time a report is created or regenerated. It can be used to for you to add custom variables to reports and update those variables with HTML. An example of this can be <a href="https://github.com/factionsecurity/Faction-Vulnerability-Bar-Chart">found here</a> which demonstrates how to add bar charts to vulnerability reports. </p>
+<ul>
+<li>Triggers on report create or regenerate</li>
+<li>Can update Text in reports</li>
+<li>Output can be HTML or raw text</li>
+<li>If returns null then nothing will be changed by this extension</li>
+</ul>
+<h3 id="vulnerability-manager-extension">Vulnerability Manager Extension</h3>
+<p><div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">faction</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">VulnerabilityManager</span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Vulnerability</span><span class="w"> </span><span class="nf">vulnChange</span><span class="p">(</span><span class="n">Assessment</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">Vulnerability</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">arg2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="c1">// TODO Auto-generated method stub</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
 </span></code></pre></div>
 Typical use case scenario: When an assessor creates or updates a vulnerability the module can send the vulnerability to another tracking system like JIRA and return the tracking number to Faction.</p>
 <ul>
@@ -677,14 +711,13 @@ Typical use case scenario: When an assessor creates or updates a vulnerability t
 <li>If the return object is null then Faction will not update locally</li>
 </ul>
 <h3 id="verificationretest-manager-extension">Verification(Retest) Manager Extension</h3>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">fuse</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">VerificationManager</span><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nd">@Override</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">verificationChange</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">Vulnerability</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">arg2</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">arg3</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">arg4</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">arg5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="c1">// TODO Auto-generated method stub</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">faction</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">VerificationManager</span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">verificationChange</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">Vulnerability</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">arg2</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">arg3</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">arg4</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">arg5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
 </span></code></pre></div>
 <ul>
 <li>Triggers on Pass, Fail, Cancel, Assigned</li>
@@ -726,7 +759,7 @@ Typical use case scenario: When an assessor creates or updates a vulnerability t
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Extending%20FACTION/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Extending FACTION">
+          <a href="../Custom%20Variables/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Custom Variables">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -736,7 +769,7 @@ Typical use case scenario: When an assessor creates or updates a vulnerability t
                 Previous
               </span>
               <div class="md-ellipsis">
-                Extending FACTION
+                Custom Variables
               </div>
             </div>
           </a>
