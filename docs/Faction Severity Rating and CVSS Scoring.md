@@ -1,6 +1,7 @@
 FACTION's severity rankings are easily customizable to how you perform assessments. You can even create different severity options for the type of assessment. 
 
 FACTION has 3 options to choose:
+
 1. Native Severity - This is simply High, Medium, Low, etc type rankings. Faction let you set up to 10 levels and can rename them to anything that works for your process. 
 2. CVSS 3.1 - This option enables [First.org CVSS 3.1 Severity Scoring](https://www.first.org/cvss/calculator/3.1) and *was introduced in FACTION 1.2*
 3. CVSS 4.0 = This option enables [First.org CVSS 4.0 Scoring](https://www.first.org/cvss/calculator/3.1) and *was introduced in FACTION 1.2*
