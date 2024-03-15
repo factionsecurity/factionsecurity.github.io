@@ -29,4 +29,7 @@ extra:
         link: https://twitter.com/null0perar0r
       - icon: fontawesome/brands/github
         link: https://github.com/summitt
+plugins:
+  - blog
+  - tags
 
