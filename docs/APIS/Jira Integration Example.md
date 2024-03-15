@@ -47,12 +47,12 @@ The source code for this example can be [downloaded here](https://github.com/fa
 </project>
 ```
 3. Create the following folders and files. They can be empty for now. We will fill this out in the next section below. 
-   ![](files/Pasted%20image%2020240302175138.png)
+   ![](/files/Pasted%20image%2020240302175138.png)
 The maven-assembly-plugin will ensure your manifest is set up correctly for Faction to be able to import your extension with the proper information.
 
 ## Extension File and Folder Requirements 
 We need to update the extension resources from Step 3 above. Below is a description of the files.
-![](files/Pasted%20image%2020240302181320.png)
+![](/files/Pasted%20image%2020240302181320.png)
 
 - `resources/META-INF/resouces/config.json` : This file is a JSON key-value pair of options you want to be configurable by the end user. These options become input boxes in the Faction App Store UI. 
 - `resources/META-INF/resources/description.md` : This is the extension description and help files that will be displayed when the extension is loaded in the Faction App Store UI
@@ -163,16 +163,16 @@ mvn clean compile assembly:single
 This will create a jar file named something like **JiraPlugin-0.0.1-SNAPSHOT-jar-with-dependencies.jar** in your ./target folder. 
 
 Upload it to Admin->App Store->Install Extension. It should display like this:
-![](files/Pasted%20image%2020240302182549.png)
+![](/files/Pasted%20image%2020240302182549.png)
 
 If all looks good, click install. 
 
 It will be installed initially as disabled. You can configure it before you enable it by clicking on the extension in the list:
-![](files/Pasted%20image%2020240302182726.png)
+![](/files/Pasted%20image%2020240302182726.png)
 
 Once you configure the settings you can enable it.
-![](files/Pasted%20image%2020240302182802.png)
+![](/files/Pasted%20image%2020240302182802.png)
 
 Now when an assessment is finalized it will add All the findings to JIRA as shown in the following screenshot:
 
-![](files/Pasted%20image%2020231218085522.png)
+![](/files/Pasted%20image%2020231218085522.png)
