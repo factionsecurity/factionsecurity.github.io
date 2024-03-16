@@ -10,7 +10,7 @@ date: 2024-03-16
 If you have been doing penetration testing for any length of time you probably have a personal database of vulnerability descriptions, recommendations as well as other text snippets you will inject into various places of your reports. What if, Instead of keeping these in separate files on various computers, what if they were all included in your reporting software?!@! 🤯
 
 Faction IS your database for global boilerplate, default vulnerability templates, personal flare, and just about anything else you can image (well...sorta 🤔). Let's walk through how this is done.
-
+<!-- more -->
 ## Vulnerability Templates
 Let's start with the obvious.... Faction includes over 75 default vulnerability templates when you start. These vulnerability templates include both descriptions and recommendations and are fully customizable by you. You can start with our templates or upload your own as described [here](/Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/).
 
