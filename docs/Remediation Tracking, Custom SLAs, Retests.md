@@ -1,3 +1,6 @@
+---
+date: 2024-03-15
+---
 FACTION has remediation tracking built in! When you close out an assessment all the vulnerabilities in that assessment start tracking based on your custom SLAs. With the custom SLAs you can set reminders when a vulnerabilities is approaching a due data and another when the it is past due. 
 
 ## Setting Custom SLAs

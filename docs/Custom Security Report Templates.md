@@ -1,3 +1,7 @@
+---
+date: 2023-12-17
+tags: []
+---
 ![](files/Pasted image 20231217155942.png)
 
 The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports you need to use the variables listed below. Entering these into your DOCX reports will auto-replace assessment and vulnerability text when the report is generated. You can even use the same variables in many of the assessor input fields outside of the report template (like Risk Assessment Summaries) and it will auto-populate the fields when the report is generated.

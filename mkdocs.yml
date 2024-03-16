@@ -31,5 +31,6 @@ extra:
         link: https://github.com/summitt
 plugins:
   - blog
-  - tags
+  - tags:
+      tags_file: tags.md
 

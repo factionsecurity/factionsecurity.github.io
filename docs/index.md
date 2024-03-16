@@ -1,3 +1,6 @@
+---
+date: 2023-12-17
+---
 # Welcome to FACTION
 __PenTesting Report Generation and Collaboration Engine__
 ![image](https://github.com/factionsecurity/faction/assets/2343831/d9237bed-302f-4e6a-9716-22ae88d0dc36)

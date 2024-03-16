@@ -1,3 +1,7 @@
+---
+date: 2024-02-12
+---
+
 You can use custom variables to add additional features to Faction. These variables can be used to add additional information to vulnerabilities like a CVSS score or to populate additional data in reports like "product owner", "cost center", etc. 
 
 ## Adding a CVSS Score 

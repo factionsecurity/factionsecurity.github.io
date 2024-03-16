@@ -1,3 +1,11 @@
+---
+date: 2024-03-14
+---
+
+Native: <img alt="Static Badge" src="https://img.shields.io/badge/Since-1.0-blue?style=flat">
+
+CVSS: <img alt="Static Badge" src="https://img.shields.io/badge/Since-1.2-blue?style=flat">
+
 FACTION's severity rankings are easily customizable to how you perform assessments. You can even create different severity options for the type of assessment. 
 
 FACTION has 3 options to choose:

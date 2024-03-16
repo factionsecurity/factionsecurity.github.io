@@ -1,3 +1,6 @@
+---
+date: 2023-12-18
+---
 Below are the Minimal Faction Setup Instructions required to get you all set up and ready to start collaborating on assessments in just a few minutes. With a Faction managed account, we host the servers and maintain the updates for you. Your instance will be hosted in a single-tenant environment to ensure your data is secure. With just a few clicks you will be up and running in minutes. 
 
 ## Create Your Managed Account

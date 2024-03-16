@@ -1,3 +1,10 @@
+---
+tags: 
+ - api
+date: 2024-02-08
+---
+<img alt="Static Badge" src="https://img.shields.io/badge/Since-1.2-blue?style=flat">
+
 ## Introduction
 Faction has an API similar to what you might find in BurpSuite Extensions. You can create custom modules in jar files and upload them to the Faction AppStore. Once uploaded, Faction will perform your custom processing when certain events are triggered like finalizing and assessment, creating a report, or failing a retest. 
 
