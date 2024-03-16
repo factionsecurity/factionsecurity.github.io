@@ -9,6 +9,8 @@ theme:
     features:
         - content.code.copy
         - navigation.footer
+        - navigation.indexes
+        - navigation.expand
 repo_url: https://github.com/factionsecurity/faction
 markdown_extensions:
   - pymdownx.highlight:
@@ -30,7 +32,9 @@ extra:
       - icon: fontawesome/brands/github
         link: https://github.com/summitt
 plugins:
-  - blog
+  - blog:
+      blog_toc: true
+  - search
+  - mkdocs-nav-weight
   - tags:
       tags_file: tags.md
-
