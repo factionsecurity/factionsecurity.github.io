@@ -762,6 +762,77 @@
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
     
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-03-25 00:00:00">March 25, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="faction-app-store"><a class="toclink" href="2024/03/25/faction-app-store/">Faction App Store</a></h2>
+<p>✨ We are excited to release the first iteration of the Faction App Store! ✨</p>
+<p>The App Store is where developers can build custom integrations with Faction. These can be anything from sending vulnerabilities to external bug trackers to adding custom graphics to your automated pentest reports! </p>
+<p>We want to make this process really easy and took inspiration from <a href="https://portswigger.net/burp/documentation/desktop/extensions/creating">Burp Suite</a> on the design. If you have ever made an extension for Burp then you should be able to get up and running pretty quickly. </p>
+<h4 id="what-can-be-extended"><a class="toclink" href="2024/03/25/faction-app-store/#what-can-be-extended">What Can Be Extended?</a></h4>
+<p>With this initial release, you can extend Faction by:
+- Including your own application inventory database to the application search features and populate results in Faction like the Application ID, Distribution Lists, and Application Name. 
+- Triggers when an assessment state changes (created, updated, or finalized). You can use this to send emails to a distribution list that an assessment has been scheduled for certain dates. When the assessment is finalized you can choose to send only the vulnerabilities of a certain criticality to an external tracking system as well as send to different tracking systems depending on the type of assessment. 
+- Triggers when a vulnerability state is changed. When a tracked vulnerability is retested and pass/fail, you can create a custom workflow and alert key stakeholders that the issue succeeded or failed. 
+- Update reports when they are generated. You can use this to add custom variables to your reporting templates and replace the contents with data from an external system or add custom charts and graphics to give your reports a more polished look. </p>
+<p>The full documentation on the API can be found <a href="APIS/App%20Store%20Extension%20API">here</a></p>
+<h4 id="custom-settings"><a class="toclink" href="2024/03/25/faction-app-store/#custom-settings">Custom Settings</a></h4>
+<p>Extensions are built so that you can add your own configuration options that can be stored in the Faction Database. Things like a user-editable hostname or API key can be configured in your extension. Based on how you set up your configuration you can make data like passwords and API keys hidden in the UI and encrypted at rest. </p>
+<p><img alt="" src="/files/Pasted%20image%2020240325105733.png" /></p>
+<h4 id="extension-chain"><a class="toclink" href="2024/03/25/faction-app-store/#extension-chain">Extension Chain</a></h4>
+<p>Extensions can be chained in any order. Once you add apps and enable them in Faction, the UI allows you to drag the extension to anywhere in the list. This allows you to create one extension that processes data and returns a result that can be processed by the next extension. </p>
+<table>
+<thead>
+<tr>
+<th>Before Order Change</th>
+<th>After Order Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="/files/Pasted%20image%2020240325105756.png" /></td>
+<td><img alt="" src="/files/Pasted%20image%2020240325105827.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>You can use this to create one extension that returns a JIRA Tracking number for all vulnerabilities in the finalized assessment, they take those numbers and process them into another system and on and on down the chain. </p>
+<h4 id="example-extensions"><a class="toclink" href="2024/03/25/faction-app-store/#example-extensions">Example Extensions</a></h4>
+<p>You can review the source code for our initial apps <a href="Faction%20App%20Store%20Extensions">here</a>. This list will grow over time but currently, there are 2 (JIRA Integration, Vulnerability Bar Charts). </p>
+<h4 id="submit-your-own"><a class="toclink" href="2024/03/25/faction-app-store/#submit-your-own">Submit Your Own</a></h4>
+<p>We can't think of everything! We encourage developers to submit their own extensions and we will add them to our list of Approved Extensions. Send an email to develop [ at ] factionsecurity [dot] com with a link to your GitHub and a brief explanation of what it does. </p>
+<h4 id="conclusion"><a class="toclink" href="2024/03/25/faction-app-store/#conclusion">Conclusion</a></h4>
+<p>We hope you enjoy the new  App Store and other new features that are part of this 1.2 Release. Faction is open-source and free to use. Please leave us feedback in either our GitHub <a href="https://github.com/orgs/factionsecurity/discussions">Discussion Boards</a> or by <a href="https://github.com/factionsecurity/faction/issues">submitting Issues</a>. </p>
+<p>If you want to help support the project and ensure its longevity then consider being a sponsor... It's good karma!  ❤️
+<strong>Sponsor Options</strong>
+- <a href="https://github.com/sponsors/factionsecurity">GitHub Sponsor</a>
+- <a href="https://www.patreon.com/null0perat0r">Patreon</a>
+- <a href="https://opencollective.com/faction">Open Collective</a></p>
+    <nav class="md-post__action">
+      <a href="2024/03/25/faction-app-store/">
+        Continue reading
+      </a>
+    </nav>
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">

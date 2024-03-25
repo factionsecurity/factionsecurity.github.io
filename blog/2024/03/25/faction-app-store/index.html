@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../../15/hello-world/">
+        <link rel="prev" href="../../16/faction-boilerplates/">
       
-      
-        <link rel="next" href="../../25/faction-app-store/">
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Faction Boilerplates - </title>
+        <title>Faction App Store - </title>
       
     
     
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vulnerability-templates" class="md-skip">
+        <a href="#what-can-be-extended" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Faction Boilerplates
+              Faction App Store
             
           </span>
         </div>
@@ -762,44 +760,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vulnerability-templates" class="md-nav__link">
+  <a href="#what-can-be-extended" class="md-nav__link">
     <span class="md-ellipsis">
-      Vulnerability Templates
+      What Can Be Extended?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#assessment-templates" class="md-nav__link">
+  <a href="#custom-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Assessment Templates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Assessment Templates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#global-assessment-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Global Assessment Templates
+      Custom Settings
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#user-assessment-templates" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#extension-chain" class="md-nav__link">
     <span class="md-ellipsis">
-      User Assessment Templates
+      Extension Chain
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#example-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Extensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-your-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submit Your Own
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
   
 </li>
       
@@ -828,25 +838,6 @@
               </div>
             </div>
             
-              <div class="md-post__authors md-typeset">
-                
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="/files/null0pProfile.png" alt="Josh Summitt">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Josh Summitt
-                        
-                      </strong>
-                      <br>
-                      Founder and Chief Architect
-                    </span>
-                  </div>
-                
-              </div>
-            
             <ul class="md-post__meta md-nav__list">
               <li class="md-nav__item md-nav__item--section">
                 <div class="md-post__title">
@@ -859,7 +850,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-03-16 00:00:00" class="md-ellipsis">March 16, 2024</time>
+                        <time datetime="2024-03-25 00:00:00" class="md-ellipsis">March 25, 2024</time>
                       </div>
                     </li>
                     
@@ -897,19 +888,7 @@
     
     
     
-      <a href="../../../../../tags/#core-features" class="md-tag">Core Features</a>
-    
-  
-    
-    
-    
-      <a href="../../../../../tags/#boilerplate" class="md-tag">Boilerplate</a>
-    
-  
-    
-    
-    
-      <a href="../../../../../tags/#customizing" class="md-tag">Customizing</a>
+      <a href="../../../../../tags/#app-store" class="md-tag">App Store</a>
     
   
 </nav>
@@ -919,32 +898,49 @@
   
 
 
-  <h1>Faction Boilerplates</h1>
+  <h1>Faction App Store</h1>
 
-<p>If you have been doing penetration testing for any length of time you probably have a personal database of vulnerability descriptions, recommendations as well as other text snippets you will inject into various places of your reports. What if, Instead of keeping these in separate files on various computers, they were all included in your reporting software?!@! 🤯</p>
-<p>Faction IS your database for global boilerplate, default vulnerability templates, personal flare, and just about anything else you can imagine (well...sorta 🤔). Let's walk through how this is done.</p>
-<!-- more -->
-<h2 id="vulnerability-templates">Vulnerability Templates</h2>
-<p>Let's start with the obvious.... Faction includes over 75 default vulnerability templates when you start. These vulnerability templates include both descriptions and recommendations and are fully customizable by you. You can start with our templates or upload your own as described <a href="/Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/">here</a>.</p>
-<p>When writing your report, type the name of the vulnerability and it will auto-populate in the UI as shown below:
-<img alt="" src="/files/Pasted%20image%2020240316111751.png" /></p>
-<p>Once selected your report will automatically include the severity of the finding, the description, and the recommendation! 💥 Something that would have taken you 30 min to an hour is complete in just a few seconds.
-<img alt="" src="/files/Pasted%20image%2020240316112114.png" /></p>
-<p>These are fully editable in the Default Vulnerabilities section. You can add new ones, update the pre-packaged ones, or delete them all and upload all your own with the <a href="/Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/">Faction API</a>.</p>
-<h2 id="assessment-templates">Assessment Templates</h2>
-<p>Faction has the option of creating global and personal boilerplates that you can easily add to your reports. Global templates are shared with everyone while personal templates are only available to you. </p>
-<h3 id="global-assessment-templates">Global Assessment Templates</h3>
-<p>In Faction, Navigate to Templates -&gt; Assessment Templates. Here you have the option to create text that will be available to all assessors in the platform. This is useful for creating things like Different High-Level Summaries for different report types or adding common risk summaries. </p>
-<p><img alt="" src="/files/Pasted%20image%2020240316113341.png" /></p>
-<p>Notice you can include most <a href="/Custom%20Security%20Report%20Templates/">faction variables</a> in your templates and they will be auto-populated in the generated report. </p>
-<p>As the security assessor, you can easily add these to different sections of your report. Below is a screen-share of using Global Templates in your reports. </p>
-<iframe width="1280" height="641" src="https://www.youtube.com/embed/uucCzTkTfCk?hd=1" title="Using Global Templates in PenTesting Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<h3 id="user-assessment-templates">User Assessment Templates</h3>
-<p>User Assessment Templates work the same as the Global Assessment Templates but are specific to your user account. This can allow you to add your own flare to a report that you might not want to share with the rest of the team. </p>
-<p>To add a User Template just start typing into any of Faction's text editors and then click the Save button in the Template section. Note that User Templates have a different icon beside them in the Template List. </p>
-<p>Below is a walk though of how you would add User templates to save and later recall user-defined boilerplate text.  </p>
-<iframe width="1280" height="641" src="https://www.youtube.com/embed/pMrvDNscN80?hd=1" title="Using User Defined Templates in PenTesting Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>✨ We are excited to release the first iteration of the Faction App Store! ✨</p>
+<p>The App Store is where developers can build custom integrations with Faction. These can be anything from sending vulnerabilities to external bug trackers to adding custom graphics to your automated pentest reports! </p>
+<p>We want to make this process really easy and took inspiration from <a href="https://portswigger.net/burp/documentation/desktop/extensions/creating">Burp Suite</a> on the design. If you have ever made an extension for Burp then you should be able to get up and running pretty quickly. </p>
+<h3 id="what-can-be-extended">What Can Be Extended?</h3>
+<p>With this initial release, you can extend Faction by:
+- Including your own application inventory database to the application search features and populate results in Faction like the Application ID, Distribution Lists, and Application Name. 
+- Triggers when an assessment state changes (created, updated, or finalized). You can use this to send emails to a distribution list that an assessment has been scheduled for certain dates. When the assessment is finalized you can choose to send only the vulnerabilities of a certain criticality to an external tracking system as well as send to different tracking systems depending on the type of assessment. 
+- Triggers when a vulnerability state is changed. When a tracked vulnerability is retested and pass/fail, you can create a custom workflow and alert key stakeholders that the issue succeeded or failed. 
+- Update reports when they are generated. You can use this to add custom variables to your reporting templates and replace the contents with data from an external system or add custom charts and graphics to give your reports a more polished look. </p>
+<p>The full documentation on the API can be found <a href="APIS/App%20Store%20Extension%20API">here</a></p>
+<h3 id="custom-settings">Custom Settings</h3>
+<p>Extensions are built so that you can add your own configuration options that can be stored in the Faction Database. Things like a user-editable hostname or API key can be configured in your extension. Based on how you set up your configuration you can make data like passwords and API keys hidden in the UI and encrypted at rest. </p>
+<p><img alt="" src="/files/Pasted%20image%2020240325105733.png" /></p>
+<h3 id="extension-chain">Extension Chain</h3>
+<p>Extensions can be chained in any order. Once you add apps and enable them in Faction, the UI allows you to drag the extension to anywhere in the list. This allows you to create one extension that processes data and returns a result that can be processed by the next extension. </p>
+<table>
+<thead>
+<tr>
+<th>Before Order Change</th>
+<th>After Order Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="/files/Pasted%20image%2020240325105756.png" /></td>
+<td><img alt="" src="/files/Pasted%20image%2020240325105827.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>You can use this to create one extension that returns a JIRA Tracking number for all vulnerabilities in the finalized assessment, they take those numbers and process them into another system and on and on down the chain. </p>
+<h3 id="example-extensions">Example Extensions</h3>
+<p>You can review the source code for our initial apps <a href="Faction%20App%20Store%20Extensions">here</a>. This list will grow over time but currently, there are 2 (JIRA Integration, Vulnerability Bar Charts). </p>
+<h3 id="submit-your-own">Submit Your Own</h3>
+<p>We can't think of everything! We encourage developers to submit their own extensions and we will add them to our list of Approved Extensions. Send an email to develop [ at ] factionsecurity [dot] com with a link to your GitHub and a brief explanation of what it does. </p>
+<h3 id="conclusion">Conclusion</h3>
+<p>We hope you enjoy the new  App Store and other new features that are part of this 1.2 Release. Faction is open-source and free to use. Please leave us feedback in either our GitHub <a href="https://github.com/orgs/factionsecurity/discussions">Discussion Boards</a> or by <a href="https://github.com/factionsecurity/faction/issues">submitting Issues</a>. </p>
+<p>If you want to help support the project and ensure its longevity then consider being a sponsor... It's good karma!  ❤️
+<strong>Sponsor Options</strong>
+- <a href="https://github.com/sponsors/factionsecurity">GitHub Sponsor</a>
+- <a href="https://www.patreon.com/null0perat0r">Patreon</a>
+- <a href="https://opencollective.com/faction">Open Collective</a></p>
 
 
 
@@ -983,7 +979,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../15/hello-world/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hello World">
+          <a href="../../16/faction-boilerplates/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Faction Boilerplates">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -993,27 +989,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Hello World
+                Faction Boilerplates
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../25/faction-app-store/" class="md-footer__link md-footer__link--next" aria-label="Next: Faction App Store">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Faction App Store
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
