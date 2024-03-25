@@ -1,4 +1,5 @@
 ---
+tags: [Self Hosted, Setup]
 date: 2023-12-18
 ---
 If you decide to self-host Faction instead of using the [Managed Solution](/Managed%20FACTION%20Setup/) then you will need to ensure you include the proper Environment variables so that Faction integrates into your environment.

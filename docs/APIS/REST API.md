@@ -1,6 +1,6 @@
 ---
 tags:
- - api
+ - API
 date: 2024-03-15
 ---
 The Rest API enables you to integrate FACTION into your unique environment. With the API you can:

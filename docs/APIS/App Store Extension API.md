@@ -1,6 +1,7 @@
 ---
 tags: 
- - api
+ - API
+ - App Store
 date: 2024-02-08
 ---
 <img alt="Static Badge" src="https://img.shields.io/badge/Since-1.2-blue?style=flat">
@@ -101,4 +102,4 @@ public class MyPlugin extends BaseExtension extends BaseExtension implements com
 - Returns the updated vulnerability
 
 ## Additional Resources
-- [Building a JIRA Extension](/Extending%20FACTION/)
+- [Building a JIRA Extension](/APIS/Jira%20Integration%20Example/)

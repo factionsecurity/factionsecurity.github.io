@@ -1,4 +1,5 @@
 ---
+tags: [ Authentication, Core Features]
 date: 2023-12-18
 ---
 # Integrate Faction into OAuth Solutions

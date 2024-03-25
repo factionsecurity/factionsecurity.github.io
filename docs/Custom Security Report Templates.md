@@ -1,10 +1,10 @@
 ---
 date: 2023-12-17
-tags: []
+tags: [Reporting, Customize, Variables]
 ---
 ![](files/Pasted image 20231217155942.png)
 
-The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports you need to use the variables listed below. Entering these into your DOCX reports will auto-replace assessment and vulnerability text when the report is generated. You can even use the same variables in many of the assessor input fields outside of the report template (like Risk Assessment Summaries) and it will auto-populate the fields when the report is generated.
+The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports you need to use the variables listed below. Entering these into your DOCX reports will auto-replace the assessment and vulnerability text when the report is generated. You can even use the same variables in many of the assessor input fields outside of the report template (like Risk Assessment Summaries) and it will auto-populate the fields when the report is generated.
 
 You can download the sample templates here:
  [Sample Templates](https://github.com/factionsecurity/report_templates) 
@@ -47,8 +47,8 @@ These are only available inside tables.
 - **${severity}** – Severity of each vulnerability.
 - **${likelihood}** – Likelihood of the vulnerability
 - **${impact}** – Impact of the vulnerability
-- **${cvssScore}** – CVSS score of the vulnerability
-- **${cvssString}** – CVSS vector of the vulnerability
+- **${cvssScore}** – CVSS score of the vulnerability (Since v1.2)
+- **${cvssString}** – CVSS vector of the vulnerability (Since v1.2)
 - **${count}** – Row Count of the vulnerability
 - **${tracking}** – Tracking number of the vulnerability
 - **${vid}** – Vulnerability internal database id
@@ -96,8 +96,8 @@ These are only available inside tables.
 - **${severity}** – Severity of each vulnerability.
 - **${likelihood}** – Likelihood of the vulnerability
 - **${impact}** – Impact of the vulnerability
-- **${cvssScore}** – CVSS score of the vulnerability
-- **${cvssString}** – CVSS vector of the vulnerability
+- **${cvssScore}** – CVSS score of the vulnerability (Since 1.2)
+- **${cvssString}** – CVSS vector of the vulnerability (Since 1.2)
 - **${count}** – Row Count of the vulnerability
 - **${tracking}** – Tracking number of the vulnerability
 - **${vid}** – Vulnerability internal database id

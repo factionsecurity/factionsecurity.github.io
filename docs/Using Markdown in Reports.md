@@ -9,7 +9,7 @@ When exploiting a vulnerability in a penetration test it is important to capture
     The API fully supports Markdown. This makes it easy to develop automated tools that can add issues or other text to Faction with formatted text via the API. 
 
 
-Here are some examples how you can use markdown in Faction.
+Here are some examples of how you can use markdown in Faction.
 
 ## Exploit Steps
 You can enter Markdown directly into the details editor when adding a new vulnerability. Once you enter the text, highlight just the part you want to convert to markdown and click the Markdown button in the toolbar. 
@@ -19,7 +19,7 @@ You can enter Markdown directly into the details editor when adding a new vulner
 After you select the Markdown button your text will be converted to rich text as shown below:
 ![](/files/Pasted%20image%2020240317122948.png)
 
-You can also perform this in a code block if you want to write your Markdown in a monospaced font.  First select `Code` as shown below:
+You can also perform this in a code block if you want to write your Markdown in a monospaced font.  First, select `Code` as shown below:
 ![](/files/Pasted%20image%2020240317123222.png)
 
 Then start entering your text in the code block as shown here.
@@ -29,7 +29,7 @@ Select the text in the code block and click the Markdown button
 ![](/files/Pasted%20image%2020240317124431.png)
 
 ## Faction Burp Suite Extension
-If you find a vulnerability while using the Faction Burp extension, you can add the finding and all details directly though the extension. Below is an example of cross site scripting:
+If you find a vulnerability while using the Faction Burp extension, you can add the finding and all details directly through the extension. Below is an example of cross-site scripting:
 ![](/files/Pasted%20image%2020240317125704.png)
 
 In Burp Suite, select the request and select Add New Finding:
@@ -50,7 +50,7 @@ You can use Markdown in your Executive Summaries as well to quickly type up your
 Select the text and click Markdown to convert!
 ![](/files/Pasted%20image%2020240317124033.png)
 
-You can also add scoping information in  tables without messing with tables editors and setting hyperlinks which can be a pain sometimes. 
+You can also add scoping information in tables without messing with table editors and setting hyperlinks which can be a pain sometimes. 
 ![](/files/Pasted%20image%2020240317124827.png)
 
 ![](/files/Pasted%20image%2020240317124858.png)

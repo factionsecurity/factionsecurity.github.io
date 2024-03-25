@@ -1,9 +1,11 @@
 ---
 tags: 
- - api
+ - API
+ - App Store
 date: 2024-02-08
 ---
 <img alt="Static Badge" src="https://img.shields.io/badge/Since-1.2-blue?style=flat">
+
 Faction can extend its functionality on the server side. If you are familiar with writing BurpSuite extensions then this process should be somewhat familiar to you. If you are not it’s OK. We will walk through the specifics below.
 
 In this example, we will create a JIRA plugin that will create issues for each vulnerability when the assessment is finalized.

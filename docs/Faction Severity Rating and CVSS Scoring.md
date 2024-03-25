@@ -1,4 +1,5 @@
 ---
+tags: [CVSS, Vulnerability, Core Features]
 date: 2024-03-14
 ---
 

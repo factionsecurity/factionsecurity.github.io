@@ -1,13 +1,13 @@
 ---
 tags: 
- - core features
- - boilerplate
- - templating
+ - Core Features
+ - Boilerplate
+ - Customizing
 authors: [null0perat0r]
 date: 2024-03-16
 ---
 
-If you have been doing penetration testing for any length of time you probably have a personal database of vulnerability descriptions, recommendations as well as other text snippets you will inject into various places of your reports. What if, Instead of keeping these in separate files on various computers, what if they were all included in your reporting software?!@! 🤯
+If you have been doing penetration testing for any length of time you probably have a personal database of vulnerability descriptions, recommendations as well as other text snippets you will inject into various places of your reports. What if, Instead of keeping these in separate files on various computers, they were all included in your reporting software?!@! 🤯
 
 Faction IS your database for global boilerplate, default vulnerability templates, personal flare, and just about anything else you can imagine (well...sorta 🤔). Let's walk through how this is done.
 <!-- more -->
@@ -34,7 +34,7 @@ Notice you can include most [faction variables](/Custom%20Security%20Report%20Te
 
 As the security assessor, you can easily add these to different sections of your report. Below is a screen-share of using Global Templates in your reports. 
 
-<iframe width="1280" height="641" src="https://www.youtube.com/embed/uucCzTkTfCk?hd=1" title="Using Global Templates in PenTesting Reprots" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1280" height="641" src="https://www.youtube.com/embed/uucCzTkTfCk?hd=1" title="Using Global Templates in PenTesting Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### User Assessment Templates
 User Assessment Templates work the same as the Global Assessment Templates but are specific to your user account. This can allow you to add your own flare to a report that you might not want to share with the rest of the team. 
