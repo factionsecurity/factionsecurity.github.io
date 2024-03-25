@@ -904,11 +904,13 @@
 <p>The App Store is where developers can build custom integrations with Faction. These can be anything from sending vulnerabilities to external bug trackers to adding custom graphics to your automated pentest reports! </p>
 <p>We want to make this process really easy and took inspiration from <a href="https://portswigger.net/burp/documentation/desktop/extensions/creating">Burp Suite</a> on the design. If you have ever made an extension for Burp then you should be able to get up and running pretty quickly. </p>
 <h3 id="what-can-be-extended">What Can Be Extended?</h3>
-<p>With this initial release, you can extend Faction by:
-- Including your own application inventory database to the application search features and populate results in Faction like the Application ID, Distribution Lists, and Application Name. 
-- Triggers when an assessment state changes (created, updated, or finalized). You can use this to send emails to a distribution list that an assessment has been scheduled for certain dates. When the assessment is finalized you can choose to send only the vulnerabilities of a certain criticality to an external tracking system as well as send to different tracking systems depending on the type of assessment. 
-- Triggers when a vulnerability state is changed. When a tracked vulnerability is retested and pass/fail, you can create a custom workflow and alert key stakeholders that the issue succeeded or failed. 
-- Update reports when they are generated. You can use this to add custom variables to your reporting templates and replace the contents with data from an external system or add custom charts and graphics to give your reports a more polished look. </p>
+<p>With this initial release, you can extend Faction by:</p>
+<ul>
+<li>Including your own application inventory database to the application search features and populate results in Faction like the Application ID, Distribution Lists, and Application Name. </li>
+<li>Triggers when an assessment state changes (created, updated, or finalized). You can use this to send emails to a distribution list that an assessment has been scheduled for certain dates. When the assessment is finalized you can choose to send only the vulnerabilities of a certain criticality to an external tracking system as well as send to different tracking systems depending on the type of assessment. </li>
+<li>Triggers when a vulnerability state is changed. When a tracked vulnerability is retested and pass/fail, you can create a custom workflow and alert key stakeholders that the issue succeeded or failed. </li>
+<li>Update reports when they are generated. You can use this to add custom variables to your reporting templates and replace the contents with data from an external system or add custom charts and graphics to give your reports a more polished look. </li>
+</ul>
 <p>The full documentation on the API can be found <a href="APIS/App%20Store%20Extension%20API">here</a></p>
 <h3 id="custom-settings">Custom Settings</h3>
 <p>Extensions are built so that you can add your own configuration options that can be stored in the Faction Database. Things like a user-editable hostname or API key can be configured in your extension. Based on how you set up your configuration you can make data like passwords and API keys hidden in the UI and encrypted at rest. </p>
@@ -936,11 +938,13 @@
 <p>We can't think of everything! We encourage developers to submit their own extensions and we will add them to our list of Approved Extensions. Send an email to develop [ at ] factionsecurity [dot] com with a link to your GitHub and a brief explanation of what it does. </p>
 <h3 id="conclusion">Conclusion</h3>
 <p>We hope you enjoy the new  App Store and other new features that are part of this 1.2 Release. Faction is open-source and free to use. Please leave us feedback in either our GitHub <a href="https://github.com/orgs/factionsecurity/discussions">Discussion Boards</a> or by <a href="https://github.com/factionsecurity/faction/issues">submitting Issues</a>. </p>
-<p>If you want to help support the project and ensure its longevity then consider being a sponsor... It's good karma!  ❤️
-<strong>Sponsor Options</strong>
-- <a href="https://github.com/sponsors/factionsecurity">GitHub Sponsor</a>
-- <a href="https://www.patreon.com/null0perat0r">Patreon</a>
-- <a href="https://opencollective.com/faction">Open Collective</a></p>
+<p>If you want to help support the project and ensure its longevity then consider being a sponsor... It's good karma!  ❤️</p>
+<p><strong>Sponsor Options</strong></p>
+<ul>
+<li><a href="https://github.com/sponsors/factionsecurity">GitHub Sponsor</a></li>
+<li><a href="https://www.patreon.com/null0perat0r">Patreon</a></li>
+<li><a href="https://opencollective.com/faction">Open Collective</a></li>
+</ul>
 
 
 
