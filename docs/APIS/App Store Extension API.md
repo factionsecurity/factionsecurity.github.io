@@ -102,4 +102,4 @@ public class MyPlugin extends BaseExtension extends BaseExtension implements com
 - Returns the updated vulnerability
 
 ## Additional Resources
-- [Building a JIRA Extension](/APIS/Jira%20Integration%20Example/)
+- [Building a JIRA Extension](/APIS/JIRA%20App%20Integration%20Example/)
