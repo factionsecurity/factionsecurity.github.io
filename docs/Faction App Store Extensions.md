@@ -14,4 +14,4 @@ Below is a List of Approved Faction Extensions. These all work with Faction 1.2+
 
 
 # Submit an Extension
-Send an email to develop [ at ] factionsecurity [dot] com with a link to to your github and a brief explaination of what it does. 
+Send an email to develop [ at ] factionsecurity [dot] com with a link to your github and a brief explanation of what it does. 

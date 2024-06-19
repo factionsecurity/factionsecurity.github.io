@@ -55,4 +55,4 @@ The higher-level tiers allow you to configure other options like LDAP and OAuth.
 
 - [Integrate Faction Into OAuth Solutions](/Integrate%20Faction%20into%20OAuth%20Solutions/)
 - [Customizing Faction for Self Hosting](/Self-Hosted%20FACTION%20Setup/)
-- [Extending Faction](/Extending%20FACTION/)
+- [Extending Faction](/APIS/App%20Store%20Extension%20API/)

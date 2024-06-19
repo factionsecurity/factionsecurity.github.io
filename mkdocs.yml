@@ -1,4 +1,5 @@
-site_name: "" 
+site_name: "Faction Docs" 
+site_url: "https://docs.factionsecurity.com"
 theme: 
     palette:
         scheme: slate
