@@ -15,6 +15,7 @@ You can install the Faction Integration directly from the BApp store.
 1. Open Burp then Click Extensions->BApp Store
 3. Search for Faction
 4. Click Install
+
 ![](/files/Pasted%20image%2020240619150257.png)
 
 ## Set Up Faction
@@ -29,24 +30,29 @@ You can retrieve your API Key in Faction by accessing your profile in the upper 
 
 ## Access Your Assessment Queue
 Now that Faction is configured you should be able to see you current assessment queue as shown below:
+
 ![](/files/Pasted%20image%2020240619151342.png)
 
 Clicking on an assessment will show you the scope, any vulnerabilities that have been reported, and notes that your team has shared with you. 
+
 ![](/files/Pasted%20image%2020240619151525.png)
 
 If you select one of the vulnerabilities you can see its full details including screenshots.
+
 ![](/files/Pasted%20image%2020240619151631.png)
 
 ## Enter Findings into Faction From Burp
 
 Lets say you find an XSS attack and have verified it with BurpSuite. You can add the finding to Faction without ever leaving Burp. Just select the request or response that you want to enter into the report and select "Add New Finding" as shown below:
+
 ![](/files/Pasted%20image%2020240619152503.png)
 
 Now you will be presented with the vulnerability findings dialog. Here you can search for an existing vulnerability template to auto populate the details and recommendations. 
 
-Next ensure its being sent to the right assessment. The option will default to the last assessment you selected in the previous section on [Access your Assessment Queue](#Access%20Your%20Assessment%20Queue)
+Next ensure its being sent to the right assessment. The option will default to the last assessment you selected in the previous section on [Access your Assessment Queue](#access-your-assessment-queue)
 
 Next you have several options. 
+
 - Select the severity or leave the default
 - Check or uncheck to include the request and/or response. When checked it will include these options in code blocks in the final report.
 - "Snip cookies" when checked will remove all cookies from being added to the report and replace them with `[...snip...]`
@@ -75,6 +81,7 @@ Anything found in the BurpSuite Scanner can be added directly into Faction using
 ![](/files/Pasted%20image%2020240619154354.png)
 
 Below shows that all issues were combined into two distinct issues.
+
 ![](/files/Pasted%20image%2020240619154637.png)
 
 Notice that if you select more than one of the same issue that it will aggregate the URLs into one finding:
