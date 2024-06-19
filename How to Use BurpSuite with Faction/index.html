@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.factionsecurity.com/Using%20Markdown%20in%20Reports/">
+        <link rel="canonical" href="https://docs.factionsecurity.com/How%20to%20Use%20BurpSuite%20with%20Faction/">
       
       
-        <link rel="prev" href="../Self-Hosted%20FACTION%20Setup/">
+        <link rel="prev" href="../Faction%20Severity%20Rating%20and%20CVSS%20Scoring/">
       
       
-        <link rel="next" href="../Using%20the%20Faction%20Burp%20Suite%20Extension/">
+        <link rel="next" href="../Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Using Markdown in Reports - Faction Docs</title>
+        <title>How to Use BurpSuite with Faction - Faction Docs</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exploit-steps" class="md-skip">
+        <a href="#install-the-burp-faction-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using Markdown in Reports
+              How to Use BurpSuite with Faction
             
           </span>
         </div>
@@ -310,10 +310,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../How%20to%20Use%20BurpSuite%20with%20Faction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    How to Use BurpSuite with Faction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -322,6 +340,87 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-burp-faction-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install the Burp Faction Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-faction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Up Faction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-your-assessment-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Your Assessment Queue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enter-findings-into-faction-from-burp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enter Findings into Faction From Burp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replay-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replay Findings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-scan-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Scan Findings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapping-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrapping Up
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -430,28 +529,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Using Markdown in Reports
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Using%20Markdown%20in%20Reports/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,51 +541,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exploit-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploit Steps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faction-burp-suite-extension" class="md-nav__link">
-    <span class="md-ellipsis">
-      Faction Burp Suite Extension
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#executive-summaries-and-scoping" class="md-nav__link">
-    <span class="md-ellipsis">
-      Executive Summaries  and Scoping
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -863,27 +899,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exploit-steps" class="md-nav__link">
+  <a href="#install-the-burp-faction-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Exploit Steps
+      Install the Burp Faction Integration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#faction-burp-suite-extension" class="md-nav__link">
+  <a href="#set-up-faction" class="md-nav__link">
     <span class="md-ellipsis">
-      Faction Burp Suite Extension
+      Set Up Faction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#executive-summaries-and-scoping" class="md-nav__link">
+  <a href="#access-your-assessment-queue" class="md-nav__link">
     <span class="md-ellipsis">
-      Executive Summaries  and Scoping
+      Access Your Assessment Queue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enter-findings-into-faction-from-burp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enter Findings into Faction From Burp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replay-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replay Findings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-scan-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Scan Findings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapping-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrapping Up
     </span>
   </a>
   
@@ -908,25 +980,19 @@
     
     
     
-      <a href="../tags/#markdown" class="md-tag">Markdown</a>
+      <a href="../tags/#burpsuite" class="md-tag">burpsuite</a>
     
   
     
     
     
-      <a href="../tags/#reporting" class="md-tag">Reporting</a>
+      <a href="../tags/#integrations" class="md-tag">integrations</a>
     
   
     
     
     
-      <a href="../tags/#core-features" class="md-tag">Core Features</a>
-    
-  
-    
-    
-    
-      <a href="../tags/#burp-suite" class="md-tag">Burp Suite</a>
+      <a href="../tags/#api" class="md-tag">api</a>
     
   
 </nav>
@@ -936,42 +1002,61 @@
   
 
 
-  <h1>Using Markdown in Reports</h1>
+  <h1>How to Use BurpSuite with Faction</h1>
 
-<p>When exploiting a vulnerability in a penetration test it is important to capture your attack steps quickly and thoroughly so you don't have to spend extra time remembering and re-validating what you did when it's time to report on the finding. Nothing can break your flow more than having to stop what you are doing to format text, fix hyperlinks or build numbered lists of steps. Markdown is one of the quickest ways to type formatted text and capture these details effortlessly. </p>
-<div class="admonition note">
-<p class="admonition-title">Pro Tip!</p>
-<p>The API fully supports Markdown. This makes it easy to develop automated tools that can add issues or other text to Faction with formatted text via the API. </p>
-</div>
-<p>Here are some examples of how you can use markdown in Faction.</p>
-<h2 id="exploit-steps">Exploit Steps</h2>
-<p>You can enter Markdown directly into the details editor when adding a new vulnerability. Once you enter the text, highlight just the part you want to convert to markdown and click the Markdown button in the toolbar. </p>
-<p><img alt="" src="/files/Pasted%20image%2020240317122727.png" /></p>
-<p>After you select the Markdown button your text will be converted to rich text as shown below:
-<img alt="" src="/files/Pasted%20image%2020240317122948.png" /></p>
-<p>You can also perform this in a code block if you want to write your Markdown in a monospaced font.  First, select <code>Code</code> as shown below:
-<img alt="" src="/files/Pasted%20image%2020240317123222.png" /></p>
-<p>Then start entering your text in the code block as shown here.
-<img alt="" src="/files/Pasted%20image%2020240317123535.png" /></p>
-<p>Select the text in the code block and click the Markdown button
-<img alt="" src="/files/Pasted%20image%2020240317124431.png" /></p>
-<h2 id="faction-burp-suite-extension">Faction Burp Suite Extension</h2>
-<p>If you find a vulnerability while using the Faction Burp extension, you can add the finding and all details directly through the extension. Below is an example of cross-site scripting:
-<img alt="" src="/files/Pasted%20image%2020240317125704.png" /></p>
-<p>In Burp Suite, select the request and select Add New Finding:
-<img alt="" src="/files/Pasted%20image%2020240317125749.png" /></p>
-<p>A dialog box will open that lets you search for the vulnerability type (in this case Cross Site Scripting) and allow you to enter your details on how to recreate the exploit. </p>
-<p><img alt="" src="/files/Pasted%20image%2020240317130047.png" /></p>
-<p>Now if we navigate back into Faction and view the details we will see the exploit steps displayed in rich text. </p>
-<p><img alt="" src="/files/Pasted%20image%2020240317130408.png" /></p>
-<h2 id="executive-summaries-and-scoping">Executive Summaries  and Scoping</h2>
-<p>You can use Markdown in your Executive Summaries as well to quickly type up your high level assessments of the application and provide guidance on how to prioritize the findings. <br />
-<img alt="" src="/files/Pasted%20image%2020240317124018.png" /></p>
-<p>Select the text and click Markdown to convert!
-<img alt="" src="/files/Pasted%20image%2020240317124033.png" /></p>
-<p>You can also add scoping information in tables without messing with table editors and setting hyperlinks which can be a pain sometimes. 
-<img alt="" src="/files/Pasted%20image%2020240317124827.png" /></p>
-<p><img alt="" src="/files/Pasted%20image%2020240317124858.png" /></p>
+<p>Faction has a tight integration with <a href="https://portswigger.net/burp">BurpSuite</a> and you can now find our extension in the <a href="https://portswigger.net/bappstore/f4048e6291214e99a92ca555abee0f74">BApp Store</a>. Here are a few things you can do with the Faction Burp Integration.
+1. See your assessment and retest queues.
+2. Instant access to your assessment scope and other details.
+3. View all findings you and your co-pentesters are reporting.
+4. Replay payloads from other pentesters.
+5. Add issues in Faction directly from BurpSuite. </p>
+<h2 id="install-the-burp-faction-integration">Install the Burp Faction Integration</h2>
+<p>You can install the Faction Integration directly from the BApp store. 
+1. Open Burp then Click Extensions-&gt;BApp Store
+3. Search for Faction
+4. Click Install
+<img alt="" src="/files/Pasted%20image%2020240619150257.png" /></p>
+<h2 id="set-up-faction">Set Up Faction</h2>
+<p>In BurpSuite navigate to the Faction tab after you have installed the Faction Integration. From here you need to enter the URL and API key for your user. </p>
+<p>The URL will be your domain plus <code>api</code>. Ex <code>https://faction-test.factionsecurity.com/api</code></p>
+<p><img alt="" src="/files/Pasted%20image%2020240619150830.png" /></p>
+<p>You can retrieve your API Key in Faction by accessing your profile in the upper right corner of the Faction Web Interface. 
+<img alt="" src="/files/Pasted%20image%2020240619151123.png" /></p>
+<h2 id="access-your-assessment-queue">Access Your Assessment Queue</h2>
+<p>Now that Faction is configured you should be able to see you current assessment queue as shown below:
+<img alt="" src="/files/Pasted%20image%2020240619151342.png" /></p>
+<p>Clicking on an assessment will show you the scope, any vulnerabilities that have been reported, and notes that your team has shared with you. 
+<img alt="" src="/files/Pasted%20image%2020240619151525.png" /></p>
+<p>If you select one of the vulnerabilities you can see its full details including screenshots.
+<img alt="" src="/files/Pasted%20image%2020240619151631.png" /></p>
+<h2 id="enter-findings-into-faction-from-burp">Enter Findings into Faction From Burp</h2>
+<p>Lets say you find an XSS attack and have verified it with BurpSuite. You can add the finding to Faction without ever leaving Burp. Just select the request or response that you want to enter into the report and select "Add New Finding" as shown below:
+<img alt="" src="/files/Pasted%20image%2020240619152503.png" /></p>
+<p>Now you will be presented with the vulnerability findings dialog. Here you can search for an existing vulnerability template to auto populate the details and recommendations. </p>
+<p>Next ensure its being sent to the right assessment. The option will default to the last assessment you selected in the previous section on <a href="#Access%20Your%20Assessment%20Queue">Access your Assessment Queue</a></p>
+<p>Next you have several options. 
+- Select the severity or leave the default
+- Check or uncheck to include the request and/or response. When checked it will include these options in code blocks in the final report.
+- "Snip cookies" when checked will remove all cookies from being added to the report and replace them with <code>[...snip...]</code>
+- "Extract Selection" when checked will only add the portion of the code you selected in Burp to the report. This is most useful trying to only show the reflected script in the response instead of the full response. 
+- Exploit Steps can be included and supports MarkDown Syntax. <em>Note Screenshots are available though the Burp Extension currently. For this you still need to add them to the Web UI.</em> </p>
+<p><img alt="" src="/files/Pasted%20image%2020240619152829.png" /></p>
+<p>Now you can click <strong>Save</strong> to add it to Faction. All this allows issues to be added seamlessly without breaking your flow. The final result will look something like this.</p>
+<p><img alt="" src="/files/Pasted%20image%2020240619153743.png" /></p>
+<h2 id="replay-findings">Replay Findings</h2>
+<p>The Faction Burp Integration has the ability to replay findings if you included the request in the details. Notice the hyperlink above the request when you select a vulnerability in the Faction BurpSuite Integration. </p>
+<p><img alt="" src="/files/Pasted%20image%2020240619151840.png" /></p>
+<p>If you click the hyperlink it will add it to your Burp Repeater. This allows you to replay your own findings and findings from your co-pentesters. The same feature is available for retests!</p>
+<p><img alt="" src="/files/Pasted%20image%2020240619151923.png" /></p>
+<h2 id="add-scan-findings">Add Scan Findings</h2>
+<p>Anything found in the BurpSuite Scanner can be added directly into Faction using the BurpSuite Integration as well. Just select the issues you want to add and then choose "Send Issues to Faction"</p>
+<p><img alt="" src="/files/Pasted%20image%2020240619154354.png" /></p>
+<p>Below shows that all issues were combined into two distinct issues.
+<img alt="" src="/files/Pasted%20image%2020240619154637.png" /></p>
+<p>Notice that if you select more than one of the same issue that it will aggregate the URLs into one finding:</p>
+<p><img alt="" src="/files/Pasted%20image%2020240619154521.png" /></p>
+<h2 id="wrapping-up">Wrapping Up</h2>
+<p>All of these features have been implemented to make adding issues to pen-testing reports easy and to not break your flow. Nothing worse that being in the zone and then have stop to mess with report formatting or ensuring you capture all the right data in your notes to use later. With Faction you can just add the issues as you find them and move on with your pentest. </p>
 
 
 
@@ -1006,7 +1091,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Self-Hosted%20FACTION%20Setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Self Hosted FACTION Setup">
+          <a href="../Faction%20Severity%20Rating%20and%20CVSS%20Scoring/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Faction Severity Rating and CVSS Scoring">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1016,20 +1101,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Self Hosted FACTION Setup
+                Faction Severity Rating and CVSS Scoring
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Using%20the%20Faction%20Burp%20Suite%20Extension/" class="md-footer__link md-footer__link--next" aria-label="Next: Using the Faction Burp Suite Extension">
+          <a href="../Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/" class="md-footer__link md-footer__link--next" aria-label="Next: Importing Your Vulnerability Templates Via the API">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Using the Faction Burp Suite Extension
+                Importing Your Vulnerability Templates Via the API
               </div>
             </div>
             <div class="md-footer__button md-icon">
