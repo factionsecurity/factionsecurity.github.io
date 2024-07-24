@@ -1,4 +1,4 @@
----
+![image](https://github.com/user-attachments/assets/b181ae83-d6ff-40ef-868d-9e637c7fde5f)---
 tags: [ Authentication, Core Features]
 date: 2023-12-18
 ---
@@ -39,6 +39,27 @@ Your Setup should look like the following:
 11. Take note of the **OpenId Configuration** URL
     ![](files/Pasted%20image%2020231218082551.png)
 
+
+## Entra Id Setup  
+**Proper roles are required to register Enterprise Application (at least Cloud Application Administrator).  
+1. Log into your [Entra Id Admin Panel](https://entra.microsoft.com/#home)  
+2. Go to the **Applications** -> **Enterprise Applications** -> **All Applications**  
+(follow [this](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/add-application-portal))  
+3. Create your own application (non-gallery)  
+![image](https://github.com/user-attachments/assets/c5951b6a-53e1-4a43-b6c2-07ee0c0a375d)  
+4.  Go to *App Registrations** and select just created app  
+![image](https://github.com/user-attachments/assets/8f429f76-5fc1-4d6d-a214-410f89d57696)  
+5.  Generate secret for App  
+![image](https://github.com/user-attachments/assets/231d2be5-6e06-4503-bdaf-253853af4f65)  
+6.  Obtain for Faction:  
+   - Application Id (Client Id) of an app  
+   - Entra URL for OIDC, commonly: *https://login.microsoftonline.com/$(tenantId)/v2.0/.well-known/openid-configuration*  
+   - Application Secret just created  
+7. Set up proper Platform configuration. Go to **Authentication** and Add a platform  
+    - WebApplication (URL: *https://example.factionsecurity.com/oauth/callback?client_name=OidcClient* - change example for Your faction tenant name)  
+![image](https://github.com/user-attachments/assets/06b47005-e8b6-4aa3-9003-bf1d66ff8679)  
+![image](https://github.com/user-attachments/assets/74adc92f-d571-44af-82f1-d0a5a93992e2)  
+8. In the Enterprise application panel assign proper users (or group) to the Enterprise application.
   
 ## Configure Faction
 1. Log into **Faction** as an admin user.
