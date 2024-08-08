@@ -1074,6 +1074,8 @@
 <li><strong>${asmtAccessKey}</strong> – Guid to access the client retest queue. ⭐️</li>
 <li><strong>${today}</strong> – Day the report is generated ⭐️</li>
 <li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf” ⭐️</li>
+<li><strong>${totalOpenVulns}</strong> - Can be used in retest reports to show a count of open vulnerabilities.  (Since 1.3)</li>
+<li><strong>${totalClosedVulns}</strong> - Can be used in retest reports to show the total count of closed vulnerabilities. (Since 1.3)</li>
 </ul>
 <h2 id="vulnerability-tables-variables">VULNERABILITY TABLES VARIABLES:</h2>
 <p>These are only available inside tables.</p>
@@ -1091,6 +1093,9 @@
 <li><strong>${count}</strong> – Row Count of the vulnerability</li>
 <li><strong>${tracking}</strong> – Tracking number of the vulnerability</li>
 <li><strong>${vid}</strong> – Vulnerability internal database id</li>
+<li><strong>${openedAt}</strong> - The date the vulnerability began tracking (Since 1.3)</li>
+<li><strong>${closedAt}</strong> - The date the vulnerability was closed (no longer tracked) (Since 1.3)</li>
+<li><strong>${remediationStatus}</strong> - Displays only "Open" or "Closed" (Since 1.3)</li>
 <li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”</li>
 <li><strong>${color  key=value,key=value}</strong> – The color of the text is based on key-value pairs. <a href="https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
 <li><strong>${cells key=value,key=value}</strong> – The color of the table cell is based on key-value pairs.  <a href="https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
@@ -1202,6 +1207,9 @@
 <li><strong>${count}</strong> – Row Count of the vulnerability</li>
 <li><strong>${tracking}</strong> – Tracking number of the vulnerability</li>
 <li><strong>${vid}</strong> – Vulnerability internal database id</li>
+<li><strong>${openedAt}</strong> - The date the vulnerability began tracking (Since 1.3)</li>
+<li><strong>${closedAt}</strong> - The date the vulnerability was closed (no longer tracked) (Since 1.3)</li>
+<li><strong>${remediationStatus}</strong> - Displays only "Open" or "Closed" (Since 1.3)</li>
 <li><strong>${cfXXXXXX}</strong> – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”</li>
 <li><strong>${details}</strong> – This will insert screenshots and exploit steps for each vulnerability.</li>
 <li><strong>${color  key=value,key=value}</strong> – The color of the text is based on key-value pairs. <a href="https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
