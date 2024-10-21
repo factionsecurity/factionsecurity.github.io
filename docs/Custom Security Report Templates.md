@@ -2,12 +2,16 @@
 date: 2023-12-17
 tags: [Reporting, Customize, Variables]
 ---
-![](files/Pasted image 20231217155942.png)
+![](files/Pasted%20image%2020231217155942.png)
 
 The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports you need to use the variables listed below. Entering these into your DOCX reports will auto-replace the assessment and vulnerability text when the report is generated. You can even use the same variables in many of the assessor input fields outside of the report template (like Risk Assessment Summaries) and it will auto-populate the fields when the report is generated.
 
 You can download the sample templates here:
  [Sample Templates](https://github.com/factionsecurity/report_templates) 
+ 
+!! note
+	You should disable spellcheck in your template document while adding variables. The spellcheck can cause the variables to contain attributes that will make the variable unrecognizable to the Faction document parser. 
+
  
 ## GENERAL VARIABLES:
 
@@ -34,12 +38,15 @@ All of these variables can be used anywhere in the DOCX template. Those with a s
 - **${asmtAccessKey}** – Guid to access the client retest queue. ⭐️
 - **${today}** – Day the report is generated ⭐️
 - **${cfXXXXXX}** – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf” ⭐️
+- **${totalOpenVulns}** - Can be used in retest reports to show a count of open vulnerabilities.  (Since 1.3)
+- **${totalClosedVulns}** - Can be used in retest reports to show the total count of closed vulnerabilities. (Since 1.3)
 
 ## VULNERABILITY TABLES VARIABLES:
 
 These are only available inside tables.
 
 - **${vulnTable}** – This defines a table to be a vulnerability listing table.
+- **${vulnTable Section_Name}** – This defines a table to be a vulnerability listing table for a section of vulnerabilities. See [Reporting Sections](https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#Reporting-Sections-(Enterprise/Paid-Feature))(Paid Only Feature).
 - **${vulnName}** – The Vulnerability name
 - **${rec}** – Vulnerability Recommendation
 - **${desc}** – Vulnerability Description
@@ -52,12 +59,16 @@ These are only available inside tables.
 - **${count}** – Row Count of the vulnerability
 - **${tracking}** – Tracking number of the vulnerability
 - **${vid}** – Vulnerability internal database id
+- **${openedAt}** - The date the vulnerability began tracking (Since 1.3)
+- **${closedAt}** - The date the vulnerability was closed (no longer tracked) (Since 1.3)
+- **${remediationStatus}** - Displays only "Open" or "Closed" (Since 1.3)
 - **${cfXXXXXX}** – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”
 - **${color  key=value,key=value}** – The color of the text is based on key-value pairs. [See below for how to set up colors.](https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors)
 - **${cells key=value,key=value}** – The color of the table cell is based on key-value pairs.  [See below for how to set up colors.](https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors)
 - **${loop}** – This variable tells the report generator which row will be repeated.
 - **${loop-*}** – This allows multiple rows to be repeated. Example ${loop-1} will repeat the row but the one below it.
 - **${details}** – This will insert screenshots and exploit steps for each vulnerability.
+- **${noIssuesText}** - This is the default text displayed in the section if no vulnerabilities are reported. (Since 1.3.28)
   
 ### Example Table Summary Table
 
@@ -89,6 +100,7 @@ These are only available inside tables.
 **For when you do not want to use tables to display your vulnerability information. You can use the following variables for inserting vulnerability information outside of a table**
 
 - **${fiBegin} / ${fiEnd}** – Block to repeat against all findings.
+- **${fiBegin Section_Name} / ${fiEnd Section_Name}** – Block to repeat a section of findings. See  [Reporting Sections](https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#Reporting-Sections-(Enterprise/Paid-Feature)) (Paid Only Feature)
 - **${vulnName}** – The Vulnerability name
 - **${rec}** – Vulnerability Recommendation
 - **${desc}** – Vulnerability Description
@@ -101,10 +113,14 @@ These are only available inside tables.
 - **${count}** – Row Count of the vulnerability
 - **${tracking}** – Tracking number of the vulnerability
 - **${vid}** – Vulnerability internal database id
+- **${openedAt}** - The date the vulnerability began tracking (Since 1.3)
+- **${closedAt}** - The date the vulnerability was closed (no longer tracked) (Since 1.3)
+- **${remediationStatus}** - Displays only "Open" or "Closed" (Since 1.3)
 - **${cfXXXXXX}** – Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”
 - **${details}** – This will insert screenshots and exploit steps for each vulnerability.
 - **${color  key=value,key=value}** – The color of the text is based on key-value pairs. [See below for how to set up colors.](https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors)
 - **${fill key=value,key=value}** – The color of the background elements is based on key-value pairs.  [See below for how to set up colors.](https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/#setting-severity-colors)
+- **${noIssuesText}** - This is the default text displayed in the section if no vulnerabilities are reported. (Since 1.3.28) 
 
 ### Example Block Findings
 
@@ -112,6 +128,19 @@ These are only available inside tables.
 
 **Why is the heading yellow?!?! Check [here](/Custom%20Security%20Report%20Templates/#setting-severity-colors)
 
+## Reporting Sections (Enterprise/Paid Feature)
+You can put findings into different sections of your report for paid versions and certain sponsored tiers of Faction. You may want to use sections if you are doing different types of pen tests in one report and need to keep these sections separated. For example, you can segregate findings into  Application Security and Network Security Sections. 
+
+To use sections you need to create the section names in the Faction Report Designer:
+![](/files/Pasted%20image%2020241020214807.png)
+
+Once the sections are created in the UI, you can add them to the report in two ways. 
+1. Vulnerability Block Variables: `${fiBegin Your_Section_Name}`/`${fiEnd Your_Section_Name}
+2. Vulnerability Table Variables: `${vulnTable Your_Section_Name}`
+
+Below is an example of how the template variables work:
+
+![](/files/Pasted%20image%2020241020215154.png)
 
 ## CSS FORMATTING:
 

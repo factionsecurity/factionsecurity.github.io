@@ -1,4 +1,5 @@
 ---
+tags: []
 date: 2023-12-17
 ---
 # Welcome to FACTION
@@ -67,7 +68,7 @@ You can find out more information about creating your own custom report template
 
 
 ## Don't want to host it yourself?
-We can provide hosting for your instance. All instances are single tenants so you don't have to worry about sharing infrastructure with untrusted parties. Navigate to [https://www.factionsecurity.com to learn more](https://www.factionsecurity.com). 
+We can provide hosting for your instance. All instances are single tenants so you don't have to worry about sharing infrastructure with untrusted parties. Hosted versions also come with other features like enhanced reporting. Navigate to [https://www.factionsecurity.com to learn more](https://www.factionsecurity.com). 
 
 ## Screenshots
 __Vulnerability Templates__
