@@ -2,18 +2,18 @@
 tags: [ Authentication, Core Features]
 date: 2023-12-18
 ---
-# Integrate Faction into ODIC Solutions
-Faction seamlessly integrates with your existing enterprise authentication solutions, ensuring a smooth and secure user experience. Leveraging widely adopted solutions such as LDAP and ODIC, Faction effortlessly integrates into any enterprise environment. Our platform is designed to adapt to your authentication infrastructure, providing a hassle-free implementation process and enhancing the overall efficiency of your organization’s security framework. With Faction, you can trust in a unified and streamlined authentication experience tailored to your enterprise needs.
+# Integrate Faction into OIDC Solutions
+Faction seamlessly integrates with your existing enterprise authentication solutions, ensuring a smooth and secure user experience. Leveraging widely adopted solutions such as LDAP and OIDC, Faction effortlessly integrates into any enterprise environment. Our platform is designed to adapt to your authentication infrastructure, providing a hassle-free implementation process and enhancing the overall efficiency of your organization’s security framework. With Faction, you can trust in a unified and streamlined authentication experience tailored to your enterprise needs.
 
 The article will walk through the steps needed to integrate [Faction](https://www.factionsecurity.com/) into [Google Auth](https://console.developers.google.com/), [Auth0](https://auth0.com/), or [Ping Identity](https://www.pingidentity.com/en.html)
 
-## Google OCIC Setup
+## Google OIDC Setup
 1. Log into your company’s [Google API Console](https://console.developers.google.com/).
 2. Click on **Credentials** from the left navigation.
 3. Click **+ Create Credentials** from the top navigation.
 4. Select **OAuth Client ID.**
 5. Select **Web Application** as the application type.
-6. Name the application something specific like **Faction ODIC Integration.** But the name does not matter.
+6. Name the application something specific like **Faction OIDC Integration.** But the name does not matter.
 7. Under **Authorized redirect URLs** click **+ ADD URI**.
 8. Enter the domain of your Faction Instance and append **/oauth/callback?client_name=OidcClient** to the path. Example: If you used Faction to host the site your URL would look like this:  
     https://furry-hyena-1111.factionsecurity.com/oauth/callback?client_name=OidcClient
