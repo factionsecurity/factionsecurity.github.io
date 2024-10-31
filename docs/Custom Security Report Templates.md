@@ -9,7 +9,7 @@ The Faction Report Designer allows you to create custom security report template
 You can download the sample templates here:
  [Sample Templates](https://github.com/factionsecurity/report_templates) 
  
-!! note
+!!! note
 	You should disable spellcheck in your template document while adding variables. The spellcheck can cause the variables to contain attributes that will make the variable unrecognizable to the Faction document parser. 
 
  

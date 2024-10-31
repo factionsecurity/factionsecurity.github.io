@@ -2,18 +2,18 @@
 tags: [ Authentication, Core Features]
 date: 2023-12-18
 ---
-# Integrate Faction into OAuth Solutions
-Faction seamlessly integrates with your existing enterprise authentication solutions, ensuring a smooth and secure user experience. Leveraging widely adopted solutions such as LDAP and OAuth, Faction effortlessly integrates into any enterprise environment. Our platform is designed to adapt to your authentication infrastructure, providing a hassle-free implementation process and enhancing the overall efficiency of your organization’s security framework. With Faction, you can trust in a unified and streamlined authentication experience tailored to your enterprise needs.
+# Integrate Faction into ODIC Solutions
+Faction seamlessly integrates with your existing enterprise authentication solutions, ensuring a smooth and secure user experience. Leveraging widely adopted solutions such as LDAP and ODIC, Faction effortlessly integrates into any enterprise environment. Our platform is designed to adapt to your authentication infrastructure, providing a hassle-free implementation process and enhancing the overall efficiency of your organization’s security framework. With Faction, you can trust in a unified and streamlined authentication experience tailored to your enterprise needs.
 
-The article will walk through the steps needed to integrate [Faction](https://www.factionsecurity.com/) into [Google Auth](https://console.developers.google.com/) or [Auth0](https://auth0.com/).
+The article will walk through the steps needed to integrate [Faction](https://www.factionsecurity.com/) into [Google Auth](https://console.developers.google.com/), [Auth0](https://auth0.com/), or [Ping Identity](https://www.pingidentity.com/en.html)
 
-## Google OAuth Setup
+## Google OCIC Setup
 1. Log into your company’s [Google API Console](https://console.developers.google.com/).
 2. Click on **Credentials** from the left navigation.
 3. Click **+ Create Credentials** from the top navigation.
 4. Select **OAuth Client ID.**
 5. Select **Web Application** as the application type.
-6. Name the application something specific like **Faction OAuth Integration.** But the name does not matter.
+6. Name the application something specific like **Faction ODIC Integration.** But the name does not matter.
 7. Under **Authorized redirect URLs** click **+ ADD URI**.
 8. Enter the domain of your Faction Instance and append **/oauth/callback?client_name=OidcClient** to the path. Example: If you used Faction to host the site your URL would look like this:  
     https://furry-hyena-1111.factionsecurity.com/oauth/callback?client_name=OidcClient
@@ -39,16 +39,42 @@ Your Setup should look like the following:
 11. Take note of the **OpenId Configuration** URL
     ![](files/Pasted%20image%2020231218082551.png)
 
-  
+## Ping Identity Setup
+1. Log into [Ping Identity Console](https://admin.pingone.com/web-portal/login)
+2. Select Applications.
+3. Add a New Application.
+4. Give the Application a name like Faction.
+5. Select OIDC Web App.
+6. Click Save.
+    ![](/files/Pasted%20image%2020241030210354.png)
+7. Open the newly created application and select the Configuration tab:
+   ![](/files/Pasted%20image%2020241030210859.png)
+8. Click the Edit Button in the upper right corner
+9. Scroll down to the Redirect URI Section and enter your Host Name with the path `/oauth/*`. (Example: `https://furry-hyena-1111.factionsecurity.com/oauth/*`)
+10. Click Enable Redirect Patterns.
+    ![](/files/Pasted%20image%2020241030211237.png)
+11. Click Save.
+12. Scroll up to the top of the configuration.
+13. Expend __URLs__ and take note of the the __OIDC Discovery Endpoint__. This will be used later in the __Configure Faction Section__. 
+14. Take Note of the __Client Id__ and the __Client Secret__. These will be used in the __Configure Faction Section__
+15. Click the __Attribute Mappings__ tab.
+16. Add email as an attribute.
+    ![](/files/Pasted%20image%2020241030211944.png)
+17. Click Save.
+
 ## Configure Faction
 1. Log into **Faction** as an admin user.
 2. Navigate to **Admin** -> **Users**.
-3. In the **OAuth2.0 Configuration** enter the Client Id you noted earlier from either Auth0 or Google.
+3. In the **OAuth2.0 Configuration** enter the __Client Id__ you noted earlier from either Auth0, Google, or Ping.
 4. Enter the **Client Secret** you noted earlier.
-5. Enter the **Discovery URL** as follows:**Google:** _https://accounts.google.com/.well-known/openid-configuration_  
-    **Auth0:** Enter the **Open Id Configuration** URL you noted in step 11 above.
+5. Enter the **Discovery URL** as follows:
+	1. **Google:** _https://accounts.google.com/.well-known/openid-configuration_  
+	2. **Auth0:** Enter the **Open Id Configuration** URL you noted in step 11 above.
+	3. **Ping**: Enter the __OIDC Discovery Endpoint__ from step 13 above. 
 6. Click **Save**
 ![](files/Pasted%20image%2020231218082632.png)
+
+
 
 ## Adding an OAuth User
 1. Under **Admin -> Users**, Click **Add User.**
