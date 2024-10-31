@@ -2,127 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.factionsecurity.com/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Custom%20Variables/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Faction%20App%20Store%20Extensions/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Faction%20Severity%20Rating%20and%20CVSS%20Scoring/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/How%20to%20Use%20BurpSuite%20with%20Faction/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.factionsecurity.com/Integrate%20Faction%20into%20OAuth%20Solutions/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <loc>https://docs.factionsecurity.com/Integrate%20Faction%20into%20ODIC%20Solutions/</loc>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Managed%20FACTION%20Setup/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Remediation%20Tracking%2C%20Custom%20SLAs%2C%20Retests/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Self-Hosted%20FACTION%20Setup/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Table%20of%20Contents%20Numbering/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Using%20Markdown%20in%20Reports/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/Using%20the%20Faction%20Burp%20Suite%20Extension/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/tags/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/APIS/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/APIS/App%20Store%20Extension%20API/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/APIS/JIRA%20App%20Integration%20Example/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/APIS/REST%20API/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/blog/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/blog/2024/03/25/faction-app-store/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/blog/2024/03/16/faction-boilerplates/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/blog/2024/03/15/hello-world/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.factionsecurity.com/blog/2024/10/22/how-to-generate-a-vulnerability-report-in-faction/</loc>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/blog/archive/2024/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.factionsecurity.com/tags/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
