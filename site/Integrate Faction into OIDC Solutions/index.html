@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.factionsecurity.com/Integrate%20Faction%20into%20ODIC%20Solutions/">
+        <link rel="canonical" href="https://docs.factionsecurity.com/Integrate%20Faction%20into%20OIDC%20Solutions/">
       
       
         <link rel="prev" href="../Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Integrate Faction into ODIC Solutions - Faction Docs</title>
+        <title>Integrate Faction into OIDC Solutions - Faction Docs</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integrate-faction-into-odic-solutions" class="md-skip">
+        <a href="#integrate-faction-into-oidc-solutions" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Integrate Faction into ODIC Solutions
+              Integrate Faction into OIDC Solutions
             
           </span>
         </div>
@@ -366,7 +366,7 @@
           
   
   <span class="md-ellipsis">
-    Integrate Faction into ODIC Solutions
+    Integrate Faction into OIDC Solutions
   </span>
   
 
@@ -377,7 +377,7 @@
         
   
   <span class="md-ellipsis">
-    Integrate Faction into ODIC Solutions
+    Integrate Faction into OIDC Solutions
   </span>
   
 
@@ -399,9 +399,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#google-ocic-setup" class="md-nav__link">
+  <a href="#google-oidc-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Google OCIC Setup
+      Google OIDC Setup
     </span>
   </a>
   
@@ -907,9 +907,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#google-ocic-setup" class="md-nav__link">
+  <a href="#google-oidc-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Google OCIC Setup
+      Google OIDC Setup
     </span>
   </a>
   
@@ -986,17 +986,17 @@
   
 
 
-<h1 id="integrate-faction-into-odic-solutions">Integrate Faction into ODIC Solutions</h1>
-<p>Faction seamlessly integrates with your existing enterprise authentication solutions, ensuring a smooth and secure user experience. Leveraging widely adopted solutions such as LDAP and ODIC, Faction effortlessly integrates into any enterprise environment. Our platform is designed to adapt to your authentication infrastructure, providing a hassle-free implementation process and enhancing the overall efficiency of your organization’s security framework. With Faction, you can trust in a unified and streamlined authentication experience tailored to your enterprise needs.</p>
+<h1 id="integrate-faction-into-oidc-solutions">Integrate Faction into OIDC Solutions</h1>
+<p>Faction seamlessly integrates with your existing enterprise authentication solutions, ensuring a smooth and secure user experience. Leveraging widely adopted solutions such as LDAP and OIDC, Faction effortlessly integrates into any enterprise environment. Our platform is designed to adapt to your authentication infrastructure, providing a hassle-free implementation process and enhancing the overall efficiency of your organization’s security framework. With Faction, you can trust in a unified and streamlined authentication experience tailored to your enterprise needs.</p>
 <p>The article will walk through the steps needed to integrate <a href="https://www.factionsecurity.com/">Faction</a> into <a href="https://console.developers.google.com/">Google Auth</a>, <a href="https://auth0.com/">Auth0</a>, or <a href="https://www.pingidentity.com/en.html">Ping Identity</a></p>
-<h2 id="google-ocic-setup">Google OCIC Setup</h2>
+<h2 id="google-oidc-setup">Google OIDC Setup</h2>
 <ol>
 <li>Log into your company’s <a href="https://console.developers.google.com/">Google API Console</a>.</li>
 <li>Click on <strong>Credentials</strong> from the left navigation.</li>
 <li>Click <strong>+ Create Credentials</strong> from the top navigation.</li>
 <li>Select <strong>OAuth Client ID.</strong></li>
 <li>Select <strong>Web Application</strong> as the application type.</li>
-<li>Name the application something specific like <strong>Faction ODIC Integration.</strong> But the name does not matter.</li>
+<li>Name the application something specific like <strong>Faction OIDC Integration.</strong> But the name does not matter.</li>
 <li>Under <strong>Authorized redirect URLs</strong> click <strong>+ ADD URI</strong>.</li>
 <li>Enter the domain of your Faction Instance and append <strong>/oauth/callback?client_name=OidcClient</strong> to the path. Example: If you used Faction to host the site your URL would look like this:<br />
     https://furry-hyena-1111.factionsecurity.com/oauth/callback?client_name=OidcClient</li>
