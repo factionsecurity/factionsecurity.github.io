@@ -22,7 +22,7 @@
     
     
       
-        <title>Overview - Faction Docs</title>
+        <title>SAML MS Entra ID Configuration - Faction Docs</title>
       
     
     
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              SAML MS Entra ID Configuration
             
           </span>
         </div>
@@ -545,18 +545,89 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SAML MS Entra ID Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Overview
+    SAML MS Entra ID Configuration
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-entra-id-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Entra ID in Azure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finish-configuration-in-faction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finish Configuration in FACTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-a-user-for-saml-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure a User for SAML Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-with-saml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login with SAML
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -896,8 +967,59 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-entra-id-in-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Entra ID in Azure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finish-configuration-in-faction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finish Configuration in FACTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-a-user-for-saml-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure a User for SAML Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-with-saml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login with SAML
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -932,9 +1054,11 @@
   
 
 
-<h1 id="overview">Overview</h1>
+  <h1>SAML MS Entra ID Configuration</h1>
+
+<h2 id="overview">Overview</h2>
 <p>This tutorial will walk you through the steps required to set up Faction with your Microsoft Entra ID Single Sign On using SAML</p>
-<h1 id="configuring-entra-id-in-azure">Configuring Entra ID in Azure</h1>
+<h2 id="configuring-entra-id-in-azure">Configuring Entra ID in Azure</h2>
 <ol>
 <li>Open the Azure Console and navigate to "Entra Id"
    <img alt="" src="/files/Pasted%20image%2020250528231939.png" /></li>
@@ -956,13 +1080,13 @@
 <li>Now navigate to "Single Sign On" and copy the "App Federation Metadata Url". This will be used in the next section.
     <img alt="" src="/files/Pasted%20image%2020250529083833.png" /></li>
 </ol>
-<h1 id="finish-configuration-in-faction">Finish Configuration in FACTION</h1>
+<h2 id="finish-configuration-in-faction">Finish Configuration in FACTION</h2>
 <p>With the Federation URL copied, you are now ready to finish the configuration on the  Faction side. 
 1. Log in to Faction as an admin
 2. Navigate to Administration-&gt;Users
 3. Scroll to the bottom and enter the URL we copied from step 11 above into "App Federation Metadata Url" input box.
 4. Click Save</p>
-<h1 id="configure-a-user-for-saml-authentication">Configure a User for SAML Authentication</h1>
+<h2 id="configure-a-user-for-saml-authentication">Configure a User for SAML Authentication</h2>
 <ol>
 <li>Log in to Faction as admin</li>
 <li>Navigate to Administration-&gt;Users</li>
@@ -976,7 +1100,7 @@
      <img alt="" src="/files/Pasted%20image%2020250529222945.png" /></li>
 <li>Click Save</li>
 </ol>
-<h1 id="login-with-saml">Login with SAML</h1>
+<h2 id="login-with-saml">Login with SAML</h2>
 <p>SAML users only need to enter their username and submit login. Faction will automatically redirect the user to SSO login form.</p>
 
 
