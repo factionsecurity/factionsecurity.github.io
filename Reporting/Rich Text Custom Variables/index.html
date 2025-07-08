@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://docs.factionsecurity.com/Managed%20FACTION%20Setup/">
+        <link rel="canonical" href="https://docs.factionsecurity.com/Reporting/Rich%20Text%20Custom%20Variables/">
       
       
         <link rel="prev" href="../Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/">
       
       
-        <link rel="next" href="../Remediation%20Tracking%2C%20Custom%20SLAs%2C%20Retests/">
+        <link rel="next" href="../Table%20of%20Contents%20Numbering/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Managed FACTION Setup - Faction Docs</title>
+        <title>Rich Text Custom Variables - Faction Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-your-managed-account" class="md-skip">
+        <a href="#create-the-custom-variable" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Faction Docs" class="md-header__button md-logo" aria-label="Faction Docs" data-md-component="logo">
+    <a href="../.." title="Faction Docs" class="md-header__button md-logo" aria-label="Faction Docs" data-md-component="logo">
       
   <img src="/img/favicon.png" alt="logo">
 
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Managed FACTION Setup
+              Rich Text Custom Variables
             
           </span>
         </div>
@@ -204,7 +204,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Faction Docs" class="md-nav__button md-logo" aria-label="Faction Docs" data-md-component="logo">
+    <a href="../.." title="Faction Docs" class="md-nav__button md-logo" aria-label="Faction Docs" data-md-component="logo">
       
   <img src="/img/favicon.png" alt="logo">
 
@@ -233,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -253,47 +253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Custom%20Security%20Report%20Templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Custom Security Report Templates
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Custom%20Variables/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Custom Variables
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Faction%20Severity%20Rating%20and%20CVSS%20Scoring/" class="md-nav__link">
+      <a href="../../Faction%20Severity%20Rating%20and%20CVSS%20Scoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -313,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../How%20to%20Use%20BurpSuite%20with%20Faction/" class="md-nav__link">
+      <a href="../../How%20to%20Use%20BurpSuite%20with%20Faction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,230 +293,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Importing Your Vulnerability Templates Via the API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Managed FACTION Setup
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Managed FACTION Setup
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-your-managed-account" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create Your Managed Account
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-an-admin-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create an Admin User
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-default-vulnerability-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Default Vulnerability Templates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-custom-risk-levels-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setting Custom Risk Levels (Optional)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vulnerability-tracking-and-remediation-slas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vulnerability Tracking and Remediation SLAs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assessment-checklists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assessment Checklists
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-configuration-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Configuration Options
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Remediation%20Tracking%2C%20Custom%20SLAs%2C%20Retests/" class="md-nav__link">
+      <a href="../../Remediation%20Tracking%2C%20Custom%20SLAs%2C%20Retests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Remediation Tracking, Custom SLAs, Retests
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Self-Hosted%20FACTION%20Setup/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Self Hosted FACTION Setup
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Table%20of%20Contents%20Numbering/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Table of Contents Numbering
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using%20Markdown%20in%20Reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Using Markdown in Reports
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Using%20the%20Faction%20Burp%20Suite%20Extension/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Using the Faction Burp Suite Extension
   </span>
   
 
@@ -589,10 +330,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -603,8 +344,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Authentication
           </label>
@@ -617,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Authentication/Integrate%20Faction%20into%20OIDC%20Solutions/" class="md-nav__link">
+      <a href="../../Authentication/Integrate%20Faction%20into%20OIDC%20Solutions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Authentication/SAML%20MS%20Entra%20ID%20Configuration/" class="md-nav__link">
+      <a href="../../Authentication/SAML%20MS%20Entra%20ID%20Configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -665,8 +406,392 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hosting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Hosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../Faction%20App%20Store%20Extensions/" class="md-nav__link">
+      <a href="../../Hosting/Managed%20FACTION%20Setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managed FACTION Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hosting/Self-Hosted%20FACTION%20Setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self Hosted FACTION Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reporting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Reporting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Assessment%20Checklists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assessment Checklists
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Custom%20Security%20Report%20Templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Security Report Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Custom%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Importing%20Your%20Vulnerability%20Templates%20Via%20the%20API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Importing Your Vulnerability Templates Via the API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Rich Text Custom Variables
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Rich Text Custom Variables
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-custom-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the Custom Variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-create-boiler-plate-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Optional) Create Boiler Plate text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-the-report-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update the Report Template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-rich-text-variables-in-assessments-and-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Rich Text Variables in Assessments and Vulnerabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Formatting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Table%20of%20Contents%20Numbering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents Numbering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using%20Markdown%20in%20Reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Markdown in Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Faction%20App%20Store%20Extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,12 +834,12 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../APIS/" class="md-nav__link ">
+            <a href="../../APIS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -725,14 +850,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_15" id="__nav_15_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_15">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             APIS
           </label>
@@ -747,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../APIS/App%20Store%20Extension%20API/" class="md-nav__link">
+      <a href="../../APIS/App%20Store%20Extension%20API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -768,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../APIS/JIRA%20App%20Integration%20Example/" class="md-nav__link">
+      <a href="../../APIS/JIRA%20App%20Integration%20Example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../APIS/REST%20API/" class="md-nav__link">
+      <a href="../../APIS/REST%20API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,12 +961,12 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_16" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../blog/" class="md-nav__link ">
+            <a href="../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -852,14 +977,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_16">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Blog
           </label>
@@ -878,6 +1003,8 @@
       
         
       
+        
+      
     
     
     
@@ -889,10 +1016,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_16_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_2" >
         
           
-          <label class="md-nav__link" for="__nav_16_2" id="__nav_16_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -903,8 +1030,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_16_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -919,7 +1046,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/archive/2024/" class="md-nav__link">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -993,63 +1143,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-your-managed-account" class="md-nav__link">
+  <a href="#create-the-custom-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      Create Your Managed Account
+      Create the Custom Variable
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-an-admin-user" class="md-nav__link">
+  <a href="#optional-create-boiler-plate-text" class="md-nav__link">
     <span class="md-ellipsis">
-      Create an Admin User
+      (Optional) Create Boiler Plate text
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-default-vulnerability-templates" class="md-nav__link">
+  <a href="#update-the-report-template" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Default Vulnerability Templates
+      Update the Report Template
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-custom-risk-levels-optional" class="md-nav__link">
+  <a href="#editing-rich-text-variables-in-assessments-and-vulnerabilities" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting Custom Risk Levels (Optional)
+      Editing Rich Text Variables in Assessments and Vulnerabilities
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vulnerability-tracking-and-remediation-slas" class="md-nav__link">
+  <a href="#advanced-formatting" class="md-nav__link">
     <span class="md-ellipsis">
-      Vulnerability Tracking and Remediation SLAs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assessment-checklists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assessment Checklists
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-configuration-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Configuration Options
+      Advanced Formatting
     </span>
   </a>
   
@@ -1074,13 +1206,31 @@
     
     
     
-      <a href="../tags/#cloud-hosted" class="md-tag">Cloud Hosted</a>
+      <a href="../../tags/#reporting" class="md-tag">Reporting</a>
     
   
     
     
     
-      <a href="../tags/#setup" class="md-tag">Setup</a>
+      <a href="../../tags/#enterprise" class="md-tag">Enterprise</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#paid-feature" class="md-tag">Paid Feature</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#managed" class="md-tag">Managed</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#variables" class="md-tag">Variables</a>
     
   
 </nav>
@@ -1090,40 +1240,84 @@
   
 
 
-  <h1>Managed FACTION Setup</h1>
+  <h1>Rich Text Custom Variables</h1>
 
-<p>Below are the Minimal Faction Setup Instructions required to get you all set up and ready to start collaborating on assessments in just a few minutes. With a Faction managed account, we host the servers and maintain the updates for you. Your instance will be hosted in a single-tenant environment to ensure your data is secure. With just a few clicks you will be up and running in minutes. </p>
-<h2 id="create-your-managed-account">Create Your Managed Account</h2>
-<p>Every account that gets created will get its own single-tenant instance. To create a new instance go to <a href="https://portal.factionsecurity.com/">https://portal.factionsecurity.com,</a> Create an Account, and Select a tier that meets your team's needs.</p>
-<p><img alt="" src="/files/Pasted%20image%2020231218081102.png" /></p>
-<p>This will begin creating your instance of Faction. Wait until the spinner shows a green checkbox before you attempt to access your site. You can then click the URL in the site list to take you to your new Faction Instance.</p>
-<p><img alt="" src="/files/Pasted%20image%2020231218081226.png" /></p>
-<h2 id="create-an-admin-user">Create an Admin User</h2>
-<p>The first time you access Faction you will be presented with a page to create your admin account. Here you need to enter basic information about the user and the option to create a team. <strong>Hacking Team</strong> is the default.</p>
-<p><img alt="" src="/files/Pasted%20image%2020231218081318.png" /></p>
-<h2 id="adding-default-vulnerability-templates">Adding Default Vulnerability Templates</h2>
-<p>The Faction Default vulnerability database is what makes generating reports quick and painless for pen-testing teams. You can upload your templates or start with an open-source list from <a href="https://github.com/factionsecurity/data">https://github.com/factionsecurity/data</a></p>
-<p>To add the VulnDB data into Faction just navigate to <strong>Admin</strong>-&gt; <strong>Default Vulnerabilities</strong> and click <strong>Update from VulnDB</strong>. This will import all of their vulnerabilities and set default Categories for the vulnerabilities.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231218081440.png" /></p>
-<h2 id="setting-custom-risk-levels-optional">Setting Custom Risk Levels (Optional)</h2>
-<p>By default, Faction adds <strong>Critical</strong>, <strong>High</strong>, <strong>Medium</strong>, <strong>Low</strong>, <strong>Recommended</strong>, and <strong>Informational</strong> risk levels but you have up to 9 that can be set and the defaults can be changed to anything that works for your environment. For instance, <strong>Critical</strong> can be changed to <strong>Priority 1</strong>.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231218081517.png" /></p>
-<h2 id="vulnerability-tracking-and-remediation-slas">Vulnerability Tracking and Remediation SLAs</h2>
-<p>Different Tiers allow enhanced features within Faction. The <strong>Teams Tier</strong> and above have verification and vulnerability tracking enabled. In <strong>Admin Settings</strong> you can set custom times to alert when the vulnerability needs to be remediated based on its risk setting. For instance, you can set a reminder that a <strong>Critical</strong> vulnerability needs to be remediated 30 days after it's reported and set a past due date of 60 days. This will trigger Faction to alert the correct teams that important issues are close to being past due to ensure issues get closed on time and are never forgotten.</p>
-<p>Any values that are missing a date will not be tracked by Faction.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231218081607.png" /></p>
-<h2 id="assessment-checklists">Assessment Checklists</h2>
-<p>For some assessments, you will want to add checklists to ensure all critical issues are tested. Below is an example of some potential checks that might need to happen on every assessment to ensure applications are tested consistently.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231218081706.png" /></p>
-<p>Once the above is created it will be available in assessments where the assessor can pass/fail the checklist item and even add notes related to why it failed or why it’s not necessary for the application being tested.</p>
-<p><img alt="" src="../files/Pasted%20image%2020231218081745.png" /></p>
-<h2 id="additional-configuration-options">Additional Configuration Options</h2>
-<p>The higher-level tiers allow you to configure other options like LDAP and OAuth. You can find additional information below on these settings:</p>
-<ul>
-<li><a href="/Integrate%20Faction%20into%20OAuth%20Solutions/">Integrate Faction Into OAuth Solutions</a></li>
-<li><a href="/Self-Hosted%20FACTION%20Setup/">Customizing Faction for Self Hosting</a></li>
-<li><a href="/APIS/App%20Store%20Extension%20API/">Extending Faction</a></li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an Enterprise Only Feature</p>
+</div>
+<p>In the open source version, rich text support is limited to two predefined sections: <strong>Executive Summary</strong> and <strong>Risk Assessment</strong>. The Enterprise edition introduces <strong>Rich Text Custom Variables</strong>, allowing you to define additional rich text sections within your reports. This gives you significantly more flexibility and control over report structure and presentation, beyond the default sections.</p>
+<p>The following tutorial shows you how to add these to your reports. </p>
+<h3 id="create-the-custom-variable">Create the Custom Variable</h3>
+<ol>
+<li>Navigate to Admin-&gt;Settings</li>
+<li>Enter a title into the <strong>Field Name Display</strong></li>
+<li>Enter a variable name <strong><em>WITHOUT SPACES</em></strong>*</li>
+<li>Select <strong>RichText</strong> from the <strong>DataType</strong></li>
+<li>Choose where this field is applicable (Assessment or Vulnerability)</li>
+</ol>
+<p>In this Example we will create a custom Scoping Field that we can add anywhere in the report. 
+<img alt="" src="/files/Pasted%20image%2020250707235330.png" /></p>
+<h3 id="optional-create-boiler-plate-text">(Optional) Create Boiler Plate text</h3>
+<p>You can create a default text to be easily recalled into any of these custom variables. In this example we will continue with adding a template for Scope:</p>
+<ol>
+<li>Navigate to Templates-&gt;Assessment Templates
+   <img alt="" src="/files/Pasted%20image%2020250707235828.png" /></li>
+<li>Select the newly created Template and any custom text:
+   <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>The scope included the ${asmtName}  site’s test environment with the most current version at the time of testing. The testing started ${asmtStart} and ended on ${asmtEnd}. The testing was performed against this site in order to cause minimal disruptions to the production site.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> | @cols=2:Assessment Scope |
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> | ------------ | --------- |
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> | **QA Main URL** |        |
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a> | **Subdomains In Scope**| |
+</span></code></pre></div>
+<img alt="" src="/files/Pasted%20image%2020250708001457.png" />  </li>
+<li>Save the Template</li>
+</ol>
+<h3 id="update-the-report-template">Update the Report Template</h3>
+<ol>
+<li>Take the your report template and add a new section. In this example we will add a Scope Section.</li>
+<li>Enter the variable name <code>${cfAssessmentScope}</code>. This variable is text entered in Step3 above and prepended with <code>cf</code> for Custom Field.
+    <img alt="" src="/files/Pasted%20image%2020250708001840.png" /></li>
+<li>Upload your report Template ( Templates-&gt;Report Designer )</li>
+</ol>
+<h3 id="editing-rich-text-variables-in-assessments-and-vulnerabilities">Editing Rich Text Variables in Assessments and Vulnerabilities</h3>
+<p>Once the field is added it will show up on the next assessment thats created. Double click <em>Assessment Scope</em> in the templates options on the far right. This will add our boiler plate text (optional step above) to the report. 
+<img alt="" src="/files/Pasted%20image%2020250708003445.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have an existing assessment assigned to an assessor before the field is created then the new field will not be visible until you resave the assessment. 
+If the user has permissions then they will see a <em>Edit</em> button in the title of the assessment. This will open the assessment in <strong>Scheduling</strong> and allow you to resave it. 
+Otherwise you will need someone with <strong>Scheduling</strong> permissions find it and resave it. 
+*You don't need to make any changes to the assessment. Just save it. *</p>
+</div>
+<p>Now you can generate the report (Assessment-&gt;Finalize-&gt;Generate Report). This will build the report with our new custom variables populated. </p>
+<p><img alt="" src="/files/Pasted%20image%2020250708004052.png" /></p>
+<h3 id="advanced-formatting">Advanced Formatting</h3>
+<p>You can further enhance the appearance of your report by editing the CSS in the <strong>Report Designer</strong>. This allows you to apply custom styles specifically to this custom variable without affecting the global report template.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The name of the custom variable is used as a CSS class. All content entered in the Rich Text Editor is automatically wrapped in a <code>&lt;div&gt;</code> with that class name, for example: <code>&lt;div class="VariableName"&gt;Rich Text Content Here&lt;/div&gt;</code>.</p>
+</div>
+<p>Continuing with our example of adding a Scope section, follow these steps to add custom style to the Scope Table so that the header matches our theme:</p>
+<ol>
+<li>Navigate to Templates-&gt;Report Designer</li>
+<li>Click <strong>Edit CSS</strong></li>
+<li>
+<p>Append the following CSS to the form. <strong>Note AssessmentScope as the class name</strong>
+   <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>.AssessmentScope th {
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    height: 40px;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    text-align: center;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    color: white;
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    background-color: #04A4EB;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>}
+</span></code></pre></div></p>
+<p><img alt="" src="/files/Pasted%20image%2020250708005218.png" />
+4. Save it
+5. Regenerate your report</p>
+</li>
+</ol>
+<p><img alt="" src="/files/Pasted%20image%2020250708005351.png" /></p>
 
 
 
@@ -1175,13 +1369,13 @@
         
         
           
-          <a href="../Remediation%20Tracking%2C%20Custom%20SLAs%2C%20Retests/" class="md-footer__link md-footer__link--next" aria-label="Next: Remediation Tracking, Custom SLAs, Retests">
+          <a href="../Table%20of%20Contents%20Numbering/" class="md-footer__link md-footer__link--next" aria-label="Next: Table of Contents Numbering">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Remediation Tracking, Custom SLAs, Retests
+                Table of Contents Numbering
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1254,10 +1448,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.footer", "navigation.indexes", "navigation.expand"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer", "navigation.indexes", "navigation.expand"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>
