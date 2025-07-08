@@ -5,13 +5,20 @@ weight: 1
 ---
 
 
-Below is a List of Approved Faction Extensions. These all work with Faction 1.2+
+List of Approved Faction Apps
 
 | Name | Developer | URL |
 | --- | --- | --- |
-| Faction Jira Integration | Faction Security | [https://github.com/factionsecurity/Faction-Jira-Extension](https://github.com/factionsecurity/Faction-Jira-Extension) |
-| Faction Vulnerability Bar Chart | Faction Security | [https://github.com/factionsecurity/Faction-Vulnerability-Bar-Chart](https://github.com/factionsecurity/Faction-Vulnerability-Bar-Chart) |
+| Faction Jira Integration | Faction Security | https://github.com/factionsecurity/Faction-Jira-Extension |
+| Faction Vulnerability Bar Chart | Faction Security | https://github.com/factionsecurity/Faction-Vulnerability-Bar-Chart |
+| Faction Checklist Reporting | Faction Security | https://github.com/factionsecurity/checklist-report-extension/releases |
 
 
-# Submit an Extension
-Send an email to develop [ at ] factionsecurity [dot] com with a link to your github and a brief explanation of what it does. 
+## Info on Building a Faction Extension
+- [App Store Extension API](https://docs.factionsecurity.com/APIS/App%20Store%20Extension%20API)
+- [JIRA Example](https://docs.factionsecurity.com/APIS/JIRA%20App%20Integration%20Example)
+
+## Submit an Extension
+Send an email to develop [ at ] factionsecurity [dot] com with a link to to your github and a brief explanation of what it does. 
+
+

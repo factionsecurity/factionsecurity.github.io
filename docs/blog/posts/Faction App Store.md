@@ -1,6 +1,9 @@
 ---
-tags: [App Store]
+tags:
+  - AppStore
 date: 2024-03-25
+authors:
+  - null0perat0r
 ---
 ✨ We are excited to release the first iteration of the Faction App Store! ✨
 
