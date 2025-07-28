@@ -93,5 +93,5 @@ When the new user reaches the Login Screen they can enter just their username wi
 You can bypass the username and password form by bookmarking the below URL. This ensures you don't need to enter a Username just to be redirected to your SSO portal where the user needs to enter their Username again. The below URL will redirect directly to your configured SSO portal for ODIC.
 
 ```
-https://YOURHOST/sso/oauth
+https://YOURHOST/sso/oidc
 ```

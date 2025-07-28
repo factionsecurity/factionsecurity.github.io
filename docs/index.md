@@ -29,13 +29,14 @@ Other Features:           
 
 1. LDAP Integration       
 
-1. OAUTH2.0 Integration
+2. OIDC Integration
+3. SAML Integration
 
-1. SMTP integration 
+4. SMTP integration 
 
-1. Extendable with Custom Plugins similar to Burp Extender.
+5. Extendable with Custom Plugins similar to Burp Extender.
 
-2. Custom Report Variables
+6. Custom Report Variables
 
 __Want to see it in action?__ -> [Faction Video Overview](https://www.youtube.com/watch?v=cYi71oofUdU)
 
@@ -61,7 +62,7 @@ On the first boot, it will ask you to create an admin account.
 
 ## Customize reports
 You can find out more information about creating your own custom report templates here:
-[Customize Report Templates](https://docs.factionsecurity.com/Custom%20Security%20Report%20Templates/)
+[Customize Report Templates](/Reporting/Using%20Docx%20Report%20Templates/)
 
 ## Burp Suite Extension
 [Burp Suite Extensions](https://github.com/factionsecurity/Faction-Burp)

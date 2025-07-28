@@ -5,7 +5,6 @@ date: 2024-03-17
 When exploiting a vulnerability in a penetration test it is important to capture your attack steps quickly and thoroughly so you don't have to spend extra time remembering and re-validating what you did when it's time to report on the finding. Nothing can break your flow more than having to stop what you are doing to format text, fix hyperlinks, or build numbered lists of steps. Markdown is one of the quickest ways to type formatted text and capture these details effortlessly. 
 
 !!! note "Pro Tip!"
-
     The API fully supports Markdown. This makes it easy to develop automated tools that can add issues or other text to Faction with formatted text via the API. 
 
 
@@ -22,6 +21,18 @@ __Steps to Reproduce__:
 
 ![](/files/Pasted%20image%2020241020220256.png)
 
+## Underline
+Underlining is not built into the markdown spec. We have added a custom syntax to support this.  To underline text in the markdown editor, you will need to wrap your text with `++`. 
+
+For Example, the below code will underline and bold the text "Steps to Reproduce"
+```
+**++Steps to Reproduce++**:
+1. Go to the home page.
+2. Click Login.
+3. Enter `<script>alert(123);</script>` in the username parameter. 
+```
+
+![](/files/Pasted%20image%2020250727232554.png)
 
 ## Faction Burp Suite Extension
 If you find a vulnerability while using the Faction Burp extension, you can add the finding and all details directly through the extension. Below is an example of cross-site scripting:
