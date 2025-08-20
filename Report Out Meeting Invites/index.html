@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#send-meeting-invite" class="md-skip">
+        <a href="#schedule-report-out-meeting-using-web-calendars" class="md-skip">
           Skip to content
         </a>
       
@@ -355,13 +355,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#send-meeting-invite" class="md-nav__link">
+  <a href="#schedule-report-out-meeting-using-web-calendars" class="md-nav__link">
     <span class="md-ellipsis">
-      Send Meeting Invite
+      Schedule Report Out Meeting Using Web Calendars
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Send Meeting Invite">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-meeting-invite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email Meeting Invite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email Meeting Invite">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1202,13 +1211,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#send-meeting-invite" class="md-nav__link">
+  <a href="#schedule-report-out-meeting-using-web-calendars" class="md-nav__link">
     <span class="md-ellipsis">
-      Send Meeting Invite
+      Schedule Report Out Meeting Using Web Calendars
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Send Meeting Invite">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-meeting-invite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email Meeting Invite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email Meeting Invite">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1281,17 +1299,24 @@
   <h1>Report Out Meeting Invites</h1>
 
 <p>Faction includes a shortcut for scheduling report out meetings. This feature allows you to easily create an invite with all stakeholders in your preferred email client (i.e. OUTLOOK, Google Workspace, etc).</p>
-<p>To create an invite, Navigate to the Finalize tab in your Assessment Package. Toward the bottom there will be a section for "Schedule Report Meeting" as shown below.
-<img alt="" src="/files/Pasted%20image%2020250818223615.png" /></p>
-<p>There are two options. 
-1. <strong>Send Meeting Invite</strong>: This will send you an email that includes the meeting invite for you to manage in your email client
-2. <strong>Download Meeting Invite</strong>: This will download an ICS file that you can email using any email client. </p>
-<h2 id="send-meeting-invite">Send Meeting Invite</h2>
-<p>When you click "Send Meeting Invite", Faction will send an email to you that contains the meeting invite. You will need to edit it in your email client to set the correct dates and times. Once saved in your email client it will then send to all the stakeholders. </p>
+<p>To create an invite, Navigate to the Finalize tab in your Assessment Package. Toward the bottom of the page there will be a section named "Schedule Report Meeting". From here choose the appropriate action that works best for your organization. </p>
+<p>There are three options. 
+1. <strong>Using Web Calendars</strong>: This option opens the calendar web view containing all stakeholders and a default email template. 
+2. <strong>Email Meeting Invite</strong>: This will send you an email that includes the meeting invite for you to manage in your email client
+3. <strong>Download Meeting Invite</strong>: This will download an ICS file that you can email using any email client. </p>
+<h2 id="schedule-report-out-meeting-using-web-calendars">Schedule Report Out Meeting Using Web Calendars</h2>
+<p><img alt="" src="Pasted%20image%2020250819231236.png" />
+These two buttons allow for direct integration with your calendar though the web view. This is generally the most frictionless way to update the calendar and send your report out meeting invites. Currently only MS Outlook and Google web calendars are supported.</p>
+<p>Selecting either of these options will take you to the web calendar view as shown below where you can easily schedule your report meeting. 
+<img alt="" src="Pasted%20image%2020250819232144.png" /></p>
+<h2 id="email-meeting-invite">Email Meeting Invite</h2>
+<p>When you click "Email Meeting Invite", Faction will send an email <em>only to the current user</em> that contains the meeting invite. You will need to edit it in your email client to set the correct dates, location, and conference information. Once saved in your email client it will then be sent to all the stakeholders. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This feature will ONLY send the invite to you. This gives you the opportunity to set the correct dates and times before sending the invite to all stakeholders.</p>
 </div>
+<p>!!! note
+     This Google Workspace and Outlook Desktop integration may only work correctly if the email domain that Faction sends from also matches the email recipient. For example: Faction can be configured to send from faction@yourdomain.com and the recipient is dave@yourdomain.com. This allows dave to get the invite and modify it as shown below to include your conference information, update times, and add other users. </p>
 <p>Once you receive the invite in your email, you will need to manage it differently depending on your email client.</p>
 <h3 id="google-workspace">Google Workspace</h3>
 <p>To update the invite in your Google Workspace follow these steps:
