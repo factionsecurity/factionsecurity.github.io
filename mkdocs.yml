@@ -14,6 +14,7 @@ theme:
         - navigation.expand
 repo_url: https://github.com/factionsecurity/faction
 markdown_extensions:
+  - attr_list
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -31,8 +32,8 @@ extra:
   social:
       - icon: fontawesome/brands/mastodon
         link: https://infosec.exchange/@null0perat0r
-      - icon: fontawesome/brands/twitter
-        link: https://twitter.com/null0perar0r
+      - icon: fontawesome/brands/bluesky
+        link: https://bsky.app/profile/factionsecurity.com
       - icon: fontawesome/brands/github
         link: https://github.com/summitt
 plugins:
@@ -40,5 +41,8 @@ plugins:
       blog_toc: true
   - search
   - mkdocs-nav-weight
+  - glightbox
   - tags:
       tags_file: tags.md
+extra_css:
+  - assets/css/extra.css
