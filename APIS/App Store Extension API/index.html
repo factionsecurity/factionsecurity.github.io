@@ -480,7 +480,7 @@
             
   
   <span class="md-ellipsis">
-    AI Configureation (Enterprise)
+    AI Configuration (Enterprise)
   </span>
   
 
@@ -490,7 +490,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_4">
             <span class="md-nav__icon md-icon"></span>
-            AI Configureation (Enterprise)
+            AI Configuration (Enterprise)
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
@@ -501,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI%20Integrations/AI%20Configureation%20%28Enterprise%29/Anthropic%20Configuration/" class="md-nav__link">
+      <a href="../../AI%20Integrations/AI%20Configuration%20%28Enterprise%29/Anthropic%20Configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI%20Integrations/AI%20Configureation%20%28Enterprise%29/Azure%20AI%20Foundry%20Configuration/" class="md-nav__link">
+      <a href="../../AI%20Integrations/AI%20Configuration%20%28Enterprise%29/Azure%20AI%20Foundry%20Configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -543,11 +543,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI%20Integrations/AI%20Configureation%20%28Enterprise%29/OpenAI%20and%20OpenAI%20Compatable%20Configuration/" class="md-nav__link">
+      <a href="../../AI%20Integrations/AI%20Configuration%20%28Enterprise%29/OpenAI%20and%20OpenAI%20Compatible%20Configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    OpenAI and OpenAI Compatable Configuration
+    OpenAI and OpenAI Compatible Configuration
   </span>
   
 
@@ -960,6 +960,8 @@
       
         
       
+        
+      
     
     
     
@@ -1014,6 +1016,27 @@
   
   <span class="md-ellipsis">
     Integrate Faction into OIDC Solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Authentication/Integrate%20Faction%20with%20GitHub%20Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrate Faction with GitHub Authentication
   </span>
   
 
@@ -1600,7 +1623,7 @@
 
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://img.shields.io/badge/Since-1.2-blue?style=flat" data-desc-position="bottom"><img alt="Static Badge" src="https://img.shields.io/badge/Since-1.2-blue?style=flat"></a></p>
 <h2 id="introduction">Introduction</h2>
-<p>Faction has an API similar to what you might find in BurpSuite Extensions. You can create custom modules in jar files and upload them to the Faction AppStore. Once uploaded, Faction will perform your custom processing when certain events are triggered like finalizing and assessment, creating a report, or failing a retest. </p>
+<p>Faction has an API similar to what you might find in BurpSuite Extensions. You can create custom modules in jar files and upload them to the Faction AppStore. Once uploaded, Faction will perform your custom processing when certain events are triggered like finalizing an assessment, creating a report, or failing a retest. </p>
 <p>You can even extend things like the Application Inventory Search so that it queries an external database to return results before scheduling assessments.</p>
 <p>You can download an example&nbsp;<a href="https://github.com/factionsecurity/Faction-Jira-Extension">Extension here.</a></p>
 <p>Below is a list of the current Hooks:</p>
@@ -1628,7 +1651,7 @@
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
 </span></code></pre></div>
-Typical use case scenario: When an assessor finalizes an assessment this module can send all the vulnerabilities to another tracking system like JIRA and return the tracking numbers to Faction.<p></p>
+Typical use case: When an assessor finalizes an assessment this module can send all the vulnerabilities to another tracking system like JIRA and return the tracking numbers to Faction.<p></p>
 <ul>
 <li>Triggers on Assessment Create, Update, Delete, Finalized, Peer Review Created, Peer Review Complete, Peer Review Accepted</li>
 <li>Accepts the Triggered Assessment and List of vulnerabilities associated with the assessment.</li>
@@ -1653,7 +1676,7 @@ This method triggers every time a report is created or regenerated. It can be us
 <li>If returns null then nothing will be changed by this extension</li>
 </ul>
 <h3 id="vulnerability-manager-extension">Vulnerability&nbsp;Manager Extension</h3>
-<p></p><div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">faction</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">VulnerabilityManager</span><span class="p">{</span>
+<p></p><div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">faction</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">VulnerabilityManager</span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nd">@Override</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Vulnerability</span><span class="w"> </span><span class="nf">vulnChange</span><span class="p">(</span><span class="n">Assessment</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">Vulnerability</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">arg2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1670,7 +1693,7 @@ Typical use case scenario: When an assessor creates or updates a vulnerability t
 <li>If the return object is null then Faction will not update locally</li>
 </ul>
 <h3 id="verificationretest-manager-extension">Verification(Retest) Manager Extension</h3>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">faction</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">VerificationManager</span><span class="p">{</span>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyPlugin</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseExtension</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">faction</span><span class="p">.</span><span class="na">extender</span><span class="p">.</span><span class="na">VerificationManager</span><span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nd">@Override</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">verificationChange</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">Vulnerability</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">arg2</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">arg3</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">arg4</span><span class="p">,</span><span class="w"> </span><span class="n">Operation</span><span class="w"> </span><span class="n">arg5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>

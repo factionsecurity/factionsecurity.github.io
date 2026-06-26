@@ -480,7 +480,7 @@
             
   
   <span class="md-ellipsis">
-    AI Configureation (Enterprise)
+    AI Configuration (Enterprise)
   </span>
   
 
@@ -490,7 +490,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_4">
             <span class="md-nav__icon md-icon"></span>
-            AI Configureation (Enterprise)
+            AI Configuration (Enterprise)
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
@@ -501,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI%20Integrations/AI%20Configureation%20%28Enterprise%29/Anthropic%20Configuration/" class="md-nav__link">
+      <a href="../../AI%20Integrations/AI%20Configuration%20%28Enterprise%29/Anthropic%20Configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI%20Integrations/AI%20Configureation%20%28Enterprise%29/Azure%20AI%20Foundry%20Configuration/" class="md-nav__link">
+      <a href="../../AI%20Integrations/AI%20Configuration%20%28Enterprise%29/Azure%20AI%20Foundry%20Configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -543,11 +543,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI%20Integrations/AI%20Configureation%20%28Enterprise%29/OpenAI%20and%20OpenAI%20Compatable%20Configuration/" class="md-nav__link">
+      <a href="../../AI%20Integrations/AI%20Configuration%20%28Enterprise%29/OpenAI%20and%20OpenAI%20Compatible%20Configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    OpenAI and OpenAI Compatable Configuration
+    OpenAI and OpenAI Compatible Configuration
   </span>
   
 
@@ -1107,6 +1107,8 @@
       
         
       
+        
+      
     
     
     
@@ -1161,6 +1163,27 @@
   
   <span class="md-ellipsis">
     Integrate Faction into OIDC Solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Authentication/Integrate%20Faction%20with%20GitHub%20Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrate Faction with GitHub Authentication
   </span>
   
 
@@ -1671,7 +1694,7 @@
   <h1>1. Using Docx Report Templates</h1>
 
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="files/Pasted%20image%2020231217155942.png" data-desc-position="bottom"><img alt="" src="files/Pasted%20image%2020231217155942.png"></a></p>
-<p>The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports, you need to use the variables listed below. Entering these into your DOCX reports will auto-replace the assessment and vulnerability text when the report is generated. You can even use the same variables in many of Factions's Input fields outside of the report template (like Risk Assessment Summaries), and it will auto-populate the fields when the report is generated.</p>
+<p>The Faction Report Designer allows you to create custom security report templates for each assessment type. When building reports, you need to use the variables listed below. Entering these into your DOCX reports will auto-replace the assessment and vulnerability text when the report is generated. You can even use the same variables in many of Faction's input fields outside of the report template (like Risk Assessment Summaries), and it will auto-populate the fields when the report is generated.</p>
 <p>You can download the sample templates here:
  <a href="https://github.com/factionsecurity/report_templates">Sample Templates</a> </p>
 <div class="admonition note">
@@ -1718,7 +1741,7 @@
 <p>These are only available inside tables.</p>
 <ul>
 <li><strong>${vulnTable}</strong>&nbsp;– This defines a table to be a vulnerability listing table.</li>
-<li><strong>${vulnTable Section_Name}</strong>&nbsp;– This defines a table to be a vulnerability listing table for a section of vulnerabilities. See <a href="/Reporting/Using%20Docx%20Report%20Templates/#reporting-sections-enterprisepaid-feature">Reporting Sections</a>(Paid Only Feature).</li>
+<li><strong>${vulnTable Section_Name}</strong>&nbsp;– This defines a table to be a vulnerability listing table for a section of vulnerabilities. See <a href="/Reporting/1.%20Using%20Docx%20Report%20Templates/#reporting-sections-enterprise-paid-feature">Reporting Sections</a>(Paid Only Feature).</li>
 <li><strong>${vulnName}</strong>&nbsp;– The Vulnerability name</li>
 <li><strong>${rec}</strong>&nbsp;–&nbsp;Vulnerability Recommendation</li>
 <li><strong>${desc}</strong>&nbsp;–&nbsp;Vulnerability Description</li>
@@ -1736,8 +1759,8 @@
 <li><strong>${closedAt}</strong> - The date the vulnerability was closed (no longer tracked) </li>
 <li><strong>${remediationStatus}</strong> - Displays only "Open" or "Closed"</li>
 <li><strong>${cfXXXXXX}</strong>&nbsp;– Custom Fields are ones you specify in the admin interface. These are all prefixed with “cf”</li>
-<li><strong>${color &nbsp;key=value,key=value}</strong>&nbsp;– The color of the text is based on key-value pairs.&nbsp;<a href="/Reporting/Using%20Docx%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
-<li><strong>${cells key=value,key=value}</strong>&nbsp;– The color of the table cell is based on key-value pairs.&nbsp;&nbsp;<a href="/Reporting/Using%20Docx%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
+<li><strong>${color &nbsp;key=value,key=value}</strong>&nbsp;– The color of the text is based on key-value pairs.&nbsp;<a href="/Reporting/1.%20Using%20Docx%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
+<li><strong>${cells key=value,key=value}</strong>&nbsp;– The color of the table cell is based on key-value pairs.&nbsp;&nbsp;<a href="/Reporting/1.%20Using%20Docx%20Report%20Templates/#setting-severity-colors">See below for how to set up colors.</a></li>
 <li><strong>${custom-fields key,value,key=value,...}</strong> - The color to match in the DOCX template. This allows you to set font colors for custom variables</li>
 <li><strong>${loop}</strong>&nbsp;– This variable tells the report generator which row will be repeated.</li>
 <li><strong>${loop-*}</strong>&nbsp;– This allows multiple rows to be repeated. Example ${loop-1} will repeat the row but the one below it.</li>
@@ -1783,7 +1806,7 @@ Example Rendered:
 <h3 id="example-table-detail-table">Example Table Detail Table</h3>
 <p>The <code>${loop-4}</code> variable will allow the report generation to iterate each vulnerability over 4 rows below the loop for a total of 5 rows that will be repeated. </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/files/Pasted%20image%2020250728001438.png" data-desc-position="bottom"><img alt="" src="/files/Pasted%20image%2020250728001438.png"></a></p>
-<p>**Why is the heading yellow?!?! Check <a href="/Reporting/Using%20Docx%20Report%20Templates/#setting-severity-colors">here</a></p>
+<p>**Why is the heading yellow?!?! Check <a href="/Reporting/1.%20Using%20Docx%20Report%20Templates/#setting-severity-colors">here</a></p>
 <p>Example Rendered:
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/files/Pasted%20image%2020250728003017.png" data-desc-position="bottom"><img alt="" src="/files/Pasted%20image%2020250728003017.png"></a></p>
 <h2 id="vulnerability-block-variables">VULNERABILITY BLOCK VARIABLES:</h2>
@@ -1791,7 +1814,7 @@ Example Rendered:
 This method takes a block of text with all formatting between <code>${fiBegin}</code> and <code>${fiEnd}</code> to use as a vulnerability template. This can contain any DOCX elements, including tables. </p>
 <ul>
 <li><strong>${fiBegin} / ${fiEnd}</strong>&nbsp;– Block to repeat against all findings.</li>
-<li><strong>${fiBegin Section_Name} / ${fiEnd Section_Name}</strong>&nbsp;– Block to repeat a section of findings. See  <a href="/Reporting/1.%20Using%20Docx%20Report%20Templates/#Reporting-Sections-(Enterprise/Paid-Feature)">Reporting Sections</a> (Paid Only Feature)</li>
+<li><strong>${fiBegin Section_Name} / ${fiEnd Section_Name}</strong>&nbsp;– Block to repeat a section of findings. See  <a href="/Reporting/1.%20Using%20Docx%20Report%20Templates/#reporting-sections-enterprise-paid-feature">Reporting Sections</a> (Paid Only Feature)</li>
 <li><strong>${vulnName}</strong>&nbsp;– The Vulnerability name</li>
 <li><strong>${rec}</strong>&nbsp;–&nbsp;Vulnerability Recommendation</li>
 <li><strong>${desc}</strong>&nbsp;–&nbsp;Vulnerability Description</li>
@@ -1839,7 +1862,7 @@ This method takes a block of text with all formatting between <code>${fiBegin}</
 <p>Example Rendered:
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/files/Pasted%20image%2020250728003841.png" data-desc-position="bottom"><img alt="" src="/files/Pasted%20image%2020250728003841.png"></a></p>
 <h2 id="hyperlinks">Hyperlinks</h2>
-<p>If you want to add hyperlinks to variables, this can be done with some variables by appending <code>link</code> after the variable.  There are only a few default variables that support this feature (<code>${asmtAssessor_Email link}</code>, <code>${cvssString link}</code>) but every Custom Variable will support this. This allows you to add things like <code>${cfAffectedURL link}</code> to your Vulnerability templates which will generate a hyperlink to this what ever URL you enter. </p>
+<p>If you want to add hyperlinks to variables, this can be done with some variables by appending <code>link</code> after the variable.  There are only a few default variables that support this feature (<code>${asmtAssessor_Email link}</code>, <code>${cvssString link}</code>) but every Custom Variable will support this. This allows you to add things like <code>${cfAffectedURL link}</code> to your Vulnerability templates which will generate a hyperlink to whatever URL you enter. </p>
 <p>Below is an example of how you would add this. Note that the "Address" in the DOCX template can be anything. It will be deleted and replaced with the User Defined Variable for Affected URL. 
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/files/Pasted%20image%2020250727224329.png" data-desc-position="bottom"><img alt="" src="/files/Pasted%20image%2020250727224329.png"></a></p>
 <h2 id="reporting-sections-enterprisepaid-feature">Reporting Sections (Enterprise/Paid Feature)</h2>
@@ -1847,8 +1870,8 @@ This method takes a block of text with all formatting between <code>${fiBegin}</
 <p>To use sections you need to create the section names in the Faction Report Designer:
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/files/Pasted%20image%2020241020214807.png" data-desc-position="bottom"><img alt="" src="/files/Pasted%20image%2020241020214807.png"></a></p>
 <p>Once the sections are created in the UI, you can add them to the report in two ways. 
-1. Vulnerability Block Variables: <code>${fiBegin Your_Section_Name}</code>/<code>${fiEnd Your_Section_Name}
-2. Vulnerability Table Variables:</code>${vulnTable Your_Section_Name}`</p>
+1. Vulnerability Block Variables: <code>${fiBegin Your_Section_Name}</code>/<code>${fiEnd Your_Section_Name}</code>
+2. Vulnerability Table Variables: <code>${vulnTable Your_Section_Name}</code></p>
 <p>Below is an example of how the template variables work:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/files/Pasted%20image%2020241020215154.png" data-desc-position="bottom"><img alt="" src="/files/Pasted%20image%2020241020215154.png"></a></p>
 <h2 id="css-formatting">CSS FORMATTING:</h2>
@@ -1884,7 +1907,7 @@ This method takes a block of text with all formatting between <code>${fiBegin}</
 </table>
 <p>For Example, a table in MS Word below has pre-filled the color codes for each severity name and category.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/files/Pasted image 20231217160231.png" data-desc-position="bottom"><img alt="" src="/files/Pasted image 20231217160231.png"></a></p>
-<p>Right-click the overall severity variable,&nbsp;<strong>${severity}</strong>; you can see the default hex code for this color is #FAC701. Likelihood would be set to #FAC02, and Impact would be set to #FAC703.</p>
+<p>Right-click the overall severity variable,&nbsp;<strong>${severity}</strong>; you can see the default hex code for this color is #FAC701. Likelihood would be set to #FAC702, and Impact would be set to #FAC703.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/files/Pasted image 20231217160250.png" data-desc-position="bottom"><img alt="" src="/files/Pasted image 20231217160250.png"></a></p>
 <p>Setting the background color for cells works in much the same way. Notice we use the ${cells} variable instead.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/files/Pasted image 20231217160305.png" data-desc-position="bottom"><img alt="" src="/files/Pasted image 20231217160305.png"></a></p>
