@@ -2,3 +2,49 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+.md-typeset {
+    font-weight: 300;
+    color: #e0e0e0;
+}
+
+.md-typeset p,
+.md-typeset li,
+.md-typeset td,
+.md-typeset th,
+.md-typeset blockquote {
+    font-weight: 300;
+    color: #e8e8e8;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.md-typeset strong {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.md-typeset a {
+    color: #90caf9;
+}
+
+.md-typeset code {
+    background-color: #2a2a3a;
+    color: #e0e0e0;
+}
+
+.md-typeset pre {
+    background-color: #1e1e2e;
+}
+
+.md-typeset pre code {
+    color: #e0e0e0;
+}
