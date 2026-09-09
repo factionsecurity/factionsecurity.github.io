@@ -1,0 +1,87 @@
+---
+tags: []
+date: 2023-12-17
+---
+# Welcome to FACTION
+__PenTesting Report Generation and Collaboration Engine__
+![image](https://github.com/factionsecurity/faction/assets/2343831/d9237bed-302f-4e6a-9716-22ae88d0dc36)
+
+
+FACTION is your entire assessment workflow in a box. With FACTION you can:
+
+1. Automate pen testing and security assessment reports
+
+1. Peer review and track changes for reports
+
+1. Create customized DOCX templates for different assessment types and retests
+
+3. Real-time collaboration with assessors via the web app and [Burp Suite Extensions](https://github.com/factionsecurity/Faction-Burp)
+
+4. Customizable vulnerability templates with over 75 prepopulated
+
+5. Easily manage assessment teams and track progress across your organization
+
+6. Track vulnerability remediation efforts with custom SLA warnings and alerts  
+
+7. Full REST API to integrate with other tools                     
+
+Other Features:           
+
+1. LDAP Integration       
+
+2. OIDC Integration
+3. SAML Integration
+
+4. SMTP Integration 
+
+5. Extendable with Custom Plugins similar to Burp Extender.
+
+6. Custom Report Variables
+
+__Want to see it in action?__ -> [Faction Video Overview](https://www.youtube.com/watch?v=cYi71oofUdU)
+
+## Quick Setup
+__Requirements__
+- Java JDK11 
+- Maven (for building the project)
+
+Run the following commands to build the war file and deploy it to the Docker container. 
+```
+git clone git@github.com:factionsecurity/faction.git
+cd faction
+mvn clean compile war:war
+docker-compose up --build
+```
+
+Once the containers are up, you can navigate to http://127.0.0.1:8080 to access your FACTION instance. 
+On the first boot, it will ask you to create an admin account. 
+
+## Import the Vulnerability Templates
+1. Navigate to Admin -> Default Vulnerabilities
+2. Click __Import from Faction__
+
+## Customize reports
+You can find out more information about creating your own custom report templates here:
+[Customize Report Templates](/faction1.x/Reporting/Using%20Docx%20Report%20Templates/)
+
+## Burp Suite Extension
+[Burp Suite Extensions](https://github.com/factionsecurity/Faction-Burp)
+
+
+## Don't want to host it yourself?
+We can provide hosting for your instance. All instances are single-tenant, so you don't have to worry about sharing infrastructure with untrusted parties. Hosted versions also come with other features like enhanced reporting. Navigate to [https://www.factionsecurity.com to learn more](https://www.factionsecurity.com). 
+
+## Screenshots
+__Vulnerability Templates__
+![image](https://github.com/factionsecurity/faction/assets/2343831/b6fa6a0b-34a9-46cf-87cb-6aeb2b5d3347)
+
+__Assessment Scheduling__
+![image](https://github.com/factionsecurity/faction/assets/2343831/7410f74e-3854-41e9-843f-7ca44d79cc54)
+
+
+__Peer Review and Track Changes__
+![image](https://github.com/factionsecurity/faction/assets/2343831/fa72a72b-2c95-4c2c-bad1-5b34aab7fd13)
+
+
+
+

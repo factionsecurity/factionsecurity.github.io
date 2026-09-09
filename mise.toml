@@ -1,0 +1,61 @@
+# Two MkDocs sites share this repo. The Faction 1.x docs in faction1.x/ are built first, into
+# docs/faction1.x/ (gitignored), where the Faction 2 build and dev server pick them up as
+# static files. So `mise run up` serves both at once and `mise run build` produces one site/.
+[env]
+_.python.venv = { path = ".venv", create = true }
+
+[tasks.install]
+description = "Install MkDocs, Material and the Faction 1.x plugins into .venv"
+run = "pip install -q -r requirements.txt -r faction1.x/requirements.txt && touch .venv/.installed"
+sources = ["requirements.txt", "faction1.x/requirements.txt"]
+outputs = [".venv/.installed"]
+
+[tasks.build-1x]
+description = "Build the Faction 1.x docs into docs/faction1.x/ so the main site serves them"
+run = "mkdocs build -f faction1.x/mkdocs.yml -d ../docs/faction1.x"
+depends = ["install"]
+
+[tasks.up]
+description = "Serve the docs locally with live reload (http://127.0.0.1:8000, 1.x under /faction1.x/)"
+alias = "serve"
+run = "mkdocs serve --dev-addr 127.0.0.1:${PORT:-8000}"
+depends = ["build-1x"]
+
+[tasks.up-1x]
+description = "Serve the Faction 1.x docs locally (http://127.0.0.1:8001)"
+run = "mkdocs serve -f faction1.x/mkdocs.yml --dev-addr 127.0.0.1:${PORT:-8001}"
+depends = ["install"]
+
+[tasks.build]
+description = "Build both sites into site/ (Faction 2 strict, Faction 1.x under site/faction1.x/)"
+run = "mkdocs build --strict"
+depends = ["build-1x"]
+
+[tasks.deploy]
+description = "Build both sites and publish site/ to the gh-pages branch"
+run = "ghp-import -n -p -f -m 'Deploy docs' site"
+depends = ["build"]
+
+[tasks.gen]
+description = "Regenerate the permission reference from the backend Permission enum"
+run = "python3 scripts/gen_permission_reference.py --repo ${FACTION_REPO:-../../faction2}"
+depends = ["install"]
+
+[tasks.check]
+description = "Fail if the generated pages are stale or the sites do not build cleanly"
+run = """
+set -e
+before=$(shasum docs/permissions/reference.md)
+mise run gen >/dev/null
+after=$(shasum docs/permissions/reference.md)
+if [ "$before" != "$after" ]; then
+  echo "docs/permissions/reference.md is stale — run 'mise run gen' and commit the result" >&2
+  exit 1
+fi
+mise run build
+"""
+depends = ["install"]
+
+[tasks.clean]
+description = "Remove the built sites"
+run = "rm -rf site docs/faction1.x"

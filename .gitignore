@@ -1,2 +1,6 @@
-
-docs/.obsidian/
+site/
+.venv/
+__pycache__/
+.DS_Store
+faction1.x/docs/.obsidian/workspace.json
+docs/faction1.x/

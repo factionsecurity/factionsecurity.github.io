@@ -1,0 +1,45 @@
+{#
+  Search-engine metadata only; nothing here changes what visitors see.
+  - A page's front matter may set `keywords:`; it is emitted as a meta tag.
+  - The home page carries Schema.org SoftwareApplication structured data so the
+    project is understood as free, open source software rather than a plain doc site.
+#}
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% if page and page.meta and page.meta.keywords %}
+    <meta name="keywords" content="{{ page.meta.keywords }}">
+  {% endif %}
+  {% if page and page.is_homepage %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OWASP Faction",
+      "alternateName": "Faction",
+      "applicationCategory": "SecurityApplication",
+      "applicationSubCategory": "Penetration testing management and pentest reporting",
+      "operatingSystem": "Linux, macOS, Windows (Docker)",
+      "softwareHelp": "{{ config.site_url or '' }}",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "codeRepository": "{{ config.repo_url }}",
+      "sameAs": [
+        "{{ config.repo_url }}"{% for s in config.extra.social %},
+        "{{ s.link }}"{% endfor %}
+      ],
+      "description": "{{ config.site_description }}",
+      "featureList": [
+        "Automated penetration test report generation from DOCX templates",
+        "AI-assisted vulnerability descriptions, recommendations and executive summaries",
+        "Assessment scheduling and team collaboration",
+        "Peer review with tracked changes",
+        "Vulnerability tracking with remediation SLAs, retests and exceptions",
+        "REST API and extension SDK"
+      ],
+      "keywords": "{{ page.meta.keywords if page.meta.keywords else '' }}"
+    }
+    </script>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,408 @@
+{
+  "main": {
+    "id": "def66f9e516894e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ef49095a92ce6d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eaf751a611399bf9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          },
+          {
+            "id": "e57e9f9577101086",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Managed FACTION Setup.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Managed FACTION Setup"
+            }
+          },
+          {
+            "id": "69aceda4060f54d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Managed FACTION Setup.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Managed FACTION Setup"
+            }
+          },
+          {
+            "id": "da779b02f5334fd6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Managed FACTION Setup.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Managed FACTION Setup"
+            }
+          },
+          {
+            "id": "3e80121de3b9f4c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Managed FACTION Setup.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Managed FACTION Setup"
+            }
+          },
+          {
+            "id": "ad979f7a9e2f40bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "APIS/JIRA App Integration Example.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "JIRA App Integration Example"
+            }
+          },
+          {
+            "id": "609906fe70992985",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Importing Your Vulnerability Templates Via the API.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Importing Your Vulnerability Templates Via the API"
+            }
+          },
+          {
+            "id": "5e49311ca0e26dd2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "tags.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "tags"
+            }
+          },
+          {
+            "id": "97ec9610ca983ee4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "APIS/App Store Extension API.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "App Store Extension API"
+            }
+          },
+          {
+            "id": "284e053d901fcab6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "87abb7bc0d27213f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          },
+          {
+            "id": "e362f0a1f106121b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AI Integrations/Faction MCP Server.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Faction MCP Server"
+            }
+          },
+          {
+            "id": "afdef5ec85325749",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/posts/Faction Boilerplates.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Faction Boilerplates"
+            }
+          },
+          {
+            "id": "0cbbb3c8a5f32f27",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AI Integrations/Faction MCP Server.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Faction MCP Server"
+            }
+          },
+          {
+            "id": "2acc1e536868dac7",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ],
+        "currentTab": 13
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a99569e0622e6dc3",
+    "type": "split",
+    "children": [
+      {
+        "id": "e223bd55d52d0d61",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5f5726f4fc49db0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a872a188118af5dc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "Assessment%Checklists",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c64eeee16ce23cc5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 594.5026054382324
+  },
+  "right": {
+    "id": "86666a565f6b520d",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e53bbb27088cb89",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b472b3c535a6a953",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/posts/How To Generate a Vulnerability Report in Faction.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for How To Generate a Vulnerability Report in Faction"
+            }
+          },
+          {
+            "id": "0655be567bd723e1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "blog/posts/How To Generate a Vulnerability Report in Faction.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from How To Generate a Vulnerability Report in Faction"
+            }
+          },
+          {
+            "id": "efd278fc1f91e408",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "418ad1f8f74f7a83",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "blog/posts/How To Generate a Vulnerability Report in Faction.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of How To Generate a Vulnerability Report in Faction"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "0cbbb3c8a5f32f27",
+  "lastOpenFiles": [
+    "faction1.x/assets/javascripts/glightbox.min.js",
+    "faction1.x/assets/stylesheets/glightbox.min.css",
+    "faction1.x/search/search_index.json",
+    "faction1.x/search",
+    "faction1.x/tags/index.html",
+    "faction1.x/tags",
+    "faction1.x/blog/archive/2024/index.html",
+    "faction1.x/blog/archive/2024",
+    "faction1.x/blog/2024/03/25/faction-app-store/index.html",
+    "faction1.x/blog/2024/03/16/faction-boilerplates/index.html",
+    "faction1.x/blog/2025/07/08/faction-16-released/index.html",
+    "faction1.x/img/favicon.png",
+    "faction1.x/assets/images/favicon.png",
+    "faction1.x/files/null0pProfile.png",
+    "faction1.x/files/Screenshot 2025-08-18 at 11.03.10 PM.png",
+    "faction1.x/files/Screenshot 2025-08-18 at 10.47.56 PM.png",
+    "faction1.x/files/Pasted image 20260416163627.png",
+    "faction1.x/files/Pasted image 20260416162956.png",
+    "faction1.x/files/Pasted image 20260416162951.png",
+    "faction1.x/files/Pasted image 20260416162944.png",
+    "faction1.x/files/Pasted image 20260416162926.png",
+    "templating/index.md",
+    "templating/content-templates.md",
+    "templating/ai-content.md",
+    "templating/ai-configuration.md",
+    "solutions/vulnerability-management-sla.md",
+    "solutions/managing-pentest-teams.md",
+    "solutions/index.md",
+    "solutions/automate-pentest-reporting.md",
+    "solutions/ai-pentest-report-writing.md",
+    "reporting/user-defined-fields.md",
+    "reporting/index.md",
+    "reporting/docx-templates.md",
+    "reporting/checklists.md",
+    "permissions/scopes.md",
+    "permissions/roles.md",
+    "permissions/reference.md",
+    "permissions/index.md",
+    "permissions/enforcement.md",
+    "getting-started/schedule-assessment.md",
+    "getting-started/install.md",
+    "getting-started/index.md",
+    "getting-started/first-report.md",
+    "AI Integrations/AI Configureation (Enterprise)/Anthropic Configuration.md",
+    "AI Integrations/AI Report Assistant (Enterprise).md",
+    "AI Integrations/AI Checklist Review (Enterprise).md"
+  ]
+}

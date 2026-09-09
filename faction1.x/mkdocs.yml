@@ -1,0 +1,62 @@
+site_name: "Faction Docs" 
+site_url: "https://docs.factionsecurity.com/faction1.x/"
+theme: 
+    palette:
+        scheme: slate
+        primary: white
+    logo: img/favicon.png
+    name: material
+    custom_dir: custom_theme/
+    features:
+        - content.code.copy
+        - navigation.footer
+        - navigation.indexes
+        - navigation.expand
+repo_url: https://github.com/factionsecurity/faction
+markdown_extensions:
+  - attr_list
+  # Needed for the "grid cards" section index pages.
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+extra:
+  analytics:
+    provider: google
+    property: G-LQPM8RS39Z
+  social:
+      - icon: fontawesome/brands/mastodon
+        link: https://infosec.exchange/@null0perat0r
+      - icon: fontawesome/brands/bluesky
+        link: https://bsky.app/profile/factionsecurity.com
+      - icon: fontawesome/brands/github
+        link: https://github.com/summitt
+      - icon: fontawesome/brands/youtube
+        link: https://www.youtube.com/@factionsecurity
+      - icon: fontawesome/brands/tiktok
+        link: https://www.tiktok.com/@factionsecurity
+      - icon: simple/substack
+        link: https://substack.com/@factionsecurity
+plugins:
+  - blog:
+      blog_toc: true
+  - search
+  - mkdocs-nav-weight
+  - glightbox
+  - tags:
+      tags_file: tags.md
+extra_css:
+  - assets/css/extra.css
+# This site is served under /faction1.x/. The docs link images as "/files/…", which would
+# otherwise point at the root site; treating absolute links as docs-relative rewrites them
+# for this base path.
+validation:
+  links:
+    absolute_links: relative_to_docs

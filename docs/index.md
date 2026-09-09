@@ -1,87 +1,101 @@
 ---
-tags: []
-date: 2023-12-17
+keywords: "pentest reporting tool, penetration testing management software, automate pentest reporting, pentest report generator, AI pentest report writing, open source pentest reporting, self-hosted pentest reporting, vulnerability management, remediation tracking, remediation SLA, application security posture management, OWASP Faction"
+description: "OWASP Faction is open source penetration testing management software. Automate pentest reporting from DOCX templates, write findings with AI, collaborate as a team, and track vulnerability remediation with SLAs. Self-hosted, Apache-2.0."
 ---
-# Welcome to FACTION
-__PenTesting Report Generation and Collaboration Engine__
-![image](https://github.com/factionsecurity/faction/assets/2343831/d9237bed-302f-4e6a-9716-22ae88d0dc36)
 
+![OWASP Faction](files/owasp-faction-logo.png){ .home-logo }
 
-FACTION is your entire assessment workflow in a box. With FACTION you can:
+<p class="home-tagline"><strong>Report Less, Break More</strong></p>
 
-1. Automate pen testing and security assessment Reports
+<p class="home-badges" markdown>
+[![Latest release](https://img.shields.io/github/v/release/factionsecurity/OWASP-Faction-2?style=flat&logo=github&label=Release&color=ab1b93)](https://github.com/factionsecurity/OWASP-Faction-2/releases/latest)
+[![YouTube](https://img.shields.io/badge/YouTube-%40factionsecurity-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@factionsecurity)
+[![TikTok](https://img.shields.io/badge/TikTok-%40factionsecurity-000000?style=flat&logo=tiktok&logoColor=white)](https://www.tiktok.com/@factionsecurity)
+[![Substack](https://img.shields.io/badge/Substack-%40factionsecurity-FF6719?style=flat&logo=substack&logoColor=white)](https://substack.com/@factionsecurity)
+</p>
 
-1. Peer review and track changes for reports
+Penetration test management for teams that produce reports for a living.
 
-1. Create customized DOCX templates for different assessment types and retests
+Faction runs the whole engagement in one place: scheduling the assessment, recording the findings as you test, getting them peer reviewed, generating the client report, and then tracking every issue through retest and remediation until it is closed. It is self-hosted, open source under Apache-2.0, and yours to change.
 
-3. Real-time collaboration with assessors via the web app and [Burp Suite Extensions](https://github.com/factionsecurity/Faction-Burp)
+## Why teams use it
 
-4. Customizable vulnerability templates with over 75 prepopulated
+### Reports write themselves
 
-5. Easily manage assessment teams and track progress across your organization
+The report is a DOCX template you design in Word, with variables for everything Faction knows about the assessment. Generate it and every finding, screenshot, severity colour and summary table lands in your layout, as DOCX and PDF. Findings come from a reusable vulnerability library so the common ones are already written, and AI prompts running in your own voice turn a tester's steps to reproduce into a description, a recommendation and an executive summary. See [Reporting](reporting/index.md) and [Templating](templating/index.md).
 
-6. Track vulnerability remediation efforts with custom SLA warnings and alerts  
+### Built for teams
 
-7. Full Rest API to integrate with other tools                     
+Assessments are scheduled against a shared calendar that shows who is free and who is booked. Assessors work on the same assessment at the same time, with edit locks, comments and @mentions on findings. Every report goes through a peer review queue with tracked changes and diffs before it reaches a client, and checklists enforce that nothing was skipped. Dashboards give pentesters, managers and remediation owners each their own view.
 
-Other Features:           
+### Vulnerabilities are tracked, not just reported
 
-1. LDAP Integration       
+A finding gets a unique tracking ID and keeps it across every assessment it appears in. Retests are scheduled against the original findings, and remediation is tracked stage by stage, with owners, planned dates and SLA clocks that warn and escalate when a fix is late. Exceptions are recorded with approvals and expiry dates, so accepted risk is visible instead of forgotten.
 
-2. OIDC Integration
-3. SAML Integration
+### Extendable
 
-4. SMTP integration 
+A JAR-based App Store lets you hook your own code into vulnerability, report and assessment events, whether that is pushing findings to a ticketing system, pulling assets from an inventory, or adding a section to the report. Faction 1 extensions load unmodified. There is a full REST API and API keys with scoped permissions for everything else.
 
-5. Extendable with Custom Plugins similar to Burp Extender.
+### An ASPM foundation
 
-6. Custom Report Variables
+Because every finding carries its application, its asset, its severity, its owner and its remediation history, Faction is a system of record for application security posture, not only a report generator. Managers see open risk by application and organization, remediation owners see what is theirs, and the same finding is never counted twice.
 
-__Want to see it in action?__ -> [Faction Video Overview](https://www.youtube.com/watch?v=cYi71oofUdU)
+## Faction for
 
-## Quick Setup
-__Requirements__
-- Java JDK11 
-- Maven (for building the project)
+- [Automating pentest reporting](solutions/automate-pentest-reporting.md) from your own Word templates
+- [Writing manual pentest reports with AI](solutions/ai-pentest-report-writing.md), in your voice, on your provider
+- [Managing large penetration testing teams](solutions/managing-pentest-teams.md) with scheduling, collaboration and peer review
+- [Tracking vulnerabilities and remediation SLAs](solutions/vulnerability-management-sla.md) after the report is delivered
 
-Run the following commands to build the war file and deploy it to the docker container. 
+## Sections
+
+<div class="grid cards" markdown>
+
+- **[Getting Started](getting-started/index.md)** — schedule a first assessment, add findings
+  from the built-in library, and generate and preview the report with the default template.
+- **[Reporting](reporting/index.md)** — DOCX report templates and every variable they can use,
+  user defined fields, and assessment checklists.
+- **[Templating](templating/index.md)** — reusable content templates for the editors, and AI
+  prompts that write descriptions, recommendations and executive summaries in your own style.
+- **[Solutions](solutions/index.md)** — what Faction is for: automated pentest reporting, AI report
+  writing, managing large teams and remediation tracking.
+- **[Permissions](permissions/index.md)** — the authorization model: how a permission string is
+  built, which scope tiers exist, what each one actually restricts at runtime, and what the
+  built-in roles grant.
+
+</div>
+
+## Install it
+
+Docker is the only requirement. One command checks prerequisites, pulls the images and writes a `.env` with generated secrets:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/factionsecurity/OWASP-Faction-2/main/install.sh | bash
+cd owasp-faction-2
+docker compose up -d
 ```
-git clone git@github.com:factionsecurity/faction.git
-cd faction
-mvn clean compile war:war
-docker-compose up --build
+
+Then open `http://localhost:8080`, sign in as `admin` / `admin123`, and change that password before anyone else can reach the install. [Running OWASP Faction](getting-started/install.md) covers the installer's options, installing by hand, upgrading and what the open source edition includes.
+
+## About this site
+
+The site is built with [MkDocs](https://www.mkdocs.org/) and the Material theme, and lives in the
+[factionsecurity.github.io](https://github.com/factionsecurity/factionsecurity.github.io) repository.
+Pages are Markdown under `docs/`, the navigation is defined in `mkdocs.yml`, and the
+[Faction 1.x documentation](/faction1.x/) is a second MkDocs site under `faction1.x/` that is built
+alongside this one.
+
+Everything runs through [mise](https://mise.jdx.dev), which creates the Python environment on first use:
+
+```bash
+mise run up        # serve both sites with live reload at http://127.0.0.1:8000
+mise run up-1x     # serve only the Faction 1.x docs at http://127.0.0.1:8001
+mise run build     # build both sites into site/ (this one in strict mode)
+mise run deploy    # build both and publish site/ to the gh-pages branch
+mise run gen       # regenerate the permission reference from the backend source
+mise run check     # fail if generated pages are stale or a build breaks
 ```
 
-Once the containers are up you can navigate to http://127.0.0.1:8080 to access your FACTION instance. 
-On the first boot, it will ask you to create an admin account. 
-
-## Import the Vulnerability Templates
-1. Navigate to Admin -> Default Vulnerabilities
-2. Click __Import from Faction__
-
-## Customize reports
-You can find out more information about creating your own custom report templates here:
-[Customize Report Templates](/Reporting/Using%20Docx%20Report%20Templates/)
-
-## Burp Suite Extension
-[Burp Suite Extensions](https://github.com/factionsecurity/Faction-Burp)
-
-
-## Don't want to host it yourself?
-We can provide hosting for your instance. All instances are single tenants so you don't have to worry about sharing infrastructure with untrusted parties. Hosted versions also come with other features like enhanced reporting. Navigate to [https://www.factionsecurity.com to learn more](https://www.factionsecurity.com). 
-
-## Screenshots
-__Vulnerability Templates__
-![image](https://github.com/factionsecurity/faction/assets/2343831/b6fa6a0b-34a9-46cf-87cb-6aeb2b5d3347)
-
-__Assessment Scheduling__
-![image](https://github.com/factionsecurity/faction/assets/2343831/7410f74e-3854-41e9-843f-7ca44d79cc54)
-
-
-__Peer Review and Track Changes__
-![image](https://github.com/factionsecurity/faction/assets/2343831/fa72a72b-2c95-4c2c-bad1-5b34aab7fd13)
-
-
-
-
+Some pages are generated from the application source rather than written by hand. They say so
+at the top and name the script that produces them. Regenerate them with `mise run gen` after
+changing the code they describe, rather than editing the page.
