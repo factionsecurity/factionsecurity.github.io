@@ -1,50 +1,142 @@
+/* Palette sampled from the OWASP Faction logo: the outline colour becomes the page
+   background and the magenta of the triangle drives links and accents. The bare
+   magenta is only 2.2:1 against that background, so link text uses a lighter tint
+   of the same hue (4.9:1) and the exact logo colour is kept for hover and accents. */
+:root {
+    --faction-ink: #231f20;
+    --faction-magenta: #ab1b93;
+    --faction-magenta-light: #dd5fc6;
+}
+
+/* Both attributes, because Material's white-primary palette sets the link colour on
+   [data-md-color-scheme=slate][data-md-color-primary=white] and a single-attribute
+   selector would lose to it. */
+[data-md-color-scheme="slate"],
+[data-md-color-scheme="slate"][data-md-color-primary="white"] {
+    --md-default-bg-color: var(--faction-ink);
+    --md-code-bg-color: #302a2c;
+    --md-typeset-a-color: var(--faction-magenta-light);
+    --md-accent-fg-color: var(--faction-magenta);
+    --md-accent-fg-color--transparent: rgba(171, 27, 147, 0.1);
+    --md-footer-bg-color: #1a1718;
+    --md-footer-bg-color--dark: #141213;
+}
+
+/* Carried over from the original docs portal: centre every content image. */
 img {
     display: block;
     margin: 0 auto;
 }
 
-.md-typeset {
-    font-weight: 300;
-    color: #e0e0e0;
+/* Taller header so the Faction wordmark has room. Material's header height is
+   whatever its tallest child is (normally the 2.4rem title), so the title,
+   the logo box and the sticky sidebar offset all move together here. Scoped to
+   the breakpoint where Material actually shows the header logo. */
+:root {
+    --faction-header-height: 3.4rem;
 }
 
-.md-typeset p,
-.md-typeset li,
-.md-typeset td,
-.md-typeset th,
-.md-typeset blockquote {
-    font-weight: 300;
-    color: #e8e8e8;
+@media screen and (min-width: 76.25em) {
+    .md-header__title {
+        height: var(--faction-header-height);
+        line-height: var(--faction-header-height);
+    }
+
+    .md-header__button.md-logo {
+        margin: 0.2rem;
+        padding: 0.2rem;
+    }
+
+    .md-header__button.md-logo img {
+        height: calc(var(--faction-header-height) - 0.8rem);
+        width: auto;
+        /* Nudge the wordmark down so it sits on the title's baseline rather than
+           floating above it. The transform moves only the image, so the header
+           height and the centred title are untouched. */
+        transform: translateY(10px);
+    }
+
+    .md-sidebar {
+        top: var(--faction-header-height);
+    }
+
+    /* With sticky navigation tabs Material pins the sidebars below header +
+       tab bar (2.4rem each); recompute it for the taller header. */
+    .md-header--lifted ~ .md-container .md-sidebar {
+        top: calc(var(--faction-header-height) + 2.4rem);
+    }
 }
 
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4,
-.md-typeset h5,
-.md-typeset h6 {
-    font-weight: 500;
-    color: #ffffff;
+/* The site title sits in the flex row next to the logo (Material's default). The
+   search box and GitHub link are packed to the right edge. */
+@media screen and (min-width: 76.25em) {
+    .md-search {
+        margin-left: auto;
+    }
+
+    /* The GitHub link block reserves a fixed 11.7rem it never fills; letting it
+       shrink to its content moves the search box right, clear of the title. */
+    .md-header__source {
+        max-width: none;
+        width: auto;
+    }
+
+    .md-source__repository {
+        max-width: none;
+        overflow: visible;
+    }
 }
 
-.md-typeset strong {
-    font-weight: 500;
-    color: #ffffff;
+/* Responsive 16:9 video embeds (YouTube iframes in the docs). */
+.video-embed {
+    aspect-ratio: 16 / 9;
+    margin: 0 0 1.25em;
+    width: 100%;
 }
 
-.md-typeset a {
-    color: #90caf9;
+.video-embed iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
 }
 
-.md-typeset code {
-    background-color: #2a2a3a;
-    color: #e0e0e0;
+/* The OWASP Faction logo stands in for the home page's title. */
+.md-typeset img.home-logo {
+    margin: 0.5rem auto 1.5rem;
+    max-width: 380px;
 }
 
-.md-typeset pre {
-    background-color: #1e1e2e;
+/* When a page has no H1 of its own (the home page leads with the logo), Material
+   inserts one from the nav title. It carries no id, unlike a heading written in
+   Markdown, which is how it is picked out here. */
+.md-content__inner > h1:not([id]) {
+    /* Kept in the flow at zero height rather than display:none: Material swaps the
+       header text for the page title once the H1 scrolls out of view, and a
+       removed H1 counts as always out of view. */
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
 
-.md-typeset pre code {
-    color: #e0e0e0;
+.md-typeset .home-tagline {
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+    margin: -0.5rem 0 1.5rem;
+    text-align: center;
+}
+
+/* Social badges under the home page tagline: a centred row of inline images. */
+.md-typeset .home-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+    margin: -0.75rem 0 1.75rem;
+}
+
+.md-typeset .home-badges img {
+    display: inline-block;
+    height: 20px;
+    margin: 0;
 }
