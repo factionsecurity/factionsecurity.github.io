@@ -191,12 +191,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI Integrations/Faction MCP Server.md",
+                "file": "reporting/code-block-themes.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Faction MCP Server"
+              "title": "code-block-themes"
             }
           },
           {
@@ -336,6 +336,20 @@
               "icon": "lucide-list",
               "title": "Outline of How To Generate a Vulnerability Report in Faction"
             }
+          },
+          {
+            "id": "e26763e95375239a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
           }
         ]
       }
@@ -358,17 +372,19 @@
   },
   "active": "0cbbb3c8a5f32f27",
   "lastOpenFiles": [
+    "files/Pasted image 20260917230951.png",
+    "files/Pasted image 20260917230825.png",
+    "files/Pasted image 20260917230724.png",
     "faction1.x/assets/javascripts/glightbox.min.js",
     "faction1.x/assets/stylesheets/glightbox.min.css",
     "faction1.x/search/search_index.json",
     "faction1.x/search",
     "faction1.x/tags/index.html",
     "faction1.x/tags",
-    "faction1.x/blog/archive/2024/index.html",
-    "faction1.x/blog/archive/2024",
+    "faction1.x/blog/2024/12/10/writing-an-automated-pentest-report/index.html",
+    "faction1.x/blog/2024/10/22/how-to-generate-a-vulnerability-report-in-faction/index.html",
     "faction1.x/blog/2024/03/25/faction-app-store/index.html",
-    "faction1.x/blog/2024/03/16/faction-boilerplates/index.html",
-    "faction1.x/blog/2025/07/08/faction-16-released/index.html",
+    "faction1.x/blog/2024/03/15/hello-world/index.html",
     "faction1.x/img/favicon.png",
     "faction1.x/assets/images/favicon.png",
     "faction1.x/files/null0pProfile.png",
@@ -377,8 +393,7 @@
     "faction1.x/files/Pasted image 20260416163627.png",
     "faction1.x/files/Pasted image 20260416162956.png",
     "faction1.x/files/Pasted image 20260416162951.png",
-    "faction1.x/files/Pasted image 20260416162944.png",
-    "faction1.x/files/Pasted image 20260416162926.png",
+    "reporting/code-block-themes.md",
     "templating/index.md",
     "templating/content-templates.md",
     "templating/ai-content.md",
@@ -402,7 +417,6 @@
     "getting-started/index.md",
     "getting-started/first-report.md",
     "AI Integrations/AI Configureation (Enterprise)/Anthropic Configuration.md",
-    "AI Integrations/AI Report Assistant (Enterprise).md",
-    "AI Integrations/AI Checklist Review (Enterprise).md"
+    "AI Integrations/AI Report Assistant (Enterprise).md"
   ]
 }

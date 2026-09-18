@@ -43,6 +43,7 @@ nav:
   - Reporting:
       - reporting/index.md
       - Using DOCX Report Templates: reporting/docx-templates.md
+      - Code Block Themes: reporting/code-block-themes.md
       - User Defined Fields: reporting/user-defined-fields.md
       - Assessment Checklists: reporting/checklists.md
   - Templating:

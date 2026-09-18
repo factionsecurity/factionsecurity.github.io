@@ -9,6 +9,7 @@ Faction generates assessment reports from DOCX templates that you design. A temp
 <div class="grid cards" markdown>
 
 - **[Using DOCX Report Templates](docx-templates.md)** — every variable a template can use, how to lay out findings as a table or as a repeating block, report sections, page breaks, severity colours and CSS formatting.
+- **[Code Block Themes](code-block-themes.md)** — copy-and-paste CSS that recolours code blocks in the report: Dracula, Solarized, Nord, Monokai, Gruvbox, GitHub and more, plus how to build your own.
 - **[User Defined Fields](user-defined-fields.md)** — add your own fields to findings and assessments, such as an affected URL or an executive summary, and print them in the report.
 - **[Assessment Checklists](checklists.md)** — enforce a standard checklist per assessment type, block finalization until it is complete, and print the results in the report.
 
