@@ -22,7 +22,7 @@ Faction runs the whole engagement in one place: scheduling the assessment, recor
 
 ### Reports write themselves
 
-The report is a DOCX template you design in Word, with variables for everything Faction knows about the assessment. Generate it and every finding, screenshot, severity colour and summary table lands in your layout, as DOCX and PDF. Findings come from a reusable vulnerability library so the common ones are already written, and AI prompts running in your own voice turn a tester's steps to reproduce into a description, a recommendation and an executive summary. See [Reporting](reporting/index.md) and [Templating](templating/index.md).
+The report is a DOCX template you design in Word, with variables for everything Faction knows about the assessment. Generate it and every finding, screenshot, severity color and summary table lands in your layout, as DOCX and PDF. Findings come from a reusable vulnerability library so the common ones are already written, and AI prompts running in your own voice turn a tester's steps to reproduce into a description, a recommendation and an executive summary. See [Reporting](reporting/index.md) and [Templating](templating/index.md).
 
 ### Built for teams
 

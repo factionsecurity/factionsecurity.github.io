@@ -1,6 +1,6 @@
 ---
 keywords: "pentest report template, DOCX report template, automated pentest report, penetration test report generator, report variables"
-description: "Reference for OWASP Faction DOCX report templates: every ${variable}, vulnerability tables and blocks, report sections, page breaks, severity colours, CSS formatting and uploading your own pentest report template."
+description: "Reference for OWASP Faction DOCX report templates: every ${variable}, vulnerability tables and blocks, report sections, page breaks, severity colors, CSS formatting and uploading your own pentest report template."
 ---
 
 # Using DOCX Report Templates
@@ -21,9 +21,13 @@ Templates are managed under **Admin → Content & Reporting → Report Designer*
 
 ## What's new in Faction 2
 
-Templates written for Faction 1 work unchanged. Faction 2 adds the following:
+Templates written for Faction 1 work unchanged, with one exception: **colors**. The `${color}`, `${cells}`, `${fill}` and `${custom-fields}` markers are no longer read — colors are now set in the Report Designer. The placeholder colors you painted in the template still work. See [Upgrading a Faction 1 template](#upgrading-a-faction-1-template).
 
-- **`${assetLocation}`** — the finding's asset location (URL, host or path). Available in finding tables and finding blocks.
+Faction 2 adds the following:
+
+- **`${assetLocation}`** — the finding's asset location (URL, host or path). Available in finding tables and finding blocks. When it is a web address it becomes a clickable link.
+- **Hyperlink fields** — a user-defined field type whose value becomes a clickable link wherever its variable sits. Email addresses become `mailto:` links. See [Hyperlinks](#hyperlinks).
+- **Finding colors in the Report Designer** — pick the color for each severity, likelihood and impact without opening Word, and each placeholder color now has a dark twin so your template stays readable while you build it. See [Setting severity colors](#setting-severity-colors).
 - **`${if-section}` / `${end-section}`** — wrap any part of the template so it disappears entirely when a section has no findings. See [Conditional sections](#conditional-sections).
 - **`${pageBreak}`** — insert a real page break, including one per finding inside a repeated block.
 - **`${sevId}`** — a per-severity finding counter such as `CV1`, `CV2`, `HV1`.
@@ -94,7 +98,7 @@ These are only available inside tables.
 - **${cvssScore}** – CVSS score of the vulnerability
 - **${cvssString}** – CVSS vector of the vulnerability
 - **${cvssString link}** – Can only be used in a hyperlink. Automatically links to the first.org CVSS calculator
-- **${assetLocation}** – The asset location recorded on the finding (URL, host, path)
+- **${assetLocation}** – The asset location recorded on the finding (URL, host, path). A web address becomes a clickable link; a host and port, a path or a name is shown as plain text
 - **${count}** – Row count of the vulnerability
 - **${sevId}** – Severity-scoped counter: the first letter of the severity, `V`, and the finding's position within that severity, e.g. `CV1`, `CV2`, `HV1`
 - **${tracking}** – Tracking ID of the vulnerability. Faction assigns one automatically (`VID-10000`, `VID-10001`, …) when the finding is created and keeps it when the finding is carried forward into a later assessment. It can be edited on the finding
@@ -105,9 +109,7 @@ These are only available inside tables.
 - **${closedInStagingAt}** – The date the vulnerability was marked fixed in staging
 - **${remediationStatus}** – Displays only "Open" or "Closed"
 - **${your_variable_name}** – Vulnerability-level user-defined fields, referenced by the variable name you gave them in the Report Designer
-- **${color key=value,key=value}** – The colour of the text is based on key-value pairs. [See below for how to set up colours.](#setting-severity-colours)
-- **${cells key=value,key=value}** – The colour of the table cell is based on key-value pairs. [See below for how to set up colours.](#setting-severity-colours)
-- **${custom-fields key=value,key=value,...}** – Maps a custom variable to the placeholder colour used in the DOCX template. This allows you to set font and cell colours for custom variables. [See below.](#setting-custom-variable-colours)
+- **Colors** – Paint a placeholder color on a cell, text or border and Faction replaces it with the color for that finding. [See Setting severity colors.](#setting-severity-colors)
 - **${loop}** – Tells the report generator which row will be repeated
 - **${loop-*}** – Allows multiple rows to be repeated. `${loop-1}` repeats the row it is in plus the one below it
 - **${noIssuesText Your text}** – The text displayed in the section if no vulnerabilities are reported. Defaults to "No issues detected for this section."
@@ -118,12 +120,14 @@ The `${loop}` variable will allow the report generation to iterate each vulnerab
 
 |   |   |   |   |
 |---|---|---|---|
-|${vulnTable}|${color Critical=C00000,High=FFC000}|||
+|${vulnTable}||||
 |ID|Finding Name|Impact|Severity|
 |${loop}|${count}. ${vulnName}|${impact}|${severity}|
 
 Example in DOCX template:
 ![](../files/Pasted%20image%2020260909010252.png)
+
+The `${color …}` cell in this screenshot is from an older template. It is no longer needed and is ignored if present — the colors come from the Report Designer.
 
 
 Example rendered:
@@ -134,7 +138,7 @@ Example rendered:
 The `${loop-4}` variable will allow the report generation to iterate each vulnerability over 4 rows below the loop for a total of 5 rows that will be repeated.
 ![](../files/Pasted%20image%2020260909010840.png)
 
-**Why is the heading yellow?** Check [Setting severity colours](#setting-severity-colours).
+**Why is the heading yellow?** Check [Setting severity colors](#setting-severity-colors).
 
 Example rendered:
 ![](../files/Pasted%20image%2020260909011022.png)
@@ -169,19 +173,15 @@ Example rendered:
 - **${remediationStatus}** – Displays only "Open" or "Closed"
 - **${your_variable_name}** – Vulnerability-level user-defined fields
 - **${pageBreak}** – A page break. Inside a block it is repeated with the block, so each finding starts on a new page
-- **${color key=value,key=value}** – The colour of the text is based on key-value pairs. [See below for how to set up colours.](#setting-severity-colours)
-- **${fill key=value,key=value}** – The colour of background elements is based on key-value pairs. [See below for how to set up colours.](#setting-severity-colours)
-- **${custom-fields key=value,key=value,...}** – Maps a custom variable to the placeholder colour used in the DOCX template. [See below.](#setting-custom-variable-colours)
+- **Colors** – Paint a placeholder color on text, a shaded paragraph or a border and Faction replaces it with the color for that finding. [See Setting severity colors.](#setting-severity-colors)
 - **${noIssuesText Your text}** – The text displayed in the section if no vulnerabilities are reported
 
-The `${color}`, `${fill}` and `${custom-fields}` configuration paragraphs are removed from the generated report.
+A `${color}`, `${fill}` or `${custom-fields}` paragraph left over from a Faction 1 template is removed from the generated report and otherwise ignored.
 
 ### Example block findings
 
 ```
 ${fiBegin}
-
-${fill Critical=8064a2,High=c0504d,Medium=e68e00,Low=33D7FF,Recommended=081417,Informational=657376}
 
 ## 1.     ${vulnName} - ${severity}
 
@@ -202,14 +202,20 @@ ${fiEnd}
 
 ![](../files/Pasted%20image%2020250728003734.png)
 
-**Why is the heading yellow?** Check [Setting severity colours](#setting-severity-colours).
+**Why is the heading yellow?** Check [Setting severity colors](#setting-severity-colors).
 
 
 ## Hyperlinks
 
-If you want to add hyperlinks to variables, this can be done with some variables by appending `link` after the variable. Only a few built-in variables support this (`${asmtAssessor_Email link}`, `${cvssString link}`) but every custom variable does. This allows you to add things like `${affected-url link}` to your vulnerability templates, which will generate a hyperlink to whatever URL was entered.
+There are three ways a variable becomes a clickable link in the report.
 
-Below is an example of how you would add this. Note that the "Address" in the DOCX template can be anything. It will be deleted and replaced with the user-defined variable for Affected URL.
+**Hyperlink fields.** Create the user-defined field with the **Hyperlink** type and use its variable as normal, for example `${affected-url}`. It becomes a real Word hyperlink wherever it sits — in a sentence, a table cell or a findings block — with nothing else to set up in the template. An email address links as `mailto:`, a web address links to itself, and a value holding several addresses gives one link each. [See Hyperlink fields.](user-defined-fields.md#hyperlink-fields)
+
+**Asset locations.** `${assetLocation}` is linked automatically when the finding's asset location is a web address. A host and port, a path or a name is left as plain text.
+
+**The `link` suffix.** Some variables can be linked by appending `link`. Only a few built-in variables support this (`${asmtAssessor_Email link}`, `${cvssString link}`) but every custom variable does, so `${affected-url link}` generates a hyperlink to whatever URL was entered. Unlike a Hyperlink field, this only works when the variable sits inside a hyperlink you have already added in Word.
+
+Below is an example of the `link` suffix. Note that the "Address" in the DOCX template can be anything. It will be deleted and replaced with the user-defined variable for Affected URL.
 
 ![](../files/Pasted%20image%2020250727224329.png)
 
@@ -267,74 +273,107 @@ The Report Designer also has a **Report Font** setting that is applied to all ge
 
 Every rich-text variable is wrapped in a `div` whose class is the variable name (`summary1`, `summary2`, your custom variable names, and the leading name of any extension placeholder such as `checklist-owasp-top-10`), so you can style each one separately.
 
-## Setting severity colours
+## Setting severity colors
 
-When building reports, you most likely will set the text or cell to the colour that matches the severity of the finding. To achieve this in Faction, you need to set a placeholder colour in the DOCX template that matches the severity category (Overall, Likelihood, and Impact). These placeholder colours are in the table below:
+Findings are usually color-coded by severity — a red cell for Critical, an orange one for High. In Faction you paint a **placeholder color** in the DOCX template wherever you want a color that depends on the finding, and choose the real colors in the Report Designer. When the report is generated, each placeholder is replaced with the color for that finding.
 
-|   |   |
-|---|---|
-|**Category**|**Colour Hex**|
-|Overall Severity|#FAC701|
-|Likelihood|#FAC702|
-|Impact|#FAC703|
+Placeholders work on table cells, text, shaded paragraphs, table borders and the numbers or bullets of a list.
 
-For example, a table in MS Word below has pre-filled the colour codes for each severity name and category.
+### The placeholder colors
 
-![](../files/Pasted%20image%2020231217160231.png)
+Each category has two placeholders that mean exactly the same thing: a light one and a dark one.
 
-Right-click the overall severity variable, **${severity}**; you can see the placeholder hex code for this colour is #FAC701. Likelihood would be set to #FAC702, and Impact would be set to #FAC703.
+| Category | Light | Dark |
+|---|---|---|
+| Severity | `#FAC701` | `#1A0701` |
+| Likelihood | `#FAC702` | `#1A0702` |
+| Impact | `#FAC703` | `#1A0703` |
 
-![](../files/Pasted%20image%2020231217160250.png)
+The pair is there so you can read your own template. Paint the **light** one on a cell and the **dark** one on the text inside it, and you see near-black text on amber while you work. It makes no difference to the report which one you use where — Faction can tell a cell from text on its own — so painting them the other way round works too.
 
-Setting the background colour for cells works in much the same way. Notice we use the `${cells}` variable instead.
+!!! warning "Check the digits"
+    The dark placeholders are `1A07…`, not `1AC7…`. An almost-right color such as `#1AC701` is an ordinary color to Faction, so it is left exactly as painted — typically a bright green that ships in the report with no warning.
 
-![](../files/Pasted%20image%2020231217160305.png)
-
-Right-click on the cell and set the colour. You may only want to use the Overall severity option but you can have multiple cells with each category if you wish.
+To paint a cell in Word, open **Borders and Shading → Shading**, choose **More Colors** under *Fill* and type the hex code. For text, use **Font Color → More Colors**.
 
 ![](../files/Pasted%20image%2020231217160321.png)
 
-Below is an example of the generated report table with colours replaced.
+Here is a template using the placeholders. The Likelihood, Impact and Severity cells are painted with the light placeholders and their text with the dark ones. The finding name — in the table and in the findings block below it — is painted with the dark severity placeholder too, with no cell color behind it.
 
-![](../files/Pasted%20image%2020231217160335.png)
+![](../files/report-colors-template.png)
 
-!!! tip
-    The keys in `${color}`, `${cells}` and `${fill}` are matched against the severity **labels** shown in the report. If you have renamed the severities in Faction's terminology settings, use your labels as the keys.
+### Color and text on color
 
-## Setting custom variable colours
+Each value has two colors, set in the Report Designer:
 
-Faction allows you to set up a colour scheme to call out data in custom variables. You can use this to highlight things that require more attention or anything else you can imagine.
+- **Color** — what the thing *is*: a filled cell, a border, or text that is not sitting on a colored background.
+- **Text on color** — used only for text that *is* sitting on a placeholder-colored background, so it can contrast with it.
 
-To demonstrate this, we are going to create two custom variables in the Report Designer, `${MyVariable}` and `${MyOtherVariable}`.
+Which one a piece of painted text gets depends on what is behind it:
 
-Set the background colour of `${MyVariable}` to `AEAAAA` and the background colour of `${MyOtherVariable}` to `DBDBDB` in our DOCX template. These values can be anything, as long as they're an RGB hex code. We chose these just so they stand out in this example. Once configured it should look like this:
+| Where the painted text is | Gets |
+|---|---|
+| In a cell filled with a placeholder | Text on color |
+| On a shaded paragraph, or text with its own shading | Text on color |
+| In a cell with no fill, or a cell filled with an ordinary color | Color |
+| Outside a table altogether | Color |
+| A table border, or a list number or bullet with no colored background | Color |
 
-![](../files/Pasted%20image%2020250727234352.png)
+So with Critical set to white text on red, a Critical severity cell comes out white on red, while the finding's name in the column beside it and the heading in the findings block come out red on the page. Here is the template above, generated:
 
-Now add the `${custom-fields}` variable at the top of our vulnerability findings block. This variable maps a custom field to the placeholder colour we want to change when the report is generated.
+![](../files/report-colors-generated.png)
 
-```
-${custom-fields MyVariable=AEAAAA,MyOtherVariable=DBDBDB}
-```
+Because *Color* is also used for text on a white page, choose colors that are readable as text as well as behind it. A pale yellow makes a fine cell and an unreadable heading.
 
-We can now set the colour based on the text that gets entered into these fields. Let's say if the text displays "Happy" then the background will be green and if it says "Sad" then the background will be red.
+### Choosing the colors
 
-We can add these colours to the `${fill}` variable. It will look something like this:
+Open the template in **Admin → Content & Reporting → Report Designer** and find **Finding Colors**. Every row shows the two colors side by side with a preview of how they read together, so an unreadable combination is obvious before it reaches a report. The same panel lists the placeholder colors with a copy button for each.
 
-```
-${fill Critical=8064a2,High=c0504d,Medium=e68e00,Low=33D7FF,Recommended=081417,Informational=657376,Happy=C5E0B3,Sad=EE5654}
-```
+Likelihood and impact use the same five levels as severity, so by default one set of colors covers all three. To color them differently, tick **Use different colors for Likelihood and Impact**. Unticking it copies the Severity colors back over the other two.
 
-The full config in the DOCX will look like this:
+Colors are matched on the severity **level**, not its name. If you have renamed the severities in Faction's terminology settings — Critical to *Sev-1*, say — the colors carry on working.
 
-![](../files/Pasted%20image%2020250727235307.png)
+A new template starts with colors matching the ones Faction uses on screen. A placeholder for a value with no color set is replaced with black text on white, so the placeholder amber never reaches a report.
 
-When we add a vulnerability, we can select our Happy or Sad option for these two custom variables:
+## Setting custom variable colors
+
+A Dropdown user-defined field can be color-coded in the same way, for example a green cell when a finding's *Customer Impact* is "Low" and a red one when it is "High".
+
+Every Dropdown field has its own group under **Finding Colors**, with a color and a text-on-color for each of its options. The first time you set a color for a field, Faction gives it its own pair of placeholders — `#FAC704` and `#1A0704` for the first field, `#FAC705` and `#1A0705` for the next, and so on — and shows them next to the field's name and in the list of placeholder colors. Paint those in the template exactly as you would the severity ones.
+
+![](../files/Pasted%20image%2020260922093900.png)
+
+Here two Dropdown fields, *My Variable* and *My Other Variable*, each have a color for their Happy and Sad options. They were given `#FAC704`/`#1A0704` and `#FAC705`/`#1A0705`, which also appear at the bottom of the list of placeholder colors:
+
+![](../files/Pasted%20image%2020260922093900.png)
+
+A field keeps its placeholders for good, even if you later remove its colors, so a template that still uses them can never pick up another field's colors by mistake.
+
+When a finding is written, the assessor picks the value from the dropdown:
+
 ![](../files/Pasted%20image%2020260909012931.png)
 
-When we generate the report, these backgrounds get updated accordingly.
+and the cells and text painted with that field's placeholders take the colors set for the chosen option.
 
-![](../files/Pasted%20image%2020250727235618.png)
+String fields cannot be colored, because they have no fixed list of values to give colors to.
+
+## Upgrading a Faction 1 template
+
+Faction 1 templates set their colors with configuration paragraphs:
+
+```
+${color Critical=C00000,High=FFC000}
+${cells Critical=8064a2,High=c0504d}
+${fill Critical=8064a2,High=c0504d}
+${custom-fields MyVariable=AEAAAA}
+```
+
+These are no longer read. A template that still contains them generates without errors — the paragraphs are removed from the report and ignored — but its colors come from the Report Designer instead. To bring one across:
+
+1. Enter the colors from its `${color}`, `${cells}` or `${fill}` paragraphs under **Finding Colors**. `${color}` values usually belong in *Text on color* and `${cells}` / `${fill}` values in *Color*.
+2. Delete the configuration paragraphs from the template.
+3. Leave the `#FAC701`–`#FAC703` colors you already painted where they are; they still work. Repaint text with the dark placeholder if you want to read it while you edit.
+4. For a custom variable that used `${custom-fields}`, set its colors in the designer, then repaint its cells with the placeholders shown next to the field. Colors you chose yourself, such as `AEAAAA`, are ordinary colors now.
 
 ## Uploading your template
 

@@ -1,5 +1,5 @@
 ---
-keywords: "code block theme, report CSS, syntax colours, dracula, solarized, nord, monokai, gruvbox, pentest report code formatting"
+keywords: "code block theme, report CSS, syntax colors, dracula, solarized, nord, monokai, gruvbox, pentest report code formatting"
 description: "Copy-and-paste CSS themes for code blocks in OWASP Faction reports — Dracula, Solarized Dark and Light, Nord, Monokai, Gruvbox, Tokyo Night, Catppuccin, GitHub and more, plus how to build your own."
 ---
 
@@ -34,7 +34,7 @@ Content-Type: application/json
 
 ![](../files/Pasted%20image%2020260917230951.png)
 
-Out of the box the panel is themed [Dracula](https://draculatheme.com). This page has ready-made CSS for a dozen other themes. Paste one into your template's CSS box and every code block in reports generated from that template takes those colours.
+Out of the box the panel is themed [Dracula](https://draculatheme.com). This page has ready-made CSS for a dozen other themes. Paste one into your template's CSS box and every code block in reports generated from that template takes those colors.
 
 ## Where to paste it
 
@@ -42,14 +42,14 @@ Out of the box the panel is themed [Dracula](https://draculatheme.com). This pag
 
 The CSS belongs to that one template, so different assessment types can carry different themes. Your CSS is added after Faction's own, so these rules simply win — you never need `!important`.
 
-!!! note "The editor keeps its own colours"
+!!! note "The editor keeps its own colors"
     This styles the **report**. The rich-text editor where you write the code block always shows the built-in Dracula panel, so a block will look different while you are editing it than it does in the generated document.
 
 ## How a theme works
 
-Every theme is the same two rules and four colours. There is nothing else to override.
+Every theme is the same two rules and four colors. There is nothing else to override.
 
-| Slot | What it colours |
+| Slot | What it colors |
 |---|---|
 | **Panel** | The background behind the whole block |
 | **Code** | The code text itself |
@@ -70,10 +70,10 @@ Every theme is the same two rules and four colours. There is nothing else to ove
 
 Two details worth knowing if you write your own:
 
-- **Put the background on `td`, not on the table.** Word ignores a table's own `background-color` when the report is converted to DOCX, so a panel coloured at the table level comes out unshaded in the downloaded document.
-- **Keep `td` in front of the gutter selector.** A bare `.code-block-gutter` loses to `.code-block td`, and your line numbers would come out in the code colour.
+- **Put the background on `td`, not on the table.** Word ignores a table's own `background-color` when the report is converted to DOCX, so a panel colored at the table level comes out unshaded in the downloaded document.
+- **Keep `td` in front of the gutter selector.** A bare `.code-block-gutter` loses to `.code-block td`, and your line numbers would come out in the code color.
 
-The short padding rows at the top and bottom of the panel take the panel colour on their own — you do not need a rule for them.
+The short padding rows at the top and bottom of the panel take the panel color on their own — you do not need a rule for them.
 
 ## Dark themes
 
@@ -96,7 +96,7 @@ Low-contrast blue-green, designed to be easy on the eyes over long stretches.
 ```
 
 !!! tip "If Solarized Dark reads too dim in print"
-    Swap the code colour for `#93a1a1`, Solarized's brighter `base1`. The palette intends `base0` for body text, but a report is often read on paper or a projector rather than a tuned monitor.
+    Swap the code color for `#93a1a1`, Solarized's brighter `base1`. The palette intends `base0` for body text, but a report is often read on paper or a projector rather than a tuned monitor.
 
 ### Nord
 
@@ -248,11 +248,11 @@ Clean white panel, dark slate text.
 
 ## Build your own
 
-Fill the four slots with your own palette, most often your client's or your firm's brand colours:
+Fill the four slots with your own palette, most often your client's or your firm's brand colors:
 
 ```css
 .code-block td {
-  background-color: #RRGGBB;  /* Panel: the darkest (or lightest) of your colours */
+  background-color: #RRGGBB;  /* Panel: the darkest (or lightest) of your colors */
   color: #RRGGBB;             /* Code: high contrast against the panel            */
 }
 
@@ -266,11 +266,11 @@ Three things make the difference between a theme that works and one that does no
 
 - **Contrast between panel and code.** Aim for a clear separation, and check it in the generated DOCX rather than only in the browser preview.
 - **Line numbers dimmer than the code.** They are scaffolding, not content. If they compete with the code, every block looks busy.
-- **A divider close to the panel colour.** A step or two away is enough. A bright divider draws the eye down the page and away from the code.
+- **A divider close to the panel color.** A step or two away is enough. A bright divider draws the eye down the page and away from the code.
 
 ## Changing the font or size
 
-Font and size are separate from colour, and Faction sets both on the cells. Override them the same way:
+Font and size are separate from color, and Faction sets both on the cells. Override them the same way:
 
 ```css
 .code-block, .code-block td {
@@ -284,5 +284,5 @@ Font and size are separate from colour, and Faction sets both on the cells. Over
 
 ## See also
 
-- **[Using DOCX Report Templates](docx-templates.md)** — every `${variable}` a template can use, report sections, severity colours and the rest of the CSS a template can carry.
+- **[Using DOCX Report Templates](docx-templates.md)** — every `${variable}` a template can use, report sections, severity colors and the rest of the CSS a template can carry.
 - **[User Defined Fields](user-defined-fields.md)** — add your own fields to findings and assessments and print them in the report.

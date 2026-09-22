@@ -191,12 +191,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "reporting/code-block-themes.md",
+                "file": "reporting/docx-templates.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "code-block-themes"
+              "title": "docx-templates"
             }
           },
           {
@@ -372,19 +372,20 @@
   },
   "active": "0cbbb3c8a5f32f27",
   "lastOpenFiles": [
-    "files/Pasted image 20260917230951.png",
-    "files/Pasted image 20260917230825.png",
-    "files/Pasted image 20260917230724.png",
+    "files/report-colors-generated.png",
+    "files/report-colors-template.png",
+    "files/Pasted image 20260922093900.png",
+    "reporting/code-block-themes.md",
     "faction1.x/assets/javascripts/glightbox.min.js",
     "faction1.x/assets/stylesheets/glightbox.min.css",
     "faction1.x/search/search_index.json",
     "faction1.x/search",
     "faction1.x/tags/index.html",
     "faction1.x/tags",
+    "faction1.x/blog/archive/2024/index.html",
+    "faction1.x/blog/archive/2024",
     "faction1.x/blog/2024/12/10/writing-an-automated-pentest-report/index.html",
-    "faction1.x/blog/2024/10/22/how-to-generate-a-vulnerability-report-in-faction/index.html",
-    "faction1.x/blog/2024/03/25/faction-app-store/index.html",
-    "faction1.x/blog/2024/03/15/hello-world/index.html",
+    "faction1.x/blog/2025/07/08/faction-16-released/index.html",
     "faction1.x/img/favicon.png",
     "faction1.x/assets/images/favicon.png",
     "faction1.x/files/null0pProfile.png",
@@ -393,7 +394,6 @@
     "faction1.x/files/Pasted image 20260416163627.png",
     "faction1.x/files/Pasted image 20260416162956.png",
     "faction1.x/files/Pasted image 20260416162951.png",
-    "reporting/code-block-themes.md",
     "templating/index.md",
     "templating/content-templates.md",
     "templating/ai-content.md",

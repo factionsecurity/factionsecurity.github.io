@@ -4,12 +4,12 @@ description: "Pentest reporting in OWASP Faction: DOCX report templates and ever
 
 # Reporting
 
-Faction generates assessment reports from DOCX templates that you design. A template is an ordinary Word document with `${variable}` placeholders; when a report is generated, Faction fills in the assessment details, repeats a block or table row for every finding, applies severity colours, and writes out a finished document.
+Faction generates assessment reports from DOCX templates that you design. A template is an ordinary Word document with `${variable}` placeholders; when a report is generated, Faction fills in the assessment details, repeats a block or table row for every finding, applies severity colors, and writes out a finished document.
 
 <div class="grid cards" markdown>
 
-- **[Using DOCX Report Templates](docx-templates.md)** — every variable a template can use, how to lay out findings as a table or as a repeating block, report sections, page breaks, severity colours and CSS formatting.
-- **[Code Block Themes](code-block-themes.md)** — copy-and-paste CSS that recolours code blocks in the report: Dracula, Solarized, Nord, Monokai, Gruvbox, GitHub and more, plus how to build your own.
+- **[Using DOCX Report Templates](docx-templates.md)** — every variable a template can use, how to lay out findings as a table or as a repeating block, report sections, page breaks, severity colors and CSS formatting.
+- **[Code Block Themes](code-block-themes.md)** — copy-and-paste CSS that recolors code blocks in the report: Dracula, Solarized, Nord, Monokai, Gruvbox, GitHub and more, plus how to build your own.
 - **[User Defined Fields](user-defined-fields.md)** — add your own fields to findings and assessments, such as an affected URL or an executive summary, and print them in the report.
 - **[Assessment Checklists](checklists.md)** — enforce a standard checklist per assessment type, block finalization until it is complete, and print the results in the report.
 

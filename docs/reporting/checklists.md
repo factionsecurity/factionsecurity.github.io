@@ -75,7 +75,7 @@ The generated table is wrapped in a `div` with the class `checklist-owasp-top-10
 
 ### Customizing the checklist extension output
 
-The checklist extension has several configurable options. You can change the text that is printed for the Pass, Fail and N/A statuses, and the background and foreground colours.
+The checklist extension has several configurable options. You can change the text that is printed for the Pass, Fail and N/A statuses, and the background and foreground colors.
 
 To configure the extension, navigate to **Admin → System → App Store** and click **Configure** on the Checklist Extension card. The options appear below the card; save them and regenerate the report to see the change.
 

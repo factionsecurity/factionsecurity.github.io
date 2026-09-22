@@ -10,7 +10,7 @@ Faction generates assessment reports from DOCX templates that you design in Word
 
 <div class="grid cards" markdown>
 
-- **[Using Docx Report Templates](1.%20Using%20Docx%20Report%20Templates.md)** — every `${variable}` a template can use, vulnerability tables and blocks, report sections, severity colours and CSS formatting.
+- **[Using Docx Report Templates](1.%20Using%20Docx%20Report%20Templates.md)** — every `${variable}` a template can use, vulnerability tables and blocks, report sections, severity colors and CSS formatting.
 - **[Using Markdown in Reports](2.%20Using%20Markdown%20in%20Reports.md)** — capture attack steps quickly with Markdown and have them rendered into the report.
 - **[Table of Contents Numbering](3.%20Table%20of%20Contents%20Numbering.md)** — why page numbers in the table of contents need a refresh in Word, and how to do it.
 - **[Custom User Defined Variables](4.%20Custom%20User%20Defined%20Variables.md)** — add your own fields to vulnerabilities and assessments and print them in the report.

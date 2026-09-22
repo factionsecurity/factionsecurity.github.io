@@ -23,7 +23,7 @@ Click **Add Field** in the panel you want, then fill in the card:
 |---|---|
 | **Display Name** | The label assessors see in the UI |
 | **Variable Name** | The name used in the DOCX template. It is generated from the display name (lower-cased, spaces become hyphens, anything else stripped) but you can change it |
-| **Field Type** | **String** for a single line of text, **Dropdown** for a fixed list of options, **Rich Text** for formatted content with headings, lists, links and images |
+| **Field Type** | **String** for a single line of text, **Dropdown** for a fixed list of options, **Rich Text** for formatted content with headings, lists, links and images, **Hyperlink** for an email address or URL that becomes a clickable link in the report |
 | **Default Value** | Pre-filled when the assessment or finding is created |
 | **Options** | Dropdown only: one option per line |
 | **Variable** | The finished `${…}` token, with a copy button |
@@ -39,7 +39,9 @@ In this example we added **Affected URL** to the Vulnerabilities panel, which pr
 
 Add the variable wherever you want the value to appear in the DOCX. A vulnerability field goes inside the findings table or the `${fiBegin}` … `${fiEnd}` block, an assessment field can go anywhere.
 
-If the value is a URL, append `link` to turn it into a hyperlink. Put the variable in a hyperlink in Word; the address you give it there is a placeholder and is replaced with the value at generation time. [See Hyperlinks](docx-templates.md#hyperlinks).
+If the value is a URL or an email address, make it a **Hyperlink** field and use the variable exactly as it is — `${affected-url}` becomes a clickable link wherever it sits in the template. See [Hyperlink fields](#hyperlink-fields) below.
+
+Older templates may use the `link` suffix instead, which still works. It only links when the variable sits inside a hyperlink you have already added in Word; the address you give it there is a placeholder that is replaced at generation time. [See Hyperlinks](docx-templates.md#hyperlinks).
 
 ```
 Affected URL: ${affected-url link}
@@ -65,13 +67,42 @@ Each Rich Text field gets a tab of its own, named after the field, with the vari
 
 Once the report is generated, the values take the place of the variables.
 
+## Hyperlink fields
+
+A Hyperlink field is filled in like a String field — a single line — but the value is both the text shown in the report and where it links to. There is no separate label to fill in.
+
+Faction decides what to link from what was entered:
+
+| Value | Links to |
+|---|---|
+| `ops@acme.com` | `mailto:ops@acme.com` |
+| `https://acme.com/portal` | the address as entered |
+| `acme.com` or `www.acme.com/security` | `https://` is added |
+| `N/A`, a name, `version 1.2` | nothing — shown as plain text |
+
+A field can hold several addresses separated by commas, semicolons or spaces. Each becomes its own link, on the same line, with your separators left exactly as you typed them:
+
+```
+ops@acme.com, soc@acme.com; https://status.acme.com
+```
+
+Punctuation at the end of an address, such as the full stop in `see acme.com.`, is left out of the link.
+
+Where the variable sits decides how it is linked:
+
+- **In the template body or a findings table** — a real Word hyperlink, styled with your template's *Hyperlink* character style.
+- **Inside a Rich Text field** — for example a finding description that says "escalate to `${contact}`" — the same links, rendered through the rich text.
+- **In a page header or footer** — plain text. Headers and footers cannot carry links.
+
 ## Templates change, assessments keep their values
 
 An assessment takes a copy of the template's fields when it is created. When the template changes later, the assessment picks up the changes the next time it is opened: new fields appear, renamed display names and changed options are updated, and fields removed from the template disappear along with their values. Values already entered are kept as long as the variable name has not changed.
 
-## Colouring values in the report
+## Coloring values in the report
 
-A String or Dropdown value can drive a colour in the report, for example a green cell for "Happy" and a red one for "Sad". This is done with the `${custom-fields}` variable in the template and is described under [Setting custom variable colours](docx-templates.md#setting-custom-variable-colours).
+A Dropdown value can drive a color in the report, for example a green cell for "Happy" and a red one for "Sad". Each Dropdown field gets its own group under **Finding Colors** in the Report Designer, with a color for each of its options, and is given its own pair of colors to paint in the template. This is described under [Setting custom variable colors](docx-templates.md#setting-custom-variable-colors).
+
+Only Dropdown fields can be colored: a String field has no fixed set of values to give colors to.
 
 ## Built-in fields
 

@@ -22,7 +22,7 @@ Pick one, for example **Unrestricted File Upload**, or click **Start Blank** to 
 
 The finding is saved as soon as it is created and every edit saves automatically. The fields that matter for the report:
 
-- **Name**, **Severity** and **Category** drive the summary tables and the severity colouring in the report.
+- **Name**, **Severity** and **Category** drive the summary tables and the severity coloring in the report.
 - **Asset / Location** is where the issue was found, a URL, host or path.
 - **Description**, **Recommendation** and **Details** are the body of the finding. Details is where screenshots and reproduction steps go; paste images straight into the editor.
 - **Custom Fields** are the extra inputs your report template asks for. The default template has none you need to fill in.
@@ -46,7 +46,7 @@ Click **Preview Report** to read the PDF without leaving Faction:
 
 The preview drawer has **DOCX** and **PDF** buttons at the top for downloading either format. **Download Report** in the top bar does the same for the DOCX.
 
-What you are looking at is the default template: a cover page, table of contents, executive summary, methodology, a findings summary and one detail section per vulnerability. The severity colours, the summary table and the per-finding layout all come from the template.
+What you are looking at is the default template: a cover page, table of contents, executive summary, methodology, a findings summary and one detail section per vulnerability. The severity colors, the summary table and the per-finding layout all come from the template.
 
 ## Where to go next
 
