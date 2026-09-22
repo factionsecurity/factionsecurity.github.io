@@ -71,7 +71,7 @@
     
     
   
-    <meta name="keywords" content="code block theme, report CSS, syntax colours, dracula, solarized, nord, monokai, gruvbox, pentest report code formatting">
+    <meta name="keywords" content="code block theme, report CSS, syntax colors, dracula, solarized, nord, monokai, gruvbox, pentest report code formatting">
   
   
 
@@ -1735,21 +1735,21 @@
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>```
 </code></pre></div>
 <p><img alt="" src="../../files/Pasted%20image%2020260917230951.png" /></p>
-<p>Out of the box the panel is themed <a href="https://draculatheme.com">Dracula</a>. This page has ready-made CSS for a dozen other themes. Paste one into your template's CSS box and every code block in reports generated from that template takes those colours.</p>
+<p>Out of the box the panel is themed <a href="https://draculatheme.com">Dracula</a>. This page has ready-made CSS for a dozen other themes. Paste one into your template's CSS box and every code block in reports generated from that template takes those colors.</p>
 <h2 id="where-to-paste-it">Where to paste it<a class="headerlink" href="#where-to-paste-it" title="Permanent link">&para;</a></h2>
 <p><strong>Admin → Content &amp; Reporting → Report Designer →</strong> select your template <strong>→ CSS</strong>.</p>
 <p>The CSS belongs to that one template, so different assessment types can carry different themes. Your CSS is added after Faction's own, so these rules simply win — you never need <code>!important</code>.</p>
 <div class="admonition note">
-<p class="admonition-title">The editor keeps its own colours</p>
+<p class="admonition-title">The editor keeps its own colors</p>
 <p>This styles the <strong>report</strong>. The rich-text editor where you write the code block always shows the built-in Dracula panel, so a block will look different while you are editing it than it does in the generated document.</p>
 </div>
 <h2 id="how-a-theme-works">How a theme works<a class="headerlink" href="#how-a-theme-works" title="Permanent link">&para;</a></h2>
-<p>Every theme is the same two rules and four colours. There is nothing else to override.</p>
+<p>Every theme is the same two rules and four colors. There is nothing else to override.</p>
 <table>
 <thead>
 <tr>
 <th>Slot</th>
-<th>What it colours</th>
+<th>What it colors</th>
 </tr>
 </thead>
 <tbody>
@@ -1783,10 +1783,10 @@
 </code></pre></div>
 <p>Two details worth knowing if you write your own:</p>
 <ul>
-<li><strong>Put the background on <code>td</code>, not on the table.</strong> Word ignores a table's own <code>background-color</code> when the report is converted to DOCX, so a panel coloured at the table level comes out unshaded in the downloaded document.</li>
-<li><strong>Keep <code>td</code> in front of the gutter selector.</strong> A bare <code>.code-block-gutter</code> loses to <code>.code-block td</code>, and your line numbers would come out in the code colour.</li>
+<li><strong>Put the background on <code>td</code>, not on the table.</strong> Word ignores a table's own <code>background-color</code> when the report is converted to DOCX, so a panel colored at the table level comes out unshaded in the downloaded document.</li>
+<li><strong>Keep <code>td</code> in front of the gutter selector.</strong> A bare <code>.code-block-gutter</code> loses to <code>.code-block td</code>, and your line numbers would come out in the code color.</li>
 </ul>
-<p>The short padding rows at the top and bottom of the panel take the panel colour on their own — you do not need a rule for them.</p>
+<p>The short padding rows at the top and bottom of the panel take the panel color on their own — you do not need a rule for them.</p>
 <h2 id="dark-themes">Dark themes<a class="headerlink" href="#dark-themes" title="Permanent link">&para;</a></h2>
 <h3 id="dracula">Dracula<a class="headerlink" href="#dracula" title="Permanent link">&para;</a></h3>
 <p>The built-in theme. Purple-leaning charcoal, high contrast.</p>
@@ -1800,7 +1800,7 @@
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">If Solarized Dark reads too dim in print</p>
-<p>Swap the code colour for <code>#93a1a1</code>, Solarized's brighter <code>base1</code>. The palette intends <code>base0</code> for body text, but a report is often read on paper or a projector rather than a tuned monitor.</p>
+<p>Swap the code color for <code>#93a1a1</code>, Solarized's brighter <code>base1</code>. The palette intends <code>base0</code> for body text, but a report is often read on paper or a projector rather than a tuned monitor.</p>
 </div>
 <h3 id="nord">Nord<a class="headerlink" href="#nord" title="Permanent link">&para;</a></h3>
 <p>Cool arctic blues, muted and even.</p>
@@ -1885,9 +1885,9 @@
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="p">.</span><span class="nc">code-block</span><span class="w"> </span><span class="nt">td</span><span class="p">.</span><span class="nc">code-block-gutter</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#9d9d9f</span><span class="p">;</span><span class="w"> </span><span class="k">border-right</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#e5e5e6</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <h2 id="build-your-own">Build your own<a class="headerlink" href="#build-your-own" title="Permanent link">&para;</a></h2>
-<p>Fill the four slots with your own palette, most often your client's or your firm's brand colours:</p>
+<p>Fill the four slots with your own palette, most often your client's or your firm's brand colors:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">.</span><span class="nc">code-block</span><span class="w"> </span><span class="nt">td</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#RRGGBB</span><span class="p">;</span><span class="w">  </span><span class="c">/* Panel: the darkest (or lightest) of your colours */</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#RRGGBB</span><span class="p">;</span><span class="w">  </span><span class="c">/* Panel: the darkest (or lightest) of your colors */</span>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#RRGGBB</span><span class="p">;</span><span class="w">             </span><span class="c">/* Code: high contrast against the panel            */</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">}</span>
 <a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
@@ -1900,10 +1900,10 @@
 <ul>
 <li><strong>Contrast between panel and code.</strong> Aim for a clear separation, and check it in the generated DOCX rather than only in the browser preview.</li>
 <li><strong>Line numbers dimmer than the code.</strong> They are scaffolding, not content. If they compete with the code, every block looks busy.</li>
-<li><strong>A divider close to the panel colour.</strong> A step or two away is enough. A bright divider draws the eye down the page and away from the code.</li>
+<li><strong>A divider close to the panel color.</strong> A step or two away is enough. A bright divider draws the eye down the page and away from the code.</li>
 </ul>
 <h2 id="changing-the-font-or-size">Changing the font or size<a class="headerlink" href="#changing-the-font-or-size" title="Permanent link">&para;</a></h2>
-<p>Font and size are separate from colour, and Faction sets both on the cells. Override them the same way:</p>
+<p>Font and size are separate from color, and Faction sets both on the cells. Override them the same way:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">.</span><span class="nc">code-block</span><span class="o">,</span><span class="w"> </span><span class="p">.</span><span class="nc">code-block</span><span class="w"> </span><span class="nt">td</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"JetBrains Mono"</span><span class="p">,</span><span class="w"> </span><span class="n">Consolas</span><span class="p">,</span><span class="w"> </span><span class="s2">"Courier New"</span><span class="p">,</span><span class="w"> </span><span class="kc">monospace</span><span class="p">;</span>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="kt">pt</span><span class="p">;</span>
@@ -1915,7 +1915,7 @@
 </div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong><a href="../docx-templates/">Using DOCX Report Templates</a></strong> — every <code>${variable}</code> a template can use, report sections, severity colours and the rest of the CSS a template can carry.</li>
+<li><strong><a href="../docx-templates/">Using DOCX Report Templates</a></strong> — every <code>${variable}</code> a template can use, report sections, severity colors and the rest of the CSS a template can carry.</li>
 <li><strong><a href="../user-defined-fields/">User Defined Fields</a></strong> — add your own fields to findings and assessments and print them in the report.</li>
 </ul>
 

@@ -877,6 +877,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hyperlink-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyperlink fields
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#templates-change-assessments-keep-their-values" class="md-nav__link">
     <span class="md-ellipsis">
       Templates change, assessments keep their values
@@ -886,9 +895,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#colouring-values-in-the-report" class="md-nav__link">
+  <a href="#coloring-values-in-the-report" class="md-nav__link">
     <span class="md-ellipsis">
-      Colouring values in the report
+      Coloring values in the report
     </span>
   </a>
   
@@ -1301,6 +1310,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hyperlink-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyperlink fields
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#templates-change-assessments-keep-their-values" class="md-nav__link">
     <span class="md-ellipsis">
       Templates change, assessments keep their values
@@ -1310,9 +1328,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#colouring-values-in-the-report" class="md-nav__link">
+  <a href="#coloring-values-in-the-report" class="md-nav__link">
     <span class="md-ellipsis">
-      Colouring values in the report
+      Coloring values in the report
     </span>
   </a>
   
@@ -1374,7 +1392,7 @@
 </tr>
 <tr>
 <td><strong>Field Type</strong></td>
-<td><strong>String</strong> for a single line of text, <strong>Dropdown</strong> for a fixed list of options, <strong>Rich Text</strong> for formatted content with headings, lists, links and images</td>
+<td><strong>String</strong> for a single line of text, <strong>Dropdown</strong> for a fixed list of options, <strong>Rich Text</strong> for formatted content with headings, lists, links and images, <strong>Hyperlink</strong> for an email address or URL that becomes a clickable link in the report</td>
 </tr>
 <tr>
 <td><strong>Default Value</strong></td>
@@ -1398,7 +1416,8 @@
 </div>
 <h2 id="step-2-use-the-variable-in-the-report-template">Step 2: Use the variable in the report template<a class="headerlink" href="#step-2-use-the-variable-in-the-report-template" title="Permanent link">&para;</a></h2>
 <p>Add the variable wherever you want the value to appear in the DOCX. A vulnerability field goes inside the findings table or the <code>${fiBegin}</code> … <code>${fiEnd}</code> block, an assessment field can go anywhere.</p>
-<p>If the value is a URL, append <code>link</code> to turn it into a hyperlink. Put the variable in a hyperlink in Word; the address you give it there is a placeholder and is replaced with the value at generation time. <a href="../docx-templates/#hyperlinks">See Hyperlinks</a>.</p>
+<p>If the value is a URL or an email address, make it a <strong>Hyperlink</strong> field and use the variable exactly as it is — <code>${affected-url}</code> becomes a clickable link wherever it sits in the template. See <a href="#hyperlink-fields">Hyperlink fields</a> below.</p>
+<p>Older templates may use the <code>link</code> suffix instead, which still works. It only links when the variable sits inside a hyperlink you have already added in Word; the address you give it there is a placeholder that is replaced at generation time. <a href="../docx-templates/#hyperlinks">See Hyperlinks</a>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Affected URL: ${affected-url link}
 </code></pre></div>
 <p>Rich Text fields are rendered as formatted content and can be styled from the template's CSS: each one is wrapped in a <code>div</code> whose class is the variable name.</p>
@@ -1411,10 +1430,50 @@
 <p>Each Rich Text field gets a tab of its own, named after the field, with the variable shown in the top right:</p>
 <p><img alt="" src="../../files/udf-assessment-executive-summary.jpg" /></p>
 <p>Once the report is generated, the values take the place of the variables.</p>
+<h2 id="hyperlink-fields">Hyperlink fields<a class="headerlink" href="#hyperlink-fields" title="Permanent link">&para;</a></h2>
+<p>A Hyperlink field is filled in like a String field — a single line — but the value is both the text shown in the report and where it links to. There is no separate label to fill in.</p>
+<p>Faction decides what to link from what was entered:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Links to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ops@acme.com</code></td>
+<td><code>mailto:ops@acme.com</code></td>
+</tr>
+<tr>
+<td><code>https://acme.com/portal</code></td>
+<td>the address as entered</td>
+</tr>
+<tr>
+<td><code>acme.com</code> or <code>www.acme.com/security</code></td>
+<td><code>https://</code> is added</td>
+</tr>
+<tr>
+<td><code>N/A</code>, a name, <code>version 1.2</code></td>
+<td>nothing — shown as plain text</td>
+</tr>
+</tbody>
+</table>
+<p>A field can hold several addresses separated by commas, semicolons or spaces. Each becomes its own link, on the same line, with your separators left exactly as you typed them:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ops@acme.com, soc@acme.com; https://status.acme.com
+</code></pre></div>
+<p>Punctuation at the end of an address, such as the full stop in <code>see acme.com.</code>, is left out of the link.</p>
+<p>Where the variable sits decides how it is linked:</p>
+<ul>
+<li><strong>In the template body or a findings table</strong> — a real Word hyperlink, styled with your template's <em>Hyperlink</em> character style.</li>
+<li><strong>Inside a Rich Text field</strong> — for example a finding description that says "escalate to <code>${contact}</code>" — the same links, rendered through the rich text.</li>
+<li><strong>In a page header or footer</strong> — plain text. Headers and footers cannot carry links.</li>
+</ul>
 <h2 id="templates-change-assessments-keep-their-values">Templates change, assessments keep their values<a class="headerlink" href="#templates-change-assessments-keep-their-values" title="Permanent link">&para;</a></h2>
 <p>An assessment takes a copy of the template's fields when it is created. When the template changes later, the assessment picks up the changes the next time it is opened: new fields appear, renamed display names and changed options are updated, and fields removed from the template disappear along with their values. Values already entered are kept as long as the variable name has not changed.</p>
-<h2 id="colouring-values-in-the-report">Colouring values in the report<a class="headerlink" href="#colouring-values-in-the-report" title="Permanent link">&para;</a></h2>
-<p>A String or Dropdown value can drive a colour in the report, for example a green cell for "Happy" and a red one for "Sad". This is done with the <code>${custom-fields}</code> variable in the template and is described under <a href="../docx-templates/#setting-custom-variable-colours">Setting custom variable colours</a>.</p>
+<h2 id="coloring-values-in-the-report">Coloring values in the report<a class="headerlink" href="#coloring-values-in-the-report" title="Permanent link">&para;</a></h2>
+<p>A Dropdown value can drive a color in the report, for example a green cell for "Happy" and a red one for "Sad". Each Dropdown field gets its own group under <strong>Finding Colors</strong> in the Report Designer, with a color for each of its options, and is given its own pair of colors to paint in the template. This is described under <a href="../docx-templates/#setting-custom-variable-colors">Setting custom variable colors</a>.</p>
+<p>Only Dropdown fields can be colored: a String field has no fixed set of values to give colors to.</p>
 <h2 id="built-in-fields">Built-in fields<a class="headerlink" href="#built-in-fields" title="Permanent link">&para;</a></h2>
 <p>Every new template comes with two assessment fields, <strong>Executive Summary</strong> (<code>${summary1}</code>) and <strong>Scope</strong> (<code>${summary2}</code>), which the sample report templates already reference. They are ordinary user defined fields and can be renamed or removed like any other.</p>
 

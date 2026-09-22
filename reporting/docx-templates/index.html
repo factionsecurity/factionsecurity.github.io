@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Reference for OWASP Faction DOCX report templates: every ${variable}, vulnerability tables and blocks, report sections, page breaks, severity colours, CSS formatting and uploading your own pentest report template.">
+        <meta name="description" content="Reference for OWASP Faction DOCX report templates: every ${variable}, vulnerability tables and blocks, report sections, page breaks, severity colors, CSS formatting and uploading your own pentest report template.">
       
       
       
@@ -942,18 +942,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-severity-colours" class="md-nav__link">
+  <a href="#setting-severity-colors" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting severity colours
+      Setting severity colors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting severity colors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-placeholder-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      The placeholder colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-and-text-on-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color and text on color
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-the-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the colors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-custom-variable-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting custom variable colors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-custom-variable-colours" class="md-nav__link">
+  <a href="#upgrading-a-faction-1-template" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting custom variable colours
+      Upgrading a Faction 1 template
     </span>
   </a>
   
@@ -1513,18 +1555,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-severity-colours" class="md-nav__link">
+  <a href="#setting-severity-colors" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting severity colours
+      Setting severity colors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting severity colors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-placeholder-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      The placeholder colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-and-text-on-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color and text on color
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-the-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the colors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-custom-variable-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting custom variable colors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-custom-variable-colours" class="md-nav__link">
+  <a href="#upgrading-a-faction-1-template" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting custom variable colours
+      Upgrading a Faction 1 template
     </span>
   </a>
   
@@ -1571,9 +1655,12 @@
 <p>If you get an error about a malformed file after the report is generated, try opening the template in <a href="https://www.libreoffice.org/">LibreOffice</a> and saving it before uploading the template to Faction.</p>
 </div>
 <h2 id="whats-new-in-faction-2">What's new in Faction 2<a class="headerlink" href="#whats-new-in-faction-2" title="Permanent link">&para;</a></h2>
-<p>Templates written for Faction 1 work unchanged. Faction 2 adds the following:</p>
+<p>Templates written for Faction 1 work unchanged, with one exception: <strong>colors</strong>. The <code>${color}</code>, <code>${cells}</code>, <code>${fill}</code> and <code>${custom-fields}</code> markers are no longer read — colors are now set in the Report Designer. The placeholder colors you painted in the template still work. See <a href="#upgrading-a-faction-1-template">Upgrading a Faction 1 template</a>.</p>
+<p>Faction 2 adds the following:</p>
 <ul>
-<li><strong><code>${assetLocation}</code></strong> — the finding's asset location (URL, host or path). Available in finding tables and finding blocks.</li>
+<li><strong><code>${assetLocation}</code></strong> — the finding's asset location (URL, host or path). Available in finding tables and finding blocks. When it is a web address it becomes a clickable link.</li>
+<li><strong>Hyperlink fields</strong> — a user-defined field type whose value becomes a clickable link wherever its variable sits. Email addresses become <code>mailto:</code> links. See <a href="#hyperlinks">Hyperlinks</a>.</li>
+<li><strong>Finding colors in the Report Designer</strong> — pick the color for each severity, likelihood and impact without opening Word, and each placeholder color now has a dark twin so your template stays readable while you build it. See <a href="#setting-severity-colors">Setting severity colors</a>.</li>
 <li><strong><code>${if-section}</code> / <code>${end-section}</code></strong> — wrap any part of the template so it disappears entirely when a section has no findings. See <a href="#conditional-sections">Conditional sections</a>.</li>
 <li><strong><code>${pageBreak}</code></strong> — insert a real page break, including one per finding inside a repeated block.</li>
 <li><strong><code>${sevId}</code></strong> — a per-severity finding counter such as <code>CV1</code>, <code>CV2</code>, <code>HV1</code>.</li>
@@ -1636,7 +1723,7 @@
 <li><strong>${cvssScore}</strong> – CVSS score of the vulnerability</li>
 <li><strong>${cvssString}</strong> – CVSS vector of the vulnerability</li>
 <li><strong>${cvssString link}</strong> – Can only be used in a hyperlink. Automatically links to the first.org CVSS calculator</li>
-<li><strong>${assetLocation}</strong> – The asset location recorded on the finding (URL, host, path)</li>
+<li><strong>${assetLocation}</strong> – The asset location recorded on the finding (URL, host, path). A web address becomes a clickable link; a host and port, a path or a name is shown as plain text</li>
 <li><strong>${count}</strong> – Row count of the vulnerability</li>
 <li><strong>${sevId}</strong> – Severity-scoped counter: the first letter of the severity, <code>V</code>, and the finding's position within that severity, e.g. <code>CV1</code>, <code>CV2</code>, <code>HV1</code></li>
 <li><strong>${tracking}</strong> – Tracking ID of the vulnerability. Faction assigns one automatically (<code>VID-10000</code>, <code>VID-10001</code>, …) when the finding is created and keeps it when the finding is carried forward into a later assessment. It can be edited on the finding</li>
@@ -1647,9 +1734,7 @@
 <li><strong>${closedInStagingAt}</strong> – The date the vulnerability was marked fixed in staging</li>
 <li><strong>${remediationStatus}</strong> – Displays only "Open" or "Closed"</li>
 <li><strong>${your_variable_name}</strong> – Vulnerability-level user-defined fields, referenced by the variable name you gave them in the Report Designer</li>
-<li><strong>${color key=value,key=value}</strong> – The colour of the text is based on key-value pairs. <a href="#setting-severity-colours">See below for how to set up colours.</a></li>
-<li><strong>${cells key=value,key=value}</strong> – The colour of the table cell is based on key-value pairs. <a href="#setting-severity-colours">See below for how to set up colours.</a></li>
-<li><strong>${custom-fields key=value,key=value,...}</strong> – Maps a custom variable to the placeholder colour used in the DOCX template. This allows you to set font and cell colours for custom variables. <a href="#setting-custom-variable-colours">See below.</a></li>
+<li><strong>Colors</strong> – Paint a placeholder color on a cell, text or border and Faction replaces it with the color for that finding. <a href="#setting-severity-colors">See Setting severity colors.</a></li>
 <li><strong>${loop}</strong> – Tells the report generator which row will be repeated</li>
 <li><strong>${loop-*}</strong> – Allows multiple rows to be repeated. <code>${loop-1}</code> repeats the row it is in plus the one below it</li>
 <li><strong>${noIssuesText Your text}</strong> – The text displayed in the section if no vulnerabilities are reported. Defaults to "No issues detected for this section."</li>
@@ -1668,7 +1753,7 @@
 <tbody>
 <tr>
 <td>${vulnTable}</td>
-<td>${color Critical=C00000,High=FFC000}</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -1688,12 +1773,13 @@
 </table>
 <p>Example in DOCX template:
 <img alt="" src="../../files/Pasted%20image%2020260909010252.png" /></p>
+<p>The <code>${color …}</code> cell in this screenshot is from an older template. It is no longer needed and is ignored if present — the colors come from the Report Designer.</p>
 <p>Example rendered:
 <img alt="" src="../../files/Pasted%20image%2020260909010657.png" /></p>
 <h3 id="example-detail-table">Example detail table<a class="headerlink" href="#example-detail-table" title="Permanent link">&para;</a></h3>
 <p>The <code>${loop-4}</code> variable will allow the report generation to iterate each vulnerability over 4 rows below the loop for a total of 5 rows that will be repeated.
 <img alt="" src="../../files/Pasted%20image%2020260909010840.png" /></p>
-<p><strong>Why is the heading yellow?</strong> Check <a href="#setting-severity-colours">Setting severity colours</a>.</p>
+<p><strong>Why is the heading yellow?</strong> Check <a href="#setting-severity-colors">Setting severity colors</a>.</p>
 <p>Example rendered:
 <img alt="" src="../../files/Pasted%20image%2020260909011022.png" /></p>
 <h2 id="vulnerability-block-variables">Vulnerability block variables<a class="headerlink" href="#vulnerability-block-variables" title="Permanent link">&para;</a></h2>
@@ -1724,38 +1810,37 @@
 <li><strong>${remediationStatus}</strong> – Displays only "Open" or "Closed"</li>
 <li><strong>${your_variable_name}</strong> – Vulnerability-level user-defined fields</li>
 <li><strong>${pageBreak}</strong> – A page break. Inside a block it is repeated with the block, so each finding starts on a new page</li>
-<li><strong>${color key=value,key=value}</strong> – The colour of the text is based on key-value pairs. <a href="#setting-severity-colours">See below for how to set up colours.</a></li>
-<li><strong>${fill key=value,key=value}</strong> – The colour of background elements is based on key-value pairs. <a href="#setting-severity-colours">See below for how to set up colours.</a></li>
-<li><strong>${custom-fields key=value,key=value,...}</strong> – Maps a custom variable to the placeholder colour used in the DOCX template. <a href="#setting-custom-variable-colours">See below.</a></li>
+<li><strong>Colors</strong> – Paint a placeholder color on text, a shaded paragraph or a border and Faction replaces it with the color for that finding. <a href="#setting-severity-colors">See Setting severity colors.</a></li>
 <li><strong>${noIssuesText Your text}</strong> – The text displayed in the section if no vulnerabilities are reported</li>
 </ul>
-<p>The <code>${color}</code>, <code>${fill}</code> and <code>${custom-fields}</code> configuration paragraphs are removed from the generated report.</p>
+<p>A <code>${color}</code>, <code>${fill}</code> or <code>${custom-fields}</code> paragraph left over from a Faction 1 template is removed from the generated report and otherwise ignored.</p>
 <h3 id="example-block-findings">Example block findings<a class="headerlink" href="#example-block-findings" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>${fiBegin}
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>${fill Critical=8064a2,High=c0504d,Medium=e68e00,Low=33D7FF,Recommended=081417,Informational=657376}
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>## 1.     ${vulnName} - ${severity}
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>## 1.     ${vulnName} - ${severity}
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Description:
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Description:
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>${desc}
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>${desc}
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Recommendation:
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Recommendation:
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>${rec}
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>${rec}
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>${details}
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>${details}
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>${pageBreak}
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>${pageBreak}
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>${fiEnd}
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>${fiEnd}
 </code></pre></div>
 <p><img alt="" src="../../files/Pasted%20image%2020250728003734.png" /></p>
-<p><strong>Why is the heading yellow?</strong> Check <a href="#setting-severity-colours">Setting severity colours</a>.</p>
+<p><strong>Why is the heading yellow?</strong> Check <a href="#setting-severity-colors">Setting severity colors</a>.</p>
 <h2 id="hyperlinks">Hyperlinks<a class="headerlink" href="#hyperlinks" title="Permanent link">&para;</a></h2>
-<p>If you want to add hyperlinks to variables, this can be done with some variables by appending <code>link</code> after the variable. Only a few built-in variables support this (<code>${asmtAssessor_Email link}</code>, <code>${cvssString link}</code>) but every custom variable does. This allows you to add things like <code>${affected-url link}</code> to your vulnerability templates, which will generate a hyperlink to whatever URL was entered.</p>
-<p>Below is an example of how you would add this. Note that the "Address" in the DOCX template can be anything. It will be deleted and replaced with the user-defined variable for Affected URL.</p>
+<p>There are three ways a variable becomes a clickable link in the report.</p>
+<p><strong>Hyperlink fields.</strong> Create the user-defined field with the <strong>Hyperlink</strong> type and use its variable as normal, for example <code>${affected-url}</code>. It becomes a real Word hyperlink wherever it sits — in a sentence, a table cell or a findings block — with nothing else to set up in the template. An email address links as <code>mailto:</code>, a web address links to itself, and a value holding several addresses gives one link each. <a href="../user-defined-fields/#hyperlink-fields">See Hyperlink fields.</a></p>
+<p><strong>Asset locations.</strong> <code>${assetLocation}</code> is linked automatically when the finding's asset location is a web address. A host and port, a path or a name is left as plain text.</p>
+<p><strong>The <code>link</code> suffix.</strong> Some variables can be linked by appending <code>link</code>. Only a few built-in variables support this (<code>${asmtAssessor_Email link}</code>, <code>${cvssString link}</code>) but every custom variable does, so <code>${affected-url link}</code> generates a hyperlink to whatever URL was entered. Unlike a Hyperlink field, this only works when the variable sits inside a hyperlink you have already added in Word.</p>
+<p>Below is an example of the <code>link</code> suffix. Note that the "Address" in the DOCX template can be anything. It will be deleted and replaced with the user-defined variable for Affected URL.</p>
 <p><img alt="" src="../../files/Pasted%20image%2020250727224329.png" /></p>
 <h2 id="report-sections">Report sections<a class="headerlink" href="#report-sections" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
@@ -1796,66 +1881,116 @@
 <p>The Report Designer also has a <strong>Report Font</strong> setting that is applied to all generated text, so you only need CSS for anything beyond the base font.</p>
 <p><img alt="" src="../../files/Pasted%20image%2020260909012209.png" /></p>
 <p>Every rich-text variable is wrapped in a <code>div</code> whose class is the variable name (<code>summary1</code>, <code>summary2</code>, your custom variable names, and the leading name of any extension placeholder such as <code>checklist-owasp-top-10</code>), so you can style each one separately.</p>
-<h2 id="setting-severity-colours">Setting severity colours<a class="headerlink" href="#setting-severity-colours" title="Permanent link">&para;</a></h2>
-<p>When building reports, you most likely will set the text or cell to the colour that matches the severity of the finding. To achieve this in Faction, you need to set a placeholder colour in the DOCX template that matches the severity category (Overall, Likelihood, and Impact). These placeholder colours are in the table below:</p>
+<h2 id="setting-severity-colors">Setting severity colors<a class="headerlink" href="#setting-severity-colors" title="Permanent link">&para;</a></h2>
+<p>Findings are usually color-coded by severity — a red cell for Critical, an orange one for High. In Faction you paint a <strong>placeholder color</strong> in the DOCX template wherever you want a color that depends on the finding, and choose the real colors in the Report Designer. When the report is generated, each placeholder is replaced with the color for that finding.</p>
+<p>Placeholders work on table cells, text, shaded paragraphs, table borders and the numbers or bullets of a list.</p>
+<h3 id="the-placeholder-colors">The placeholder colors<a class="headerlink" href="#the-placeholder-colors" title="Permanent link">&para;</a></h3>
+<p>Each category has two placeholders that mean exactly the same thing: a light one and a dark one.</p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>Category</th>
+<th>Light</th>
+<th>Dark</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Category</strong></td>
-<td><strong>Colour Hex</strong></td>
-</tr>
-<tr>
-<td>Overall Severity</td>
-<td>#FAC701</td>
+<td>Severity</td>
+<td><code>#FAC701</code></td>
+<td><code>#1A0701</code></td>
 </tr>
 <tr>
 <td>Likelihood</td>
-<td>#FAC702</td>
+<td><code>#FAC702</code></td>
+<td><code>#1A0702</code></td>
 </tr>
 <tr>
 <td>Impact</td>
-<td>#FAC703</td>
+<td><code>#FAC703</code></td>
+<td><code>#1A0703</code></td>
 </tr>
 </tbody>
 </table>
-<p>For example, a table in MS Word below has pre-filled the colour codes for each severity name and category.</p>
-<p><img alt="" src="../../files/Pasted%20image%2020231217160231.png" /></p>
-<p>Right-click the overall severity variable, <strong>${severity}</strong>; you can see the placeholder hex code for this colour is #FAC701. Likelihood would be set to #FAC702, and Impact would be set to #FAC703.</p>
-<p><img alt="" src="../../files/Pasted%20image%2020231217160250.png" /></p>
-<p>Setting the background colour for cells works in much the same way. Notice we use the <code>${cells}</code> variable instead.</p>
-<p><img alt="" src="../../files/Pasted%20image%2020231217160305.png" /></p>
-<p>Right-click on the cell and set the colour. You may only want to use the Overall severity option but you can have multiple cells with each category if you wish.</p>
-<p><img alt="" src="../../files/Pasted%20image%2020231217160321.png" /></p>
-<p>Below is an example of the generated report table with colours replaced.</p>
-<p><img alt="" src="../../files/Pasted%20image%2020231217160335.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The keys in <code>${color}</code>, <code>${cells}</code> and <code>${fill}</code> are matched against the severity <strong>labels</strong> shown in the report. If you have renamed the severities in Faction's terminology settings, use your labels as the keys.</p>
+<p>The pair is there so you can read your own template. Paint the <strong>light</strong> one on a cell and the <strong>dark</strong> one on the text inside it, and you see near-black text on amber while you work. It makes no difference to the report which one you use where — Faction can tell a cell from text on its own — so painting them the other way round works too.</p>
+<div class="admonition warning">
+<p class="admonition-title">Check the digits</p>
+<p>The dark placeholders are <code>1A07…</code>, not <code>1AC7…</code>. An almost-right color such as <code>#1AC701</code> is an ordinary color to Faction, so it is left exactly as painted — typically a bright green that ships in the report with no warning.</p>
 </div>
-<h2 id="setting-custom-variable-colours">Setting custom variable colours<a class="headerlink" href="#setting-custom-variable-colours" title="Permanent link">&para;</a></h2>
-<p>Faction allows you to set up a colour scheme to call out data in custom variables. You can use this to highlight things that require more attention or anything else you can imagine.</p>
-<p>To demonstrate this, we are going to create two custom variables in the Report Designer, <code>${MyVariable}</code> and <code>${MyOtherVariable}</code>.</p>
-<p>Set the background colour of <code>${MyVariable}</code> to <code>AEAAAA</code> and the background colour of <code>${MyOtherVariable}</code> to <code>DBDBDB</code> in our DOCX template. These values can be anything, as long as they're an RGB hex code. We chose these just so they stand out in this example. Once configured it should look like this:</p>
-<p><img alt="" src="../../files/Pasted%20image%2020250727234352.png" /></p>
-<p>Now add the <code>${custom-fields}</code> variable at the top of our vulnerability findings block. This variable maps a custom field to the placeholder colour we want to change when the report is generated.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>${custom-fields MyVariable=AEAAAA,MyOtherVariable=DBDBDB}
+<p>To paint a cell in Word, open <strong>Borders and Shading → Shading</strong>, choose <strong>More Colors</strong> under <em>Fill</em> and type the hex code. For text, use <strong>Font Color → More Colors</strong>.</p>
+<p><img alt="" src="../../files/Pasted%20image%2020231217160321.png" /></p>
+<p>Here is a template using the placeholders. The Likelihood, Impact and Severity cells are painted with the light placeholders and their text with the dark ones. The finding name — in the table and in the findings block below it — is painted with the dark severity placeholder too, with no cell color behind it.</p>
+<p><img alt="" src="../../files/report-colors-template.png" /></p>
+<h3 id="color-and-text-on-color">Color and text on color<a class="headerlink" href="#color-and-text-on-color" title="Permanent link">&para;</a></h3>
+<p>Each value has two colors, set in the Report Designer:</p>
+<ul>
+<li><strong>Color</strong> — what the thing <em>is</em>: a filled cell, a border, or text that is not sitting on a colored background.</li>
+<li><strong>Text on color</strong> — used only for text that <em>is</em> sitting on a placeholder-colored background, so it can contrast with it.</li>
+</ul>
+<p>Which one a piece of painted text gets depends on what is behind it:</p>
+<table>
+<thead>
+<tr>
+<th>Where the painted text is</th>
+<th>Gets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In a cell filled with a placeholder</td>
+<td>Text on color</td>
+</tr>
+<tr>
+<td>On a shaded paragraph, or text with its own shading</td>
+<td>Text on color</td>
+</tr>
+<tr>
+<td>In a cell with no fill, or a cell filled with an ordinary color</td>
+<td>Color</td>
+</tr>
+<tr>
+<td>Outside a table altogether</td>
+<td>Color</td>
+</tr>
+<tr>
+<td>A table border, or a list number or bullet with no colored background</td>
+<td>Color</td>
+</tr>
+</tbody>
+</table>
+<p>So with Critical set to white text on red, a Critical severity cell comes out white on red, while the finding's name in the column beside it and the heading in the findings block come out red on the page. Here is the template above, generated:</p>
+<p><img alt="" src="../../files/report-colors-generated.png" /></p>
+<p>Because <em>Color</em> is also used for text on a white page, choose colors that are readable as text as well as behind it. A pale yellow makes a fine cell and an unreadable heading.</p>
+<h3 id="choosing-the-colors">Choosing the colors<a class="headerlink" href="#choosing-the-colors" title="Permanent link">&para;</a></h3>
+<p>Open the template in <strong>Admin → Content &amp; Reporting → Report Designer</strong> and find <strong>Finding Colors</strong>. Every row shows the two colors side by side with a preview of how they read together, so an unreadable combination is obvious before it reaches a report. The same panel lists the placeholder colors with a copy button for each.</p>
+<p>Likelihood and impact use the same five levels as severity, so by default one set of colors covers all three. To color them differently, tick <strong>Use different colors for Likelihood and Impact</strong>. Unticking it copies the Severity colors back over the other two.</p>
+<p>Colors are matched on the severity <strong>level</strong>, not its name. If you have renamed the severities in Faction's terminology settings — Critical to <em>Sev-1</em>, say — the colors carry on working.</p>
+<p>A new template starts with colors matching the ones Faction uses on screen. A placeholder for a value with no color set is replaced with black text on white, so the placeholder amber never reaches a report.</p>
+<h2 id="setting-custom-variable-colors">Setting custom variable colors<a class="headerlink" href="#setting-custom-variable-colors" title="Permanent link">&para;</a></h2>
+<p>A Dropdown user-defined field can be color-coded in the same way, for example a green cell when a finding's <em>Customer Impact</em> is "Low" and a red one when it is "High".</p>
+<p>Every Dropdown field has its own group under <strong>Finding Colors</strong>, with a color and a text-on-color for each of its options. The first time you set a color for a field, Faction gives it its own pair of placeholders — <code>#FAC704</code> and <code>#1A0704</code> for the first field, <code>#FAC705</code> and <code>#1A0705</code> for the next, and so on — and shows them next to the field's name and in the list of placeholder colors. Paint those in the template exactly as you would the severity ones.</p>
+<p><img alt="" src="../../files/Pasted%20image%2020260922093900.png" /></p>
+<p>Here two Dropdown fields, <em>My Variable</em> and <em>My Other Variable</em>, each have a color for their Happy and Sad options. They were given <code>#FAC704</code>/<code>#1A0704</code> and <code>#FAC705</code>/<code>#1A0705</code>, which also appear at the bottom of the list of placeholder colors:</p>
+<p><img alt="" src="../../files/Pasted%20image%2020260922093900.png" /></p>
+<p>A field keeps its placeholders for good, even if you later remove its colors, so a template that still uses them can never pick up another field's colors by mistake.</p>
+<p>When a finding is written, the assessor picks the value from the dropdown:</p>
+<p><img alt="" src="../../files/Pasted%20image%2020260909012931.png" /></p>
+<p>and the cells and text painted with that field's placeholders take the colors set for the chosen option.</p>
+<p>String fields cannot be colored, because they have no fixed list of values to give colors to.</p>
+<h2 id="upgrading-a-faction-1-template">Upgrading a Faction 1 template<a class="headerlink" href="#upgrading-a-faction-1-template" title="Permanent link">&para;</a></h2>
+<p>Faction 1 templates set their colors with configuration paragraphs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>${color Critical=C00000,High=FFC000}
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>${cells Critical=8064a2,High=c0504d}
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>${fill Critical=8064a2,High=c0504d}
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>${custom-fields MyVariable=AEAAAA}
 </code></pre></div>
-<p>We can now set the colour based on the text that gets entered into these fields. Let's say if the text displays "Happy" then the background will be green and if it says "Sad" then the background will be red.</p>
-<p>We can add these colours to the <code>${fill}</code> variable. It will look something like this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>${fill Critical=8064a2,High=c0504d,Medium=e68e00,Low=33D7FF,Recommended=081417,Informational=657376,Happy=C5E0B3,Sad=EE5654}
-</code></pre></div>
-<p>The full config in the DOCX will look like this:</p>
-<p><img alt="" src="../../files/Pasted%20image%2020250727235307.png" /></p>
-<p>When we add a vulnerability, we can select our Happy or Sad option for these two custom variables:
-<img alt="" src="../../files/Pasted%20image%2020260909012931.png" /></p>
-<p>When we generate the report, these backgrounds get updated accordingly.</p>
-<p><img alt="" src="../../files/Pasted%20image%2020250727235618.png" /></p>
+<p>These are no longer read. A template that still contains them generates without errors — the paragraphs are removed from the report and ignored — but its colors come from the Report Designer instead. To bring one across:</p>
+<ol>
+<li>Enter the colors from its <code>${color}</code>, <code>${cells}</code> or <code>${fill}</code> paragraphs under <strong>Finding Colors</strong>. <code>${color}</code> values usually belong in <em>Text on color</em> and <code>${cells}</code> / <code>${fill}</code> values in <em>Color</em>.</li>
+<li>Delete the configuration paragraphs from the template.</li>
+<li>Leave the <code>#FAC701</code>–<code>#FAC703</code> colors you already painted where they are; they still work. Repaint text with the dark placeholder if you want to read it while you edit.</li>
+<li>For a custom variable that used <code>${custom-fields}</code>, set its colors in the designer, then repaint its cells with the placeholders shown next to the field. Colors you chose yourself, such as <code>AEAAAA</code>, are ordinary colors now.</li>
+</ol>
 <h2 id="uploading-your-template">Uploading your template<a class="headerlink" href="#uploading-your-template" title="Permanent link">&para;</a></h2>
 <p>When your DOCX is ready, upload it in the Report Designer under <strong>Admin → Content &amp; Reporting → Report Designer</strong>.</p>
 <p><img alt="" src="../../files/report-designer-upload-template.jpg" /></p>
