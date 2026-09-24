@@ -97,7 +97,7 @@ Faction serves plain HTTP. Put it behind a reverse proxy that terminates TLS bef
 
 Everything in this documentation is part of OWASP Faction unless it says otherwise. The edition applies a few limits: one AI provider, four AI prompts and two installed extensions. Users are not capped.
 
-Some capabilities live only in the commercial edition Faction Security builds on the same codebase: single sign-on, white-labelling, inbound email threading, prompt-level AI audit logging, encrypted PDFs, an external owner portal and custom roles. In the interface these appear marked with a ◆ rather than hidden, so a feature you cannot find is explained rather than mysterious.
+Some capabilities live only in the commercial edition Faction Security builds on the same codebase: single sign-on, white-labelling, inbound email threading, prompt-level AI audit logging, encrypted PDFs, an external owner portal, custom roles and the built-in [MCP server](../integrations/mcp-server.md) for AI clients. In the interface these appear marked with a ◆ rather than hidden, so a feature you cannot find is explained rather than mysterious.
 
 ## Building from source
 

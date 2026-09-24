@@ -57,6 +57,8 @@ nav:
       - Write Pentest Reports with AI: solutions/ai-pentest-report-writing.md
       - Manage Large Pentest Teams: solutions/managing-pentest-teams.md
       - Track Vulnerabilities and SLAs: solutions/vulnerability-management-sla.md
+  - Integrations:
+      - MCP Server: integrations/mcp-server.md
   # The Faction 1.x documentation is a separate MkDocs site in faction1.x/, built into
   # site/faction1.x/ by `mise run build` and served under this path.
   - Faction 1.x Docs: /faction1.x/
