@@ -50,6 +50,7 @@ What you are looking at is the default template: a cover page, table of contents
 
 ## Where to go next
 
+- **Retest the fixes.** [Retest Reports](../reporting/retest-reports.md) picks up once the client has remediated: retest each finding, record the evidence and send a retest report.
 - **Make the report yours.** [Using DOCX Report Templates](../reporting/docx-templates.md) covers the variables the template uses, how findings are laid out, and, at the end, [how to upload your own template](../reporting/docx-templates.md#uploading-your-template) in place of the default.
 - **Ask for more on each finding.** [User Defined Fields](../reporting/user-defined-fields.md) adds inputs such as an affected URL or a CWE number to the finding form and prints them in the report.
 - **Standardise the testing.** [Assessment Checklists](../reporting/checklists.md) enforces a checklist per assessment type and can print it in the report.

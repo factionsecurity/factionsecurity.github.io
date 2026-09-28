@@ -34,6 +34,7 @@ nav:
       - Running OWASP Faction: getting-started/install.md
       - 1. Schedule an assessment: getting-started/schedule-assessment.md
       - 2. Add findings and generate the report: getting-started/first-report.md
+      - Bulk-import assessments from a CSV: getting-started/import-assessments-csv.md
   - Permissions:
       - Overview: permissions/index.md
       - Scopes: permissions/scopes.md
@@ -43,6 +44,7 @@ nav:
   - Reporting:
       - reporting/index.md
       - Using DOCX Report Templates: reporting/docx-templates.md
+      - Retest Reports: reporting/retest-reports.md
       - Code Block Themes: reporting/code-block-themes.md
       - User Defined Fields: reporting/user-defined-fields.md
       - Assessment Checklists: reporting/checklists.md

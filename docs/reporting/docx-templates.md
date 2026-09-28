@@ -33,6 +33,7 @@ Faction 2 adds the following:
 - **`${sevId}`** — a per-severity finding counter such as `CV1`, `CV2`, `HV1`.
 - **`${tracking}` is always filled in.** Every finding is given a unique tracking ID (`VID-10000`, `VID-10001`, …) when it is created. A finding carried forward into a retest keeps its number, and the ID can still be edited on the finding.
 - **`${closedInDevAt}` / `${closedInStagingAt}`** — remediation milestone dates alongside `${openedAt}` and `${closedAt}`.
+- **Retest reports** — a report template can carry a second DOCX for retest reports, with `${retestEvidence}`, `${retestResult}`, `${retestDate}` and `${retestedBy}` for each finding's latest retest. See [Retest reports](#retest-reports).
 - **Custom variables are no longer prefixed with `cf`.** In Faction 2 you choose the variable name yourself when you create a user-defined field in the Report Designer, so `${cfAffectedURL}` in Faction 1 becomes whatever you named the field, for example `${affected-url}`. See [User Defined Fields](user-defined-fields.md).
 
 ## General variables
@@ -62,8 +63,8 @@ All of these variables can be used anywhere in the DOCX template. Those with a s
 - **${today}** – The day the report is generated ⭐️
 - **${today MM/dd/yyyy}** – The day the report is generated with date formatting ⭐️
 - **${your_variable_name}** – Assessment-level user-defined fields you create in the Report Designer, referenced by the variable name you gave them ⭐️
-- **${totalOpenVulns}** – Use in retest reports to show the count of open vulnerabilities
-- **${totalClosedVulns}** – Use in retest reports to show the count of closed vulnerabilities
+- **${totalOpenVulns}** – The count of open vulnerabilities. Useful in [retest reports](#retest-reports)
+- **${totalClosedVulns}** – The count of closed vulnerabilities. Useful in [retest reports](#retest-reports)
 - **${pageBreak}** – Replaced with a page break. Put it in a paragraph of its own
 - **{[asmtCRITICAL]}**, **{[asmtHIGH]}**, **{[asmtMEDIUM]}**, **{[asmtLOW]}**, **{[asmtINFORMATIONAL]}** – A numbered list of the finding names at that severity. Note the different bracket style; these are meant for rich-text fields such as the summaries
 
@@ -108,6 +109,10 @@ These are only available inside tables.
 - **${closedInDevAt}** – The date the vulnerability was marked fixed in development
 - **${closedInStagingAt}** – The date the vulnerability was marked fixed in staging
 - **${remediationStatus}** – Displays only "Open" or "Closed"
+- **${retestResult}** – "Passed" or "Failed" from the finding's latest completed retest. [Retest reports](#retest-reports) only; blank if the finding was never retested
+- **${retestDate}** – The date that retest was completed
+- **${retestedBy}** – Who completed that retest
+- **${retestEvidence}** – The evidence recorded on that retest: text, screenshots and code, inserted like `${details}`
 - **${your_variable_name}** – Vulnerability-level user-defined fields, referenced by the variable name you gave them in the Report Designer
 - **Colors** – Paint a placeholder color on a cell, text or border and Faction replaces it with the color for that finding. [See Setting severity colors.](#setting-severity-colors)
 - **${loop}** – Tells the report generator which row will be repeated
@@ -171,6 +176,10 @@ Example rendered:
 - **${closedInDevAt}** – The date the vulnerability was marked fixed in development
 - **${closedInStagingAt}** – The date the vulnerability was marked fixed in staging
 - **${remediationStatus}** – Displays only "Open" or "Closed"
+- **${retestResult}** – "Passed" or "Failed" from the finding's latest completed retest. [Retest reports](#retest-reports) only; blank if the finding was never retested
+- **${retestDate}** – The date that retest was completed
+- **${retestedBy}** – Who completed that retest
+- **${retestEvidence}** – The evidence recorded on that retest: text, screenshots and code, inserted like `${details}`
 - **${your_variable_name}** – Vulnerability-level user-defined fields
 - **${pageBreak}** – A page break. Inside a block it is repeated with the block, so each finding starts on a new page
 - **Colors** – Paint a placeholder color on text, a shaded paragraph or a border and Faction replaces it with the color for that finding. [See Setting severity colors.](#setting-severity-colors)
@@ -204,6 +213,55 @@ ${fiEnd}
 
 **Why is the heading yellow?** Check [Setting severity colors](#setting-severity-colors).
 
+
+## Retest reports
+
+A retest report is generated from a second DOCX on the same report template, uploaded under **Retest Template** in the Report Designer. It shares the template's CSS, font, sections, user-defined fields and finding colors; only the document layout differs.
+
+Every variable on this page works in a retest template, and the report lists **every** finding on the assessment, so the client sees what is open and closed across the whole engagement. Four finding variables are filled from each finding's **latest completed retest** (passed or failed). They are blank for a finding that was never retested, and a cancelled retest doesn't count.
+
+| Variable | Filled with |
+|---|---|
+| `${retestResult}` | "Passed" or "Failed" |
+| `${retestDate}` | The date the retest was completed |
+| `${retestedBy}` | The name of the person who completed it |
+| `${retestEvidence}` | The evidence written on the retest, with its screenshots and code blocks, formatted like `${details}` |
+
+They work in both [vulnerability tables](#vulnerability-table-variables) and [vulnerability blocks](#vulnerability-block-variables). `${totalOpenVulns}` and `${totalClosedVulns}` are handy in the summary.
+
+### Example retest summary table
+
+A [vulnerability table](#vulnerability-table-variables) with a column for each retest variable gives the client the status of every finding at a glance.
+
+|   |   |   |   |   |   |
+|---|---|---|---|---|---|
+||${vulnTable}|||||
+|#|Vulnerability|Retest Status|Last Retest|Retest By|Severity|
+|${count}|${loop} ${vulnName}|${retestResult}|${retestDate}|${retestedBy}|${severity}|
+
+Example rendered. The second finding was never retested, so its retest cells are blank:
+
+![](../files/retest-report-summary-table.png)
+
+### Example retest details
+
+In the per-finding detail table, add a line for the retest after the finding's own details, with the evidence below it:
+
+```
+Retest Details:  Retest Date: ${retestDate} Retested By: ${retestedBy} Retest Result: ${retestResult}
+${retestEvidence}
+```
+
+Example rendered:
+
+![](../files/retest-report-evidence.png)
+
+The same variables work in a [vulnerability block](#vulnerability-block-variables) (`${fiBegin}` … `${fiEnd}`) if your template doesn't use tables.
+
+For the whole retest workflow, from scheduling to sending the report, see [Retest Reports](retest-reports.md).
+
+!!! note "Evidence is locked once it is in a report"
+    Generating a retest report locks the evidence it used, so what the client received can't change afterwards. To allow corrections, turn on **Allow editing retest evidence after a retest report** for the assessment's workflow; an edit then marks the assessment ready for a new retest report.
 
 ## Hyperlinks
 
@@ -383,9 +441,12 @@ When your DOCX is ready, upload it in the Report Designer under **Admin → Cont
 
 1. Select the template on the left, or click **New Template** to start one. A template is tied to one **Assessment Type**, so create one per type of engagement you report on.
 2. In **Document Template**, drag the `.docx` onto the drop zone or click **Upload Template** and choose the file. The current file's name and size are shown underneath, and **Download** returns the copy Faction holds, which is handy when the original has gone missing.
-3. Set the **Report Font** and any **CSS** you need under Custom CSS Formatting, add report sections and user defined fields further down, and the template is ready to use.
+3. Optionally, upload a second `.docx` under **Retest Template** with **Upload Retest Template**. It is used for [retest reports](#retest-reports).
+4. Set the **Report Font** and any **CSS** you need under Custom CSS Formatting, add report sections and user defined fields further down, and the template is ready to use.
 
 There is no separate save step: the Report Designer saves each change as you make it. Assessments created from now on pick the template up automatically; an assessment that already exists keeps generating with the version it was created against until its template is updated.
+
+If an assessment's template is deleted or deactivated, its reports use the most recently updated active template for the same assessment type instead, so a retired template never strands the assessments created from it.
 
 !!! tip "Start from the default"
     A fresh install already has the [default Faction pentest template](https://github.com/factionsecurity/report_templates) attached to the Web Application Pentest type. Click **Download** on it to get the DOCX, edit that in Word, and upload the result. Every variable it uses is documented above, so it is the quickest route to a branded template that still works.

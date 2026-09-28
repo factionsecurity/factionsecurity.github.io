@@ -20,7 +20,11 @@ PERMISSION_RE = re.compile(
 )
 RESOURCE_RE = re.compile(r'^\s{4}(?P<name>[A-Z_]+)\("(?P<display>[^"]+)",\s*"(?P<desc>[^"]+)"\)', re.M)
 
-HEADER = """# Permission reference
+HEADER = """---
+description: "Complete reference of every permission in OWASP Faction, grouped by resource, as shown on the Roles admin screen."
+---
+
+# Permission reference
 
 Every permission the platform defines, grouped by resource — the same catalog the Roles admin
 screen renders as a checkbox matrix.
@@ -38,7 +42,7 @@ cannot be granted from the Roles screen.
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--repo", default="../../faction2", help="path to the faction2 checkout")
+    parser.add_argument("--repo", default="../../faction2/core", help="path to the core checkout (OWASP-Faction-2), which holds backend/")
     parser.add_argument("--out", default="docs/permissions/reference.md")
     args = parser.parse_args()
 

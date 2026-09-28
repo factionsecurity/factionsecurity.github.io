@@ -11,6 +11,7 @@ This section gets Faction running and walks through a first assessment end to en
 - **[Running OWASP Faction](install.md)** — install it with one command or by hand, sign in, change the default password, and upgrade later.
 - **[1. Schedule an assessment](schedule-assessment.md)** — create the assessment from the Scheduling page, pick its type and dates, and let Faction attach the default report template.
 - **[2. Add findings and generate the report](first-report.md)** — add vulnerabilities from the built-in library, generate the report and preview it in the browser.
+- **[Bulk-import assessments from a CSV](import-assessments-csv.md)** — schedule many assessments at once instead of creating them one at a time.
 
 </div>
 

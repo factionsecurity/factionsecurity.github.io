@@ -16,7 +16,7 @@ screen renders as a checkbox matrix.
 cannot be granted from the Roles screen.
 
 
-There are **102** permissions across **17** resources.
+There are **108** permissions across **19** resources.
 
 
 ## Users
@@ -159,6 +159,15 @@ There are **102** permissions across **17** resources.
 | `checklist:delete` | Delete checklist templates |
 
 
+## Content Templates
+
+| Permission | Description |
+| --- | --- |
+| `content-templates:create` | Create content templates |
+| `content-templates:edit` | Edit content templates |
+| `content-templates:delete` | Delete content templates |
+
+
 ## Survey Templates
 
 | Permission | Description |
@@ -221,4 +230,13 @@ There are **102** permissions across **17** resources.
 | Permission | Description |
 | --- | --- |
 | `manager_dashboard:read:all` | Read manager dashboard |
+
+
+## Availability
+
+| Permission | Description |
+| --- | --- |
+| `availability:manage:team` | Manage availability for team members |
+| `availability:manage:all` | Manage availability for everyone |
+| `availability:configure` | Configure holiday calendars |
 
